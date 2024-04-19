@@ -3,7 +3,7 @@ package Ensamblador;
 import java.io.Serializable;
 import java.util.List;
 
-public class Libros implements{
+public class Libros{
 
     protected String titulo, autor, genero;
     protected double precio;
@@ -64,11 +64,11 @@ public class Libros implements{
         return precio-(precio * descuento / 100);
     }
 
-    public void buscarPorAutor(List<Libro> libros, String autor){
+    public void buscarPorAutor(List<Libros> libros, String autor){
         libros.stream().filter(libro -> libro.getAutor().equalsIgnoreCase(autor)).forEach(System.out::println);
     }
 
-    public void filtrarPorGenero(List<Libro> libros, String genero){
+    public void filtrarPorGenero(List<Libros> libros, String genero){
         libros.stream().filter(libro -> libro.getGenero().equalsIgnoreCase(genero)).forEach(System.out::println);
     }
 
