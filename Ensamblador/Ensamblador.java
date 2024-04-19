@@ -2,9 +2,10 @@ package Ensamblador;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 public class Ensamblador {
-    Scanner sc=new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     private ArrayList<Cliente> clientes;
     private ArrayList<Libros> libros;
     private ArrayList<Archivos> archivos;
@@ -27,17 +28,17 @@ public class Ensamblador {
 
     public void agregarLibro(Libros libro)
     {
-
+        Libros.add(libro);
     }
 
     public void eliminarLibro(Libros libro){
-
+        Libros.remove(libro);
     }
     public void agregarArchivo(Archivos archivo){
-
+        Archivos.add(archivo);
     }
     public void eliminarArchivo(Archivos archivo){
-
+        Archivos.remove(archivo);
     }
     public void buscarClientePorNombre(Scanner sc){
         System.out.println("Dame el nombre que quieres buscar: ");
@@ -49,9 +50,14 @@ public class Ensamblador {
         }
 
     }
-    public void buscarLibroPorTitulo(String titulo) {
-
-    }
+    public Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> listaLibros) {
+            for (Libros libro : listaLibros) {
+                if (Objects.equals(Libros.getTitulo(), titulo)) {
+                    return libro;
+                }
+            }
+            return null;
+        }
     public void guardarDatosEnArchivo(Archivos archivo) {
 
     }
@@ -59,8 +65,6 @@ public class Ensamblador {
 
     }
     public void generarInforme() {
-
+        this.archivos = new ArrayList<Archivos>();
     }
-
-
 }
