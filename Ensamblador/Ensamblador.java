@@ -23,6 +23,8 @@ public class Ensamblador {
     {
         Cliente.remove(cliente);
     }
+
+
     public void agregarLibro(Libros libro)
     {
 

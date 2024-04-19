@@ -13,6 +13,13 @@ public class Cliente {
 
     int idCliente, numTelefono, ventas, puntosFidelidad;
 
+    public static void add(Cliente cliente) {
+    }
+
+    public static void remove(Cliente cliente) {
+    }
+
+
     public int getTipoCliente() {
         return TipoCliente;
     }
