@@ -1,4 +1,4 @@
 package Ensamblador;
 
-public class libros {
+public class Libros {
 }
