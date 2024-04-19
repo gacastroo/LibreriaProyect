@@ -7,12 +7,12 @@ public class Ensamblador {
     Scanner sc=new Scanner(System.in);
     private ArrayList<Cliente> clientes;
     private ArrayList<Libros> libros;
-    private ArrayList<Archivo> archivos;
+    private ArrayList<Archivos> archivos;
 
-    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivo> archivos) {
+    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
         this.clientes = (ArrayList<Cliente>) clientes;
         this.libros = (ArrayList<Libros>) libros;
-        this.archivos = (ArrayList<Archivo>) archivos;
+        this.archivos = (ArrayList<Archivos>) archivos;
     }
 
     public void add(Cliente cliente)
@@ -31,10 +31,10 @@ public class Ensamblador {
     public void eliminarLibro(Libros libro){
 
     }
-    public void agregarArchivo(Archivo archivo){
+    public void agregarArchivo(Archivos archivo){
 
     }
-    public void eliminarArchivo(Archivo archivo){
+    public void eliminarArchivo(Archivos archivo){
 
     }
     public void buscarClientePorNombre(Scanner sc){
@@ -50,10 +50,10 @@ public class Ensamblador {
     public void buscarLibroPorTitulo(String titulo) {
 
     }
-    public void guardarDatosEnArchivo(Archivo archivo) {
+    public void guardarDatosEnArchivo(Archivos archivo) {
 
     }
-    public void cargarDatosDesdeArchivo(Archivo archivo) {
+    public void cargarDatosDesdeArchivo(Archivos archivo) {
 
     }
     public void generarInforme() {
