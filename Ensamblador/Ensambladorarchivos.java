@@ -1,9 +1,15 @@
 package Ensamblador;
 
 import java.io.*;
+import java.util.List;
 
 //subclase de ensamblador :D
-public class Ensamblador_archivos extends Ensamblador {
+public class Ensambladorarchivos extends Ensamblador {
+
+    public Ensambladorarchivos(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
+        super(clientes, libros, archivos);
+    }
+
     public void guardarDatosEnArchivo(String nombreArchivo, String datos) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
             writer.write(datos);
