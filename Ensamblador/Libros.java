@@ -3,12 +3,9 @@ package Ensamblador;
 import java.io.Serializable;
 import java.util.List;
 
-public class Libros{
-
+public class Libros {
     protected String titulo, autor, genero;
     protected double precio;
-
-    public Libros(){}
 
     public Libros(String titulo, String autor, String genero, double precio) {
         this.titulo = titulo;
@@ -17,7 +14,7 @@ public class Libros{
         this.precio = precio;
     }
 
-    public String getTitulo() {
+    public static String getTitulo() {
         return titulo;
     }
 
@@ -71,6 +68,13 @@ public class Libros{
     public void filtrarPorGenero(List<Libros> libros, String genero){
         libros.stream().filter(libro -> libro.getGenero().equalsIgnoreCase(genero)).forEach(System.out::println);
     }
+
+    public static void add(Libros libro) {
+    }
+
+    public static void remove(Libros libro) {
+    }
+
 
 
 }
