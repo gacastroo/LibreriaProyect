@@ -3,6 +3,7 @@ package Ensamblador;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 public class Ensamblador {
     Scanner sc=new Scanner(System.in);
     private ArrayList<Cliente> clientes;
@@ -14,6 +15,7 @@ public class Ensamblador {
         this.libros = (ArrayList<Libros>) libros;
         this.archivos = (ArrayList<Archivos>) archivos;
     }
+
 
     public void add(Cliente cliente)
     {
