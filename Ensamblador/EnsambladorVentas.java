@@ -5,11 +5,9 @@ import java.util.List;
 
 //subclase ensamblador :D
 public class EnsambladorVentas extends Ensamblador {
-    private List<Ventas> ventas;
 
     public EnsambladorVentas(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
         super(clientes, libros, archivos);
-        this.ventas = ventas;
     }
 
     public static void add(Ventas ventas) {
@@ -34,7 +32,7 @@ public class EnsambladorVentas extends Ensamblador {
             TotalVentas += ventas.calcularTotal();
         }
         ;
-        System.out.println("El total de las ventas es: " + TotalVentas);
+        System.out.println(STR."El total de las ventas es: \{TotalVentas}");
         //Está mal hecho, hay que arreglarlo
         return null;
     }

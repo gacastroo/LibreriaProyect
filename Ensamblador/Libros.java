@@ -12,7 +12,7 @@ public abstract class Libros implements Serializable {
 
 
     public void Libro(String titulo, String autor, String genero, double precio) {
-        this.titulo = titulo;
+        Libros.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
         this.precio = precio;
@@ -23,7 +23,7 @@ public abstract class Libros implements Serializable {
     }
 
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        Libros.titulo = titulo;
     }
 
     public String getAutor() {
@@ -52,12 +52,7 @@ public abstract class Libros implements Serializable {
 
     @Override
     public String toString() {
-        return "Libro{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", genero='" + genero + '\'' +
-                ", precio=" + precio +
-                '}';
+        return STR."Libro{titulo='\{titulo}\{'\''}, autor='\{autor}\{'\''}, genero='\{genero}\{'\''}, precio=\{precio}\{'}'}";
     }
 
     //descuento se representa en por ciento
