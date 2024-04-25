@@ -13,9 +13,9 @@ public class Ensambladorarchivos extends Ensamblador {
     public void guardarDatosEnArchivo(String nombreArchivo, String datos) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
             writer.write(datos);
-            System.out.println("Datos guardados correctamente en el archivo \"" + nombreArchivo + "\"");
+            System.out.println(STR."Datos guardados correctamente en el archivo \"\{nombreArchivo}\"");
         } catch (IOException e) {
-            System.out.println("Error al guardar los datos en el archivo \"" + nombreArchivo + "\":");
+            System.out.println(STR."Error al guardar los datos en el archivo \"\{nombreArchivo}\":");
             e.printStackTrace();
         }
     }
@@ -28,11 +28,13 @@ public class Ensambladorarchivos extends Ensamblador {
                 contenido.append(linea);
                 contenido.append("\n");
             }
-            System.out.println("Archivo \"" + nombreArchivo + "\" cargado correctamente");
+            System.out.println(STR."Archivo \"\{nombreArchivo}\" cargado correctamente");
         } catch (IOException e) {
-            System.out.println("Error al cargar el archivo \"" + nombreArchivo + "\":");
+            System.out.println(STR."Error al cargar el archivo \"\{nombreArchivo}\":");
             e.printStackTrace();
         }
         return contenido.toString();
     }
+
+    //Metodo por tipo de Libro --> Archivo Pendiente
 }

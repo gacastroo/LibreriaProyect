@@ -8,8 +8,8 @@ public class Ventas {
 
     LocalDate fechaVenta;
     List<Libros> librosVendidos;
-    // List<Venta> ventas;
-    // List<Vendedor> vendedores;
+        // List<Venta> ventas;
+        // List<Vendedor> vendedores;
     List<Cliente> clientes;
 
     public Ventas(LocalDate fechaVenta, List<Libros> librosVendidos, List<Cliente> clientes) {

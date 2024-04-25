@@ -6,10 +6,12 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Ensamblador {
-    Scanner sc = new Scanner(System.in);
-    private ArrayList<Cliente> clientes;
-    private ArrayList<Libros> libros;
-    private ArrayList<Archivos> archivos;
+     ArrayList<Cliente> clientes;
+     ArrayList<Libros> libros;
+     ArrayList<Archivos> archivos;
+    ArrayList<Ventas> ventas;
+
+
 
     public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
         this.clientes = (ArrayList<Cliente>) clientes;
@@ -30,24 +32,24 @@ public class Ensamblador {
 
     public void agregarLibro(Libros libro)
     {
-        Libros.add(libro);
+        this.libros.add(libro);
     }
 
     public void eliminarLibro(Libros libro){
-        Libros.remove(libro);
+        this.libros.remove(libro);
     }
     public void agregarArchivo(Archivos archivo){
-        Archivos.add(archivo);
+        this.archivos.add(archivo);
     }
     public void eliminarArchivo(Archivos archivo){
-        Archivos.remove(archivo);
+        this.archivos.remove(archivo);
     }
     public void buscarClientePorNombre(Scanner sc){
         System.out.println("Dame el nombre que quieres buscar: ");
         String Nombre=sc.nextLine();
         for (Cliente clientes: clientes){
             if (clientes.getNombre().equals(Nombre)){
-                System.out.println("El cliente buscado es"+clientes.getNombre());
+                System.out.println(STR."El cliente buscado es\{clientes.getNombre()}");
             }
         }
 
@@ -60,13 +62,15 @@ public class Ensamblador {
             }
             return null;
         }
-    public void guardarDatosEnArchivo(Archivos archivo) {
+    public void guardarDatosEnArchivo(Ensambladorarchivos archivo) {
 
     }
-    public void cargarDatosDesdeArchivo(Archivos archivo) {
+    public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
 
     }
     public void generarInforme() {
-        this.archivos = new ArrayList<Archivos>();
+        //
     }
+
+
 }
