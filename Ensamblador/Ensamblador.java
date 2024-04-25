@@ -62,14 +62,34 @@ public class Ensamblador {
             }
             return null;
         }
-    public void guardarDatosEnArchivo(Ensambladorarchivos archivo) {
-
+    public void guardarDatosEnArchivo(Archivos archivos) {
+        Object[] Archivo = new Object[0];
+        new Archivos().escribirArchivo(Archivo);
+        //Modificar
     }
     public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
-
+        //Modificar
     }
-    public void generarInforme() {
-        //
+    public void generarInforme(EnsambladorReportes reportes, Scanner scanner) {
+        System.out.println("Elige una opcion para el reporte: ");
+        System.out.println("Opcion 1: Generar reporte de clientes");
+        System.out.println("Opcion 2: Generar reporte de libros");
+        System.out.println("Opcion 3: Generar reporte de ventas");
+        int o= scanner.nextInt();
+
+        switch (o) {
+            case 1:
+                reportes.generarReporteClientes();
+                break;
+            case 2:
+                reportes.generarReporteLibros();
+                break;
+            case 3:
+                reportes.generarReporteVentas();
+                break;
+            default:
+                throw new IllegalStateException(STR."Unexpected value: \{o}");
+        }
     }
 
 

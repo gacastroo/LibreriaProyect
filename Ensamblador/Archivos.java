@@ -29,7 +29,7 @@ public class Archivos {
         return STR."Archivo{nombre='\{nombre}\{'\''}, extension='\{extension}\{'\''}, ruta='\{ruta}\{'\''}\{'}'}";
     }
 
-    public  ArrayList <Object> leerArchivo() {
+    public  ArrayList <Object> leerArchivo(ArrayList<Archivos> archivos) {
         File f;
         FileInputStream fe = null;
         ObjectInputStream objs = null;
