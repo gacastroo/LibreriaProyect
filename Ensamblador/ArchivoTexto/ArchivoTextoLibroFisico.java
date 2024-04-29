@@ -1,6 +1,6 @@
-package Ensamblador;
+package Ensamblador.ArchivoTexto;
 
-import Proyecto_Libreria.Libro;
+import Ensamblador.Libros;
 
 import java.util.List;
 

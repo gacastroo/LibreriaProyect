@@ -1,7 +1,8 @@
 package Ensamblador;
 
-import Ensamblador.Cliente;
-import Ensamblador.Libros;
+import Ensamblador.TiposClientes.ClienteMayorista;
+import Ensamblador.TiposClientes.ClienteRegular;
+import Ensamblador.TiposClientes.ClienteVIP;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -26,9 +27,6 @@ public class Venta {
         this.clientes = clientes;
     }
 
-    public Venta() {
-
-    }
 
     public void setIdVenta(int idVenta) {
         this.idVenta = idVenta;

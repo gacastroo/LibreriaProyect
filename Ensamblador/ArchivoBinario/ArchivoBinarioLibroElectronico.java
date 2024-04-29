@@ -1,5 +1,6 @@
-import Ensamblador.ArchivoBinario;
-import libros.LibroInfantil;
+package Ensamblador.ArchivoBinario;
+
+import Ensamblador.TipoLibros.LibroElectronico;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,10 +9,10 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArchivoBinarioLibroInfantil extends ArchivoBinario {
+public class ArchivoBinarioLibroElectronico extends ArchivoBinario {
     public byte[] datos;
 
-    public void GuardarLibros(List<LibroInfantil> librosList){
+    public void GuardarLibros(List<LibroElectronico> librosList){
         File file = new File(super.getRuta());
         try {
             if (!file.exists()) {
@@ -21,7 +22,7 @@ public class ArchivoBinarioLibroInfantil extends ArchivoBinario {
             ObjectOutputStream OIS = new ObjectOutputStream(FOS);
             OIS.writeInt(librosList.size());
 
-            for (LibroInfantil lib : librosList){
+            for (LibroElectronico lib : librosList){
                 OIS.writeObject(lib);
             }
 
@@ -52,4 +53,5 @@ public class ArchivoBinarioLibroInfantil extends ArchivoBinario {
         }
         return listaHaEntragar;
     }
+
 }

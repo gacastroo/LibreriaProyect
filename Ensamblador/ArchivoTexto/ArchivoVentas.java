@@ -1,4 +1,8 @@
-package Ensamblador;
+package Ensamblador.ArchivoTexto;
+
+import Ensamblador.Archivos;
+import Ensamblador.Libros;
+import Ensamblador.Venta;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -97,8 +101,8 @@ public class ArchivoVentas extends Archivos {
 
                     //Venta venta= new Venta( fechaVenta,  clientes,  librosVendidos,  total, idVenta,descuento,precio,fechaEntrega);
 
-                    Ventas venta= new Ventas(fechaVenta,  libroVendidos,  clientes);
-                    ventas.add(venta);
+                    Ventas ventas= new Ventas(fechaVenta,  libroVendidos,  clientes);
+                    ventas.add(ventas);
                 } else {
                     System.out.println("No hay mas ventas");
                 }

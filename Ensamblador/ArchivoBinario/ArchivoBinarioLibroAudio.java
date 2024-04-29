@@ -1,7 +1,7 @@
-package Ensamblador;
+package Ensamblador.ArchivoBinario;
 
-import Ensamblador.ArchivoBinario;
-import Libros.java;
+import Ensamblador.TipoLibros.LibroAudio;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

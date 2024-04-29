@@ -1,6 +1,8 @@
-package Ensamblador;
+package Ensamblador.ArchivoClientes;
 
 import Ensamblador.Archivos;
+import Ensamblador.Cliente;
+import Ensamblador.TiposClientes.*;
 
 import java.io.*;
 import java.time.LocalDate;

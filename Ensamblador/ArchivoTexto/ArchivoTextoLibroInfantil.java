@@ -1,7 +1,6 @@
+package Ensamblador.ArchivoTexto;
 
 import Ensamblador.Libros;
-import Proyecto_Libreria.Libro;
-
 import java.util.List;
 
 public class ArchivoTextoLibroInfantil extends ArchivoTexto {

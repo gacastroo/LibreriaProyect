@@ -1,4 +1,4 @@
-package Ensamblador;
+package Ensamblador;//package EjerciciosProgramacion.PROYECTOFINAL;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,14 +11,9 @@ public class Cliente {
     String nombre, direccion, email;
     LocalDate fechaRegistro;
 
-    int idCliente, numTelefono, ventas, puntosFidelidad;
-
-    public static void add(Cliente cliente) {
-    }
-
-    public static void remove(Cliente cliente) {
-    }
-
+    int idCliente;
+    int numTelefono;
+    int puntosFidelidad;
 
     public int getTipoCliente() {
         return TipoCliente;
@@ -39,14 +34,11 @@ public class Cliente {
     }
 
     // atributo del grupo libros.
-    double precio;
-
     //Constructor completo de la clase cliente.
-    public Cliente(String nombre, String direccion, String email, LocalDate fechaRegistro, int numTelefono) {
+    public Cliente(String nombre, String direccion, String email, int numTelefono) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
-        this.fechaRegistro = fechaRegistro;
         this.numTelefono = numTelefono;
     }
 
@@ -75,11 +67,9 @@ public class Cliente {
     public LocalDate getFechaRegistro() {
         return fechaRegistro;
     } //Tipo fecha.
-
-    public int getVentas(){
-        return ventas;
+    public void setFechaRegistro(LocalDate fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
     }
-
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -92,10 +82,6 @@ public class Cliente {
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setVentas(int ventas) {
-        this.ventas = ventas;
-    }
-
 
     public void setNumTelefono(int numTelefono) {
         this.numTelefono = numTelefono;
@@ -129,7 +115,7 @@ public class Cliente {
         return null;
     }
 
-    public static Cliente clienteBuscadoPorDireccion(String direccion, ArrayList<Cliente> listaClientes, HashMap<Integer, Cliente> mapaClientes) {
+    public static Cliente clienteBuscadoPorDireccion(String direccion, ArrayList<Cliente> listaClientes) {
         for (Cliente cliente : listaClientes) {
             if (cliente.getDireccion().equals(direccion)) {
                 return cliente;
@@ -138,21 +124,37 @@ public class Cliente {
         return null;
     }
 
-    public static void buscarClientePorID(Scanner sc, ArrayList<Cliente> listaClientes, HashMap<Integer, Cliente> mapaClientes) {
+    public static void buscarClientePorID(Scanner sc, HashMap<Integer, Cliente> mapaClientes) {
         System.out.println("Ingrese el ID del cliente a buscar: ");
         int id = sc.nextInt();
         sc.nextLine(); // Limpiar el buffer del scanner después de leer un entero
         Cliente cliente = mapaClientes.get(id);
         if (cliente != null) {
             System.out.println("¡Cliente encontrado!");
-            System.out.println("Nombre:" + cliente.getNombre() + "con el ID:" + cliente.getIdCliente());
-            System.out.println("Direccion':" + cliente.getDireccion());
-            System.out.println("Telefono:" + cliente.getNumTelefono());
-            System.out.println("Fecha de registro:" + cliente.getFechaRegistro());
-            System.out.println("Puntos de fidelidad:" + cliente.getPuntosFidelidad());
+            System.out.println("Nombre: " + cliente.getNombre() + " con el ID: " + cliente.getIdCliente());
+            System.out.println("Direccion: " + cliente.getDireccion());
+            System.out.println("Telefono: " + cliente.getNumTelefono());
+            System.out.println("Fecha de registro: " + cliente.getFechaRegistro());
+            System.out.println("Puntos de fidelidad: " + cliente.getPuntosFidelidad());
             sc.nextLine();
         } else {
             System.out.println("Cliente no encontrado");
         }
+    }
+
+    //Métodos asignarPuntosFidelidad y canjearPuntosFidelidad: Estos métodos se encargan de asignar y canjear puntos de fidelidad a un cliente.
+    // Se calcula el número de puntos a asignar o canjear según el precio de la venta y se actualizan los puntos de fidelidad del cliente en consecuencia.
+    // Además, se aplican descuentos en función de los puntos canjeados.
+    public static void GuardarPuntosFidelidad(Cliente cliente,int precioVenta){
+        cliente.setPuntosFidelidad((cliente.getPuntosFidelidad() + (precioVenta)));
+    }
+    public static void CanjearPuntosFidelidad(Cliente cliente,Venta venta){
+        int PuntosCanjeables=cliente.getPuntosFidelidad();
+        int PuntosNoCanjeados= cliente.getPuntosFidelidad()-PuntosCanjeables;
+        cliente.setPuntosFidelidad(PuntosNoCanjeados);
+        int Descuento=PuntosCanjeables/20;//Si tengo 200 puntos fidelidad se realiza un descuento de 5% (10 euros)
+        venta.setPrecio(venta.getPrecio()-Descuento);
+        System.out.println("Cantidad de puntos de fidelidad a canjear :"+PuntosCanjeables+" equivalentes a "+Descuento + " euros");
+        System.out.println("¡Puntos de fidelidad canjeados exitosamente!");
     }
 }

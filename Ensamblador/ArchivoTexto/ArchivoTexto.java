@@ -1,6 +1,10 @@
-import Ensamblador.Archivos;
-import Ensamblador.Libros;
-import Proyecto_Libreria.*;
+package Ensamblador.ArchivoTexto;
+
+import Ensamblador.*;
+import Ensamblador.TipoLibros.LibroAudio;
+import Ensamblador.TipoLibros.LibroElectronico;
+import Ensamblador.TipoLibros.LibroFisico;
+import Ensamblador.TipoLibros.LibroInfantil;
 
 import java.io.*;
 import java.util.*;

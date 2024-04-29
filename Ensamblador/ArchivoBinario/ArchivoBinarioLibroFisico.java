@@ -1,7 +1,6 @@
-package Ensamblador;
+package Ensamblador.ArchivoBinario;
 
-import Ensamblador.ArchivoBinario;
-import libros.LibroFisico;
+import Ensamblador.TipoLibros.LibroFisico;
 
 import java.io.*;
 import java.util.ArrayList;

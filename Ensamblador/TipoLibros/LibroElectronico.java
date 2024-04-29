@@ -1,4 +1,4 @@
-package Ensamblador;
+package Ensamblador.TipoLibros;
 
 import Ensamblador.Libros;
 

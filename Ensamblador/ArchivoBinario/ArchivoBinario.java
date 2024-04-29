@@ -1,4 +1,4 @@
-package Ensamblador;
+package Ensamblador.ArchivoBinario;
 
 import Ensamblador.Archivos;
 
