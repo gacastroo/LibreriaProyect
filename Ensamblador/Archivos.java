@@ -26,7 +26,8 @@ public class Archivos {
 
     @Override
     public String toString() {
-        return STR."Archivo{nombre='\{nombre}\{'\''}, extension='\{extension}\{'\''}, ruta='\{ruta}\{'\''}\{'}'}";
+        String s = "Arhivo nombre:" + nombre + "," +"extension = " + extension + ","+ "ruta = " + ruta;
+        return s;
     }
 
     public  ArrayList <Object> leerArchivo(ArrayList<Archivos> archivos) {

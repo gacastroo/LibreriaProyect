@@ -49,8 +49,6 @@ public class Ensamblador {
         String Nombre=sc.nextLine();
         for (Cliente clientes: clientes){
             if (clientes.getNombre().equals(Nombre)){
-
-
                 System.out.println("El cliente buscado es" + clientes.getNombre());
             }
         }
@@ -72,7 +70,7 @@ public class Ensamblador {
     public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
         //Modificar
     }
-    public void generarInforme(EnsambladorReportes reportes, Scanner scanner) {
+    public void generarInforme(EnsambladorReportes reportes, Scanner scanner) throws IllegalStateException {
         System.out.println("Elige una opcion para el reporte: ");
         System.out.println("Opcion 1: Generar reporte de clientes");
         System.out.println("Opcion 2: Generar reporte de libros");
@@ -90,7 +88,7 @@ public class Ensamblador {
                 reportes.generarReporteVentas();
                 break;
             default:
-                throw new IllegalStateException(STR."Unexpected value: \{o}");
+                System.out.println("Opcion incorrecta");
         }
     }
 

@@ -145,11 +145,11 @@ public class Cliente {
         Cliente cliente = mapaClientes.get(id);
         if (cliente != null) {
             System.out.println("¡Cliente encontrado!");
-            System.out.println(STR."Nombre: \{cliente.getNombre()} con el ID: \{cliente.getIdCliente()}");
-            System.out.println(STR."Direccion: \{cliente.getDireccion()}");
-            System.out.println(STR."Telefono: \{cliente.getNumTelefono()}");
-            System.out.println(STR."Fecha de registro: \{cliente.getFechaRegistro()}");
-            System.out.println(STR."Puntos de fidelidad: \{cliente.getPuntosFidelidad()}");
+            System.out.println("Nombre:" + cliente.getNombre() + "con el ID:" + cliente.getIdCliente());
+            System.out.println("Direccion':" + cliente.getDireccion());
+            System.out.println("Telefono:" + cliente.getNumTelefono());
+            System.out.println("Fecha de registro:" + cliente.getFechaRegistro());
+            System.out.println("Puntos de fidelidad:" + cliente.getPuntosFidelidad());
             sc.nextLine();
         } else {
             System.out.println("Cliente no encontrado");
