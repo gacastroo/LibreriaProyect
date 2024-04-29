@@ -26,14 +26,12 @@ public class EnsambladorVentas extends Ensamblador {
         return null;
     }
 
-    public static Ventas TotalVentas(List<Ventas> Ventas) {
+    public static String TotalVentas(List<Ventas> Ventas) {
         double TotalVentas = 0.0;
         for (Ventas ventas : Ventas) {
             TotalVentas += ventas.calcularTotal();
         }
-        ;
-        System.out.println(STR."El total de las ventas es: \{TotalVentas}");
-        //Está mal hecho, hay que arreglarlo
-        return null;
+        String V ="El total de las ventas es: " + TotalVentas;
+        return V;
     }
 }

@@ -52,7 +52,8 @@ public abstract class Libros implements Serializable {
 
     @Override
     public String toString() {
-        return STR."Libro{titulo='\{titulo}\{'\''}, autor='\{autor}\{'\''}, genero='\{genero}\{'\''}, precio=\{precio}\{'}'}";
+         String L="Libro: " +titulo+ "autor: " + autor+ "genero: " + genero+ "precio: " +precio;
+         return L;
     }
 
     //descuento se representa en por ciento

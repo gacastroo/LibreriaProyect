@@ -49,7 +49,9 @@ public class Ensamblador {
         String Nombre=sc.nextLine();
         for (Cliente clientes: clientes){
             if (clientes.getNombre().equals(Nombre)){
-                System.out.println(STR."El cliente buscado es\{clientes.getNombre()}");
+
+
+                System.out.println("El cliente buscado es" + clientes.getNombre());
             }
         }
 
