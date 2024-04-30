@@ -31,7 +31,7 @@ public class EnsambladorReportes extends Ensamblador {
         StringBuilder reporte = new StringBuilder();
         for (Venta venta : venta) {
             // Obtener el cliente de la venta actual
-            ClienteVentas cliente = venta.getClientes().getFirst(); // Supongo que solo hay un cliente por venta
+            ClienteVentas cliente = Venta.getCliente().getFirst(); // Supongo que solo hay un cliente por venta
             // Obtener el libro de la venta actual
             Libros libro = venta.getLibrosVendidos().getFirst(); // Supongo que solo se vende un libro por venta
             // Agregar detalles de la venta al reporte

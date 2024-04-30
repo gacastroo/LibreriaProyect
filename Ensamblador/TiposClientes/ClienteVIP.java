@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class ClienteVIP extends ClienteVentas {
     public ClienteVIP(String nombre, String direccion, String email, LocalDate parse, int numTelefono) {
-        super(nombre, direccion, email, numTelefono);
+        super(nombre, direccion, email, parse, numTelefono);
     }
     public static void accesoServicioPersonalizado() {
         // Asesoramiento personalizado

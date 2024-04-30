@@ -10,7 +10,7 @@ public class ClienteVentas {
 
     //Creación de las variables de la clase cliente.
     static String nombre;
-    String direccion;
+    static String direccion;
     String email;
     LocalDate fechaRegistro;
 
@@ -39,8 +39,8 @@ public class ClienteVentas {
     // atributo del grupo libros.
     //Constructor completo de la clase cliente.
     public ClienteVentas(String nombre, String direccion, String email, LocalDate fechaRegistro, int numTelefono) {
-        this.nombre = nombre;
-        this.direccion = direccion;
+        ClienteVentas.nombre = nombre;
+        ClienteVentas.direccion = direccion;
         this.email = email;
         this.fechaRegistro = fechaRegistro;
         this.numTelefono = numTelefono;
@@ -77,7 +77,7 @@ public class ClienteVentas {
     }
 
     public static void setDireccion(String direccion) {
-        this.direccion = direccion;
+        ClienteVentas.direccion = direccion;
     }
 
     public void setEmail(String email) {
@@ -109,7 +109,7 @@ public class ClienteVentas {
 
     public static ClienteVentas buscarClientePorNombre(String nombre, ArrayList<ClienteVentas> listaClientes) {
         for (ClienteVentas cliente : listaClientes) {
-            if (cliente.getNombre().equals(nombre)) {
+            if (getNombre().equals(nombre)) {
                 return cliente;
             }
         }
@@ -118,7 +118,7 @@ public class ClienteVentas {
 
     public static ClienteVentas clienteBuscadoPorDireccion(String direccion, ArrayList<ClienteVentas> listaClientes) {
         for (ClienteVentas cliente : listaClientes) {
-            if (cliente.getDireccion().equals(direccion)) {
+            if (getDireccion().equals(direccion)) {
                 return cliente;
             }
         }
@@ -132,8 +132,8 @@ public class ClienteVentas {
         ClienteVentas cliente = mapaClientes.get(id);
         if (cliente != null) {
             System.out.println("¡Cliente encontrado!");
-            System.out.println("Nombre: " + cliente.getNombre() + " con el ID: " + cliente.getIdCliente());
-            System.out.println("Direccion: " + cliente.getDireccion());
+            System.out.println("Nombre: " + getNombre() + " con el ID: " + cliente.getIdCliente());
+            System.out.println("Direccion: " + getDireccion());
             System.out.println("Telefono: " + cliente.getNumTelefono());
             System.out.println("Fecha de registro: " + cliente.getFechaRegistro());
             System.out.println("Puntos de fidelidad: " + cliente.getPuntosFidelidad());
@@ -154,11 +154,11 @@ public class ClienteVentas {
         int PuntosNoCanjeados= cliente.getPuntosFidelidad()-PuntosCanjeables;
         cliente.setPuntosFidelidad(PuntosNoCanjeados);
         int Descuento=PuntosCanjeables/20;//Si tengo 200 puntos fidelidad se realiza un descuento de 5% (10 euros)
-        venta.setPrecio(venta.getPrecio()-Descuento);
+        venta.setPrecio(Venta.getPrecio()-Descuento);
         System.out.println("Cantidad de puntos de fidelidad a canjear :"+PuntosCanjeables+" equivalentes a "+Descuento + " euros");
         System.out.println("¡Puntos de fidelidad canjeados exitosamente!");
     }
-    public class ClienteMayorista extends ClienteVentas {
+    public static class ClienteMayorista extends ClienteVentas {
         public ClienteMayorista(String nombre, String direccion, String email, LocalDate fechaRegistro, int numTelefono) {
             super(nombre, direccion, email, fechaRegistro, numTelefono);
         }
@@ -173,10 +173,10 @@ public class ClienteVentas {
         }
         public static int gestionarPedido(ClienteVentas cliente){
             int envio;
-            if(cliente.getDireccion().equals("Madrid")){
+            if(getDireccion().equals("Madrid")){
                 envio=3;
             }
-            else if(Objects.equals(cliente.getDireccion(), "España")){
+            else if(Objects.equals(getDireccion(), "España")){
                 envio=5;
             }
             else {
@@ -185,17 +185,17 @@ public class ClienteVentas {
             return envio;
         }
         public static double VerificarBonificacionMayorista(Venta venta){
-            double DescuentoMayorista= venta.getPrecio();
-            if((venta.getPrecio()<300)&&(venta.getPrecio()>=200)){
-                DescuentoMayorista= (int) (venta.getPrecio()*0.1);//10% de descuento si su compra esta entre 200 y 300
-            } else if((venta.getPrecio()>=300)&(venta.getPrecio()<500)){
-                DescuentoMayorista= (int) (venta.getPrecio()*0.15);//15% de descuento si su compra esta entre 300 y 500
-            }else if ((venta.getPrecio()>=500)&(venta.getPrecio()<800)){
-                DescuentoMayorista= (int) (venta.getPrecio()*0.2);//20% de descuento si su compra esta entre 500 y 800
+            double DescuentoMayorista= Venta.getPrecio();
+            if((Venta.getPrecio()<300)&&(Venta.getPrecio()>=200)){
+                DescuentoMayorista= (int) (Venta.getPrecio()*0.1);//10% de descuento si su compra esta entre 200 y 300
+            } else if((Venta.getPrecio()>=300)&(Venta.getPrecio()<500)){
+                DescuentoMayorista= (int) (Venta.getPrecio()*0.15);//15% de descuento si su compra esta entre 300 y 500
+            }else if ((Venta.getPrecio()>=500)&(Venta.getPrecio()<800)){
+                DescuentoMayorista= (int) (Venta.getPrecio()*0.2);//20% de descuento si su compra esta entre 500 y 800
             } else{ DescuentoMayorista=0;}
             System.out.println("Descuento mayorista aplicado exitosamente.");
-            venta.setPrecio(venta.getPrecio()-DescuentoMayorista);
-            return venta.getPrecio();
+            venta.setPrecio(Venta.getPrecio()-DescuentoMayorista);
+            return Venta.getPrecio();
         }
     }
 
