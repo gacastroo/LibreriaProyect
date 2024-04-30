@@ -8,7 +8,9 @@ import java.util.Scanner;
 public class Cliente {
 
     //Creación de las variables de la clase cliente.
-    String nombre, direccion, email;
+    static String nombre;
+    static String direccion;
+    String email;
     LocalDate fechaRegistro;
 
     int idCliente;
@@ -44,7 +46,7 @@ public class Cliente {
 
 
     //Getters y setters.
-    public String getNombre() {
+    public static String getNombre() {
         return nombre;
     }
 
@@ -56,7 +58,7 @@ public class Cliente {
         return numTelefono;
     }
 
-    public String getDireccion() {
+    public static String getDireccion() {
         return direccion;
     }
 

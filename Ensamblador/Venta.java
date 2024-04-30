@@ -63,7 +63,7 @@ public class Venta {
         Venta.libroVendidos = libroVendidos;
     }
 
-    public void setCliente(ClienteVentas cliente) { Venta.cliente = cliente; }
+    public void setCliente(ClienteVentas cliente) { Venta.clientev = cliente; }
 
     public static LocalDate getFechaVenta() {
         return fechaVenta;
@@ -73,14 +73,14 @@ public class Venta {
         return libroVendidos;
     }
 
-    public static List<ClienteVentas> getCliente() { return cliente;}
+    public static List<ClienteVentas> getCliente() { return getCliente();}
 
     public static LocalDate getFechaEntrega() {return FechaEntrega;}
 
     public void setFechaEntrega(LocalDate fechaEntrega) {FechaEntrega = fechaEntrega;}
 
     public void mostrarCliente() {
-        System.out.println(cliente.toString());
+        System.out.println(Cliente.getNombre());
     }
     public void mostrarLibrosVendidos(){
         for (Libros libroVendidos : libroVendidos){
@@ -105,14 +105,14 @@ public class Venta {
     }
 
     public void buscarClienteYMostrarDireccion(String nombreCliente) {
-        if (cliente != null && cliente.getNombre().equalsIgnoreCase(nombreCliente)) {
-            System.out.println("Dirección del cliente " + nombreCliente + ": " + cliente.getDireccion());
+        if (Cliente.getNombre() != null && Cliente.getNombre().equalsIgnoreCase(nombreCliente)) {
+            System.out.println("Dirección del cliente " + nombreCliente + ": " + Cliente.getDireccion());
         } else {
             System.out.println("Cliente no encontrado");
         }
     }
     public static void GuardarVenta(Scanner sc, ArrayList<Venta> listaVentas, HashMap<Integer, ClienteVentas> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
-        Venta venta = new Venta();
+        Venta venta = new Venta(sc,fechaVenta,libroVendidos,clientev);
         System.out.println("Ingrese el ID del cliente a buscar: ");
         int idCliente = sc.nextInt();
         sc.nextLine();

@@ -2,6 +2,7 @@ package Ensamblador;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Scanner;
 
 //subclase ensamblador :D
 public class EnsambladorVentas extends Ensamblador {
@@ -13,8 +14,8 @@ public class EnsambladorVentas extends Ensamblador {
     public static void add(Venta ventas) {
     }
 
-    public static Venta agregarVenta(LocalDate fechaVenta,List<Libros> librosVendidos , List<ClienteVentas> clientes) {
-        return new Venta();
+    public static Venta agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos , List<ClienteVentas> cliente) {
+        return new Venta(sc,fechaVenta,librosVendidos,cliente);
     }
 
     public static Venta BuscarVentaPorCliente(List<Venta> Ventas, List<ClienteVentas> Clientes) {
