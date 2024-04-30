@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class VentaOnline extends Venta {
 
-    public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, ClienteVentas cliente) {
+    public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, List<ClienteVentas> cliente) {
         super(sc, fechaVenta, libroVendidos, cliente);
     }
 

@@ -12,7 +12,7 @@ public class EnsambladorReportes extends Ensamblador {
         // Generar un reporte con información detallada sobre los clientes
         StringBuilder reporte = new StringBuilder();
         for (ClienteVentas cliente : clientes) {
-            reporte.append("Nombre: ").append(cliente.getNombre()).append(", Email: ").append(cliente.getEmail()).append(", Teléfono: ").append(cliente.getNumTelefono()).append("\n");
+            reporte.append("Nombre: ").append(ClienteVentas.getNombre()).append(", Email: ").append(cliente.getEmail()).append(", Teléfono: ").append(cliente.getNumTelefono()).append("\n");
         }
         return reporte.toString();
     }
@@ -33,12 +33,12 @@ public class EnsambladorReportes extends Ensamblador {
             // Obtener el cliente de la venta actual
             ClienteVentas cliente = Venta.getCliente().getFirst(); // Supongo que solo hay un cliente por venta
             // Obtener el libro de la venta actual
-            Libros libro = venta.getLibrosVendidos().getFirst(); // Supongo que solo se vende un libro por venta
+            Libros libro = Venta.getLibrosVendidos().getFirst(); // Supongo que solo se vende un libro por venta
             // Agregar detalles de la venta al reporte
-            reporte.append("Cliente: ").append(cliente.getNombre())
+            reporte.append("Cliente: ").append(ClienteVentas.getNombre())
                     .append(", Libro: ").append(Libros.getTitulo())
-                    .append(", Cantidad: ").append(venta.getLibrosVendidos().size()) // Aquí supongo que deseas mostrar la cantidad de libros vendidos
-                    .append(", Total: ").append(venta.calcularTotal())
+                    .append(", Cantidad: ").append(Venta.getLibrosVendidos().size()) // Aquí supongo que deseas mostrar la cantidad de libros vendidos
+                    .append(", Total: ").append(Venta.calcularTotal())
                     .append("\n");
         }
         return reporte.toString();

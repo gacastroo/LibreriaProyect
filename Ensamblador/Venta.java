@@ -17,18 +17,15 @@ public class Venta {
     static LocalDate fechaVenta;
     static LocalDate FechaEntrega;
     static List<Libros> libroVendidos;
-    static ClienteVentas cliente;
+    static List<ClienteVentas> clientev;
 
-    public Venta(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, ClienteVentas cliente) {
+    public Venta(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, List<ClienteVentas> cliente) {
         this.sc = sc;
         Venta.fechaVenta = fechaVenta;
         Venta.libroVendidos = libroVendidos;
-        Venta.cliente = cliente;
+        Venta.clientev = cliente;
     }
 
-    public Venta() {
-
-    }
 
     public void setIdVenta(int idVenta) {
         Venta.idVenta = idVenta;
@@ -76,7 +73,7 @@ public class Venta {
         return libroVendidos;
     }
 
-    public static ClienteVentas getCliente() { return cliente;}
+    public static List<ClienteVentas> getCliente() { return cliente;}
 
     public static LocalDate getFechaEntrega() {return FechaEntrega;}
 
@@ -92,7 +89,7 @@ public class Venta {
     }
     public String obtenerDireccionCliente2(ClienteVentas clientes) {
         if (clientes != null) {
-            return clientes.getDireccion(); // Devolver la dirección del cliente proporcionado
+            return ClienteVentas.getDireccion(); // Devolver la dirección del cliente proporcionado
         } else {
             return "Cliente no disponible";
         }
