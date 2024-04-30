@@ -30,7 +30,7 @@ public class Archivos {
         return s;
     }
 
-    public  ArrayList <Object> leerArchivo(ArrayList<Archivos> archivos) {
+    public  ArrayList <Object> leerArchivo(Object[] archivos) {
         File f;
         FileInputStream fe = null;
         ObjectInputStream objs = null;

@@ -1,5 +1,8 @@
 package Ensamblador;
 
+import Ensamblador.ArchivoBinario.ArchivoBinarioLibroAudio;
+import Ensamblador.TipoLibros.LibroAudio;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +51,8 @@ public class Ensamblador {
         System.out.println("Dame el nombre que quieres buscar: ");
         String Nombre=sc.nextLine();
         for (ClienteVentas clientes: clientes){
-            if (clientes.getNombre().equals(Nombre)){
-                System.out.println("El cliente buscado es" + clientes.getNombre());
+            if (ClienteVentas.getNombre().equals(Nombre)){
+                System.out.println("El cliente buscado es" + ClienteVentas.getNombre());
             }
         }
 
@@ -68,7 +71,8 @@ public class Ensamblador {
         //Modificar
     }
     public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
-        //Modificar
+        Object[] Archivo = new Object[0];
+        new Archivos().leerArchivo(Archivo);
     }
     public void generarInforme(EnsambladorReportes reportes, Scanner scanner) throws IllegalStateException {
         System.out.println("Elige una opcion para el reporte: ");

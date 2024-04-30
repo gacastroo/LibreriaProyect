@@ -63,7 +63,7 @@ public class Venta {
         Venta.libroVendidos = libroVendidos;
     }
 
-    public void setCliente(ClienteVentas cliente) { Venta.clientev = cliente; }
+    public void setCliente(List<ClienteVentas> clienteventa) { Venta.clientev = clienteventa; }
 
     public static LocalDate getFechaVenta() {
         return fechaVenta;
