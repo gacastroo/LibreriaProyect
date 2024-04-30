@@ -1,11 +1,11 @@
 package Ensamblador.TiposClientes;
 
-import Ensamblador.Cliente;
+import Ensamblador.ClienteVentas;
 import Ensamblador.Venta;
 
 import java.time.LocalDate;
 
-public class ClienteVIP extends Cliente {
+public class ClienteVIP extends ClienteVentas {
     public ClienteVIP(String nombre, String direccion, String email, LocalDate parse, int numTelefono) {
         super(nombre, direccion, email, numTelefono);
     }

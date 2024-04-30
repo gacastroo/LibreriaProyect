@@ -1,6 +1,6 @@
 package Ensamblador.TiposClientes;
 
-import Ensamblador.Cliente;
+import Ensamblador.ClienteVentas;
 import Ensamblador.Venta;
 
 import java.time.LocalDate;
@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class ClienteOnline extends Cliente {
+public class ClienteOnline extends ClienteVentas {
 
     public ClienteOnline(String nombre, String direccion, String email , LocalDate parse, int numTelefono) {
         super(nombre, direccion, email, numTelefono);
@@ -17,7 +17,7 @@ public class ClienteOnline extends Cliente {
 
     // Método utilizado para realizar el seguimiento de un envío
 
-    public static void seguimientoEnvio(Scanner sc, HashMap<Integer, Cliente> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
+    public static void seguimientoEnvio(Scanner sc, HashMap<Integer, ClienteVentas> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
         System.out.println("Ingrese el ID de la venta a buscar: ");
         int idVenta = sc.nextInt();
         sc.nextLine();
@@ -32,14 +32,14 @@ public class ClienteOnline extends Cliente {
         }
 
         if (ventaEncontrada != null) {
-            System.out.println(ventaEncontrada.ventaEncontrada(ventaEncontrada));
+            System.out.println(/*ventaEncontrada -> ventaCliente*/);
             System.out.println("""
                     ¿Desea consultar el estado del envio o cancelar un envío?\s
                     1. Consultar estado
                     2. Cancelar envío""");
             int x = sc.nextInt();
             if (x == 1) {
-                System.out.println(ventaEncontrada.obtenerEstadoEnvio(ventaEncontrada));
+                System.out.println(/*ObtenerEstadoEnvio -> ventaCliente*/);
             }
             if (x == 2) {
                 System.out.println("Cancelando el envío.");
@@ -56,6 +56,5 @@ public class ClienteOnline extends Cliente {
         System.out.println("Se ha devuelto el importe completo de la compra.");
     }
 }
-
 
 

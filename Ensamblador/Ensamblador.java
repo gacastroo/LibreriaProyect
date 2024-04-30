@@ -6,27 +6,27 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Ensamblador {
-     ArrayList<Cliente> clientes;
+     ArrayList<ClienteVentas> clientes;
      ArrayList<Libros> libros;
      ArrayList<Archivos> archivos;
-    ArrayList<Ventas> venta;
+    ArrayList<Venta> venta;
 
 
 
-    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
-        this.clientes = (ArrayList<Cliente>) clientes;
+    public Ensamblador(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos) {
+        this.clientes = (ArrayList<ClienteVentas>) clientes;
         this.libros = (ArrayList<Libros>) libros;
         this.archivos = (ArrayList<Archivos>) archivos;
     }
 
 
-    public void add(Cliente cliente)
+    public void add(ClienteVentas cliente)
     {
-        Cliente.add(cliente);
+        this.clientes.add(cliente);
     }
-    public static void remove(Cliente cliente)
+    public void remove(ClienteVentas cliente)
     {
-        Cliente.remove(cliente);
+        this.clientes.remove(cliente);
     }
 
 
@@ -47,7 +47,7 @@ public class Ensamblador {
     public void buscarClientePorNombre(Scanner sc){
         System.out.println("Dame el nombre que quieres buscar: ");
         String Nombre=sc.nextLine();
-        for (Cliente clientes: clientes){
+        for (ClienteVentas clientes: clientes){
             if (clientes.getNombre().equals(Nombre)){
                 System.out.println("El cliente buscado es" + clientes.getNombre());
             }

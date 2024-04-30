@@ -8,6 +8,8 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
+import static Ensamblador.Venta.getCliente;
 /*
 public class ArchivoVentas extends Archivo{
     List<String> registro = new ArrayList<>();
@@ -60,13 +62,13 @@ public class ArchivoVentas extends Archivos {
     private Object mapper;
 
 
-    public void guardarVentas(List<Ventas> ventas) {
+    public void guardarVentas(List<Venta> ventas) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))) {
             bw.write("transaccion,");
             bw.write("fecha,cliente,librosVendidos,total,idVenta,descuento,precio,fechaEntrega\n");
 
-            for (Ventas venta : ventas) {
-                String datos = Venta.getFechaVenta().toString() + "," + Venta.getClientes().toString() + "," + Venta.getLibrosVendidos().toString() + "," + Venta.calcularTotal() + "," + Venta.getIdVenta()+","+Venta.getDescuento()+","+Venta.getPrecio()+","+Venta.getFechaEntrega();
+            for (Venta venta : ventas) {
+                String datos = Venta.getFechaVenta().toString() + "," + getCliente().toString() + "," + Venta.getLibrosVendidos().toString() + "," + Venta.calcularTotal() + "," + Venta.getIdVenta()+","+Venta.getDescuento()+","+Venta.getPrecio()+","+Venta.getFechaEntrega();
                 bw.write(datos);
                 bw.newLine();
                 registro.add(datos);
@@ -79,8 +81,8 @@ public class ArchivoVentas extends Archivos {
 
 
 
-    public List<Ventas> cargarVentas() {
-        List<Ventas> ventas = new ArrayList<>();
+    public List<Venta> cargarVentas() {
+        List<Venta> ventas = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(super.getRuta()))) {
             br.readLine();
@@ -90,7 +92,7 @@ public class ArchivoVentas extends Archivos {
                 String[] datosVenta = linea.split(",");
                 if (datosVenta.length >= 8) {
                     LocalDate fechaVenta = LocalDate.parse(datosVenta[0].trim());
-                    List<Cliente> clientes = mapper.datosVenta(datosVenta[1].trim());
+                    //List<Cliente> clientes = mapper.datosVenta(datosVenta[1].trim());
                     String librosVendidos = datosVenta[2].trim();
                     Double total = Double.valueOf(datosVenta[3].trim());
                     int idVenta = Integer.parseInt(datosVenta[4].trim());
@@ -101,8 +103,8 @@ public class ArchivoVentas extends Archivos {
 
                     //Venta venta= new Venta( fechaVenta,  clientes,  librosVendidos,  total, idVenta,descuento,precio,fechaEntrega);
 
-                    Ventas ventas= new Ventas(fechaVenta,  libroVendidos,  clientes);
-                    ventas.add(ventas);
+                    Venta venta = new Venta();
+                    ventas.add(venta);
                 } else {
                     System.out.println("No hay mas ventas");
                 }

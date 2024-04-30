@@ -1,11 +1,11 @@
 package Ensamblador.TiposClientes;
 
-import Ensamblador.Cliente;
+import Ensamblador.ClienteVentas;
 import Ensamblador.Venta;
 
 import java.time.LocalDate;
 
-public class ClienteRegular extends Cliente {
+public class ClienteRegular extends ClienteVentas {
     int tipoCliente = 1;
 
     public ClienteRegular(String nombre, String direccion, String email, LocalDate parse, int numTelefono) {

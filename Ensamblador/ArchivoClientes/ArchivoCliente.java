@@ -1,7 +1,7 @@
 package Ensamblador.ArchivoClientes;
 
 import Ensamblador.Archivos;
-import Ensamblador.Cliente;
+import Ensamblador.ClienteVentas;
 import Ensamblador.TiposClientes.*;
 
 import java.io.*;
@@ -12,9 +12,9 @@ import java.util.*;
 public class ArchivoCliente extends Archivos {
 
     List <String> registro = new ArrayList<>();
-    void guardarClientes(List<Cliente> clientes) {
+    void guardarClientes(List<ClienteVentas> clientes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))){
-            for (Cliente cliente : clientes) {
+            for (ClienteVentas cliente : clientes) {
                 switch (cliente.getClass().getSimpleName()) {
 
                     case "ClienteInternacional" -> {
@@ -81,8 +81,8 @@ public class ArchivoCliente extends Archivos {
         }
     }
 
-    public List<Cliente> cargar() {
-        List<Cliente> clientes = new ArrayList<>();
+    public List<ClienteVentas> cargar() {
+        List<ClienteVentas> clientes = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(super.getRuta()))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -95,15 +95,15 @@ public class ArchivoCliente extends Archivos {
                     String direccion = datosCliente[2].trim();
                     String email = datosCliente[3].trim();
 
-                    Cliente cliente;
+                    ClienteVentas cliente;
 
                     switch (tipoCliente) {
                         case "ClientesInternacional":
 
                             cliente = new ClienteInternacional(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
                             // Realizar acciones específicas para clientes internacionales
-                            ((ClienteInternacional) cliente).calcularCostoEnvioInternacional();
-                            ((ClienteInternacional) cliente).gestionarAduanas();
+                            //((ClienteInternacional) cliente).calcularCostoEnvioInternacional();
+                            //((ClienteInternacional) cliente).gestionarAduanas();
                             break;
                         case "ClientesMayorista":
                             cliente = new ClienteMayorista(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
