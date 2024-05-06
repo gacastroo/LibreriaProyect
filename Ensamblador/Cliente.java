@@ -148,7 +148,7 @@ public class Cliente {
     public static void GuardarPuntosFidelidad(Cliente cliente,int precioVenta){
         cliente.setPuntosFidelidad((cliente.getPuntosFidelidad() + (precioVenta)));
     }
-    public static void CanjearPuntosFidelidad(Cliente cliente,Venta venta){
+    public static void CanjearPuntosFidelidad(Cliente cliente, Ventas venta){
         int PuntosCanjeables=cliente.getPuntosFidelidad();
         int PuntosNoCanjeados= cliente.getPuntosFidelidad()-PuntosCanjeables;
         cliente.setPuntosFidelidad(PuntosNoCanjeados);

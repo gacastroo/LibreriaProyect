@@ -1,7 +1,7 @@
 package Ensamblador.TiposClientes;
 
 import Ensamblador.Cliente;
-import Ensamblador.Venta;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 
@@ -25,7 +25,7 @@ public class ClienteVIP extends Cliente {
         // Invitaciones a eventos exclusivos
         System.out.println("Proporcionando acceso a eventos exclusivos para el cliente VIP.");
     }
-    public static int VerificarBonificacionVIP(Venta venta){ //Método aplicarDescuentoVIP renombrado a VerificarBonificacionVIP
+    public static int VerificarBonificacionVIP(Ventas venta){ //Método aplicarDescuentoVIP renombrado a VerificarBonificacionVIP
         int DecuentoVIP =(int )(venta.getPrecio()*0.15);
         venta.setPrecio(venta.getPrecio()-DecuentoVIP);
         System.out.println("Descuento VIP aplicado exitosamente");

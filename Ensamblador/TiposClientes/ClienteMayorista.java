@@ -1,7 +1,7 @@
 package Ensamblador.TiposClientes;
 
 import Ensamblador.Cliente;
-import Ensamblador.Venta;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 
@@ -18,7 +18,7 @@ public class ClienteMayorista extends Cliente {
         System.out.println("Confirmando pedido con el cliente mayorista...");
         System.out.println("Pedido gestionado exitosamente para el cliente mayorista.");
     }
-    public static int VerificarBonificacionMayorista(Venta venta){
+    public static int VerificarBonificacionMayorista(Ventas venta){
         int DescuentoMayorista= (int) venta.getPrecio();
         if((venta.getPrecio()<300)&&(venta.getPrecio()>=200)){
             DescuentoMayorista= (int) (venta.getPrecio()*0.1);//10% de descuento si su compra esta entre 200 y 300

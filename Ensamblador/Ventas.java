@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.*;
 
 
-public class Venta {
+public class Ventas {
     Scanner sc = new Scanner(System.in);
     static double descuento;
     static int idVenta;
@@ -20,7 +20,7 @@ public class Venta {
     static List<Libros> libroVendidos;
     static List<Cliente> clientes;
 
-    public Venta(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, List<Cliente> clientes) {
+    public Ventas() {
         this.sc = sc;
         this.fechaVenta = fechaVenta;
         this.libroVendidos = libroVendidos;
@@ -132,8 +132,8 @@ public class Venta {
             System.out.println("Cliente no encontrado");
         }
     }
-    public static void GuardarVenta(Scanner sc, ArrayList<Venta> listaVentas, HashMap<Integer, Cliente> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
-        Venta venta = new Venta();
+    public static void GuardarVenta(Scanner sc, ArrayList<Ventas> listaVentas, HashMap<Integer, Cliente> mapaClientes, HashMap<Ventas, Integer> mapaVentas) {
+        Ventas venta = new Ventas();
         System.out.println("Ingrese el ID del cliente a buscar: ");
         int idCliente = sc.nextInt();
         sc.nextLine();
@@ -185,7 +185,7 @@ public class Venta {
         }
 
     }
-    public static void Descuento(Cliente cliente,Venta venta) {
+    public static void Descuento(Cliente cliente, Ventas venta) {
         switch (cliente.getTipoCliente()){
             case 1 ->{
                 ClienteRegular.VerificarBonificacionRegular(venta);
@@ -203,7 +203,7 @@ public class Venta {
         }
     }
 
-    public static void CalcularEnvio(Scanner sc,Venta venta,Cliente cliente){
+    public static void CalcularEnvio(Scanner sc, Ventas venta, Cliente cliente){
         System.out.println("Indique la region del envio:"+
                 "\n1)Africa"+
                 "\n2)America" +

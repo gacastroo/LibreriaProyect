@@ -1,7 +1,7 @@
 package Ensamblador.TiposClientes;
 
 import Ensamblador.Cliente;
-import Ensamblador.Venta;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -17,14 +17,14 @@ public class ClienteOnline extends Cliente {
 
     // Método utilizado para realizar el seguimiento de un envío
 
-    public static void seguimientoEnvio(Scanner sc, HashMap<Integer, Cliente> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
+    public static void seguimientoEnvio(Scanner sc, HashMap<Integer, Cliente> mapaClientes, HashMap<Ventas, Integer> mapaVentas) {
         System.out.println("Ingrese el ID de la venta a buscar: ");
         int idVenta = sc.nextInt();
         sc.nextLine();
 
         // Buscamos la venta en el mapa de ventas
-        Venta ventaEncontrada = null;
-        for (Map.Entry<Venta, Integer> entry : mapaVentas.entrySet()) {
+        Ventas ventaEncontrada = null;
+        for (Map.Entry<Ventas, Integer> entry : mapaVentas.entrySet()) {
             if (entry.getKey().getIdVenta() == idVenta) {
                 ventaEncontrada = entry.getKey();
                 break;
@@ -50,7 +50,7 @@ public class ClienteOnline extends Cliente {
         }
     }
 
-    public static void GestionarDevolucion(Venta ventaEncontrada) {
+    public static void GestionarDevolucion(Ventas ventaEncontrada) {
         ventaEncontrada.setPrecio(0);
         ventaEncontrada.setFechaEntrega(null);
         System.out.println("Se ha devuelto el importe completo de la compra.");

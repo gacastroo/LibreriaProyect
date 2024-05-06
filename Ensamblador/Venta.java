@@ -30,12 +30,12 @@ public class VentaCliente {
     public String toString() {
         return "ID de venta: " + idVenta + "\n" + "Precio: " + precio;
     }
-    public String ventaEncontrada(Venta venta) {
+    public String ventaEncontrada(Ventas venta) {
         return "Venta:" + idVenta+
                 "\n"+ "Fecha de registro: " +  FechaRegistro+
                 "\nFecha de envio esperada: " +FechaEntrega;
     }
-    public String obtenerEstadoEnvio(Venta venta) {
+    public String obtenerEstadoEnvio(Ventas venta) {
         //Indicamos la fecha de entrega como la fecha de hoy + 7 dias.
         LocalDate fecha_actual = LocalDate.now();
         // Comprobar si la fecha actual es posterior a la fecha de registro
