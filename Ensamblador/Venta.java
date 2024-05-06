@@ -39,7 +39,7 @@ public class VentaCliente {
         //Indicamos la fecha de entrega como la fecha de hoy + 7 dias.
         LocalDate fecha_actual = LocalDate.now();
         // Comprobar si la fecha actual es posterior a la fecha de registro
-        if (fecha_actual.isBefore(venta.getFechaRegistro())) {
+        if (fecha_actual.isBefore(venta.getFechaRegistroA())) {
             // Comparar la fecha actual con la fecha de entrega esperada
             if (fecha_actual.isBefore(venta.getFechaEntrega())) {
                 return "Pendiente de entrega";
