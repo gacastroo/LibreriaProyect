@@ -1,5 +1,5 @@
 package Ensamblador;
-
+import Ensamblador.Ventas;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -149,12 +149,12 @@ public class ClienteVentas {
     public static void GuardarPuntosFidelidad(ClienteVentas cliente, int precioVenta){
         cliente.setPuntosFidelidad((cliente.getPuntosFidelidad() + (precioVenta)));
     }
-    public static void CanjearPuntosFidelidad(ClienteVentas cliente, Venta venta){
+    public static void CanjearPuntosFidelidad(ClienteVentas cliente, Ventas venta){
         int PuntosCanjeables=cliente.getPuntosFidelidad();
         int PuntosNoCanjeados= cliente.getPuntosFidelidad()-PuntosCanjeables;
         cliente.setPuntosFidelidad(PuntosNoCanjeados);
         int Descuento=PuntosCanjeables/20;//Si tengo 200 puntos fidelidad se realiza un descuento de 5% (10 euros)
-        venta.setPrecio(Venta.getPrecio()-Descuento);
+        venta.setPrecio(venta.getPrecio()-Descuento);
         System.out.println("Cantidad de puntos de fidelidad a canjear :"+PuntosCanjeables+" equivalentes a "+Descuento + " euros");
         System.out.println("¡Puntos de fidelidad canjeados exitosamente!");
     }
@@ -184,18 +184,18 @@ public class ClienteVentas {
             }
             return envio;
         }
-        public static double VerificarBonificacionMayorista(Venta venta){
-            double DescuentoMayorista= Venta.getPrecio();
-            if((Venta.getPrecio()<300)&&(Venta.getPrecio()>=200)){
-                DescuentoMayorista= (int) (Venta.getPrecio()*0.1);//10% de descuento si su compra esta entre 200 y 300
-            } else if((Venta.getPrecio()>=300)&(Venta.getPrecio()<500)){
-                DescuentoMayorista= (int) (Venta.getPrecio()*0.15);//15% de descuento si su compra esta entre 300 y 500
-            }else if ((Venta.getPrecio()>=500)&(Venta.getPrecio()<800)){
-                DescuentoMayorista= (int) (Venta.getPrecio()*0.2);//20% de descuento si su compra esta entre 500 y 800
+        public double VerificarBonificacionMayorista(Ventas venta){
+            double DescuentoMayorista= venta.getPrecio();
+            if((venta.getPrecio()<300)&&(venta.getPrecio()>=200)){
+                DescuentoMayorista= (int) (venta.getPrecio()*0.1);//10% de descuento si su compra esta entre 200 y 300
+            } else if((venta.getPrecio()>=300)&(venta.getPrecio()<500)){
+                DescuentoMayorista= (int) (venta.getPrecio()*0.15);//15% de descuento si su compra esta entre 300 y 500
+            }else if ((venta.getPrecio()>=500)&(venta.getPrecio()<800)){
+                DescuentoMayorista= (int) (venta.getPrecio()*0.2);//20% de descuento si su compra esta entre 500 y 800
             } else{ DescuentoMayorista=0;}
             System.out.println("Descuento mayorista aplicado exitosamente.");
-            venta.setPrecio(Venta.getPrecio()-DescuentoMayorista);
-            return Venta.getPrecio();
+            venta.setPrecio(venta.getPrecio()-DescuentoMayorista);
+            return venta.getPrecio();
         }
     }
 

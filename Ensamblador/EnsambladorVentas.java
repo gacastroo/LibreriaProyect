@@ -4,33 +4,34 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
+
 //subclase ensamblador :D
 public class EnsambladorVentas extends Ensamblador {
 
-    public EnsambladorVentas(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos, List<Venta> ventas) {
+    public EnsambladorVentas(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
         super(clientes, libros, archivos);
     }
 
-    public static void add(Venta ventas) {
+    public static void add(Ventas ventas) {
     }
 
-    public static Venta agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos , List<ClienteVentas> cliente) {
-        return new Venta(sc,fechaVenta,librosVendidos,cliente);
+    public static Ventas agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos , List<ClienteVentas> clientes) {
+        return new Ventas(sc,fechaVenta,librosVendidos,clientes);
     }
 
-    public static Venta BuscarVentaPorCliente(List<Venta> Ventas, List<ClienteVentas> Clientes) {
+    public static Ventas BuscarVentaPorCliente(List<Ventas> Ventas, List<ClienteVentas> Clientes) {
         return null;
     }
 
-    public static Venta BuscarVentasPorLibro(List<Libros> libros) {
+    public static Ventas BuscarVentasPorLibro(List<Libros> libros) {
         System.out.println("Que libro quieres consultar?");
         return null;
     }
 
-    public static String TotalVentas(List<Venta> Ventas) {
+    public static String TotalVentas(List<Ventas> Ventas) {
         double TotalVentas = 0.0;
-        for (Venta ventas : Ventas) {
-            TotalVentas += Venta.calcularTotal();
+        for (Ventas venta : Ventas) {
+            TotalVentas += venta.calcularTotal();
         }
         String V ="El total de las ventas es: " + TotalVentas;
         return V;

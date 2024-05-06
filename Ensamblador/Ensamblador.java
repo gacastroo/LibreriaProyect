@@ -9,7 +9,7 @@ public class Ensamblador {
      ArrayList<ClienteVentas> clientes;
      ArrayList<Libros> libros;
      ArrayList<Archivos> archivos;
-    ArrayList<Venta> venta;
+    ArrayList<Ventas> venta;
 
 
 

@@ -1,14 +1,14 @@
-package Ensamblador.Ventas;
+package Ensamblador.Ventass;
 
 import Ensamblador.Cliente;
 import Ensamblador.Libros;
-import Ensamblador.Venta;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class VentaPresencial extends Venta {
+public class VentaPresencial extends Ventas {
 
     Vendedor vendedor;
 
@@ -28,10 +28,10 @@ public class VentaPresencial extends Venta {
         System.out.println("El vendedor ha sido introducido con éxito");
     }
 
-    public void GenerarFactura(Venta venta, Cliente cliente){
+    public void GenerarFactura(Ventas venta, Cliente cliente){
 
         System.out.println("======= Factura =======");
-        System.out.println("Fecha de venta: " + getFechaVenta());
+        System.out.println("Fecha de venta: " + getFechaVentas());
         System.out.println("Nombre del cliente: " + cliente.getNombre());
         System.out.println("Nombre del vendedor: " + vendedor.getNombre());
         System.out.println("Libros vendidos con su precio:");

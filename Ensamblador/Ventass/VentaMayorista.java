@@ -1,14 +1,14 @@
-package Ensamblador.Ventas;
+package Ensamblador.Ventass;
 
 import Ensamblador.Libros;
 import Ensamblador.Cliente;
-import Ensamblador.Venta;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class VentaMayorista extends Venta {
+public class VentaMayorista extends Ventas {
 
     public VentaMayorista(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
         super(sc, fechaVenta, libroVendidos, cliente);
@@ -16,7 +16,7 @@ public class VentaMayorista extends Venta {
     public double obtenerDescuentoMayorista() {
         return VentaMayorista.DescuentoDeClienteMayorista(this);
     }
-    public static double DescuentoDeClienteMayorista (Venta venta){
+    public static double DescuentoDeClienteMayorista(Ventas venta){
         venta.setDescuento(venta.getPrecio());
         if((venta.getPrecio()<300)&&(venta.getPrecio()>=200)){
             venta.setDescuento(venta.getPrecio()*0.1); //10% de descuento si su compra esta entre 200 y 300

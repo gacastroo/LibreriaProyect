@@ -14,9 +14,9 @@ public class Ventas {
     Scanner sc = new Scanner(System.in);
     double descuento;
     int idVenta;
-    double Precio;
+    double precio;
     LocalDate fechaVenta;
-    LocalDate FechaEntrega;
+    LocalDate fechaEntrega;
     List<Libros> libroVendidos;
     Cliente cliente;
 
@@ -56,11 +56,11 @@ public class Ventas {
     }
 
     public double getPrecio() {
-        return Precio;
+        return precio;
     }
 
     public void setPrecio(double precio) {
-        Precio = precio;
+        precio = precio;
     }
 
     public void setFechaVenta(LocalDate fechaVenta) {
@@ -87,9 +87,9 @@ public class Ventas {
 
     public Cliente getCliente() { return cliente;}
 
-    public LocalDate getFechaEntrega() {return FechaEntrega;}
+    public LocalDate getFechaEntrega() {return fechaEntrega;}
 
-    public void setFechaEntrega(LocalDate fechaEntrega) {FechaEntrega = fechaEntrega;}
+    public void setFechaEntrega(LocalDate fechaEntrega) {fechaEntrega = fechaEntrega;}
 
     public void mostrarCliente() {
         System.out.println(cliente.toString());
@@ -263,4 +263,19 @@ public class Ventas {
     }
 
 
+    public boolean obtenerEstadoEnvio(Ventas ventaEncontrada) {
+        return false;
+    }
+
+    public boolean ventaEncontrada(Ventas ventaEncontrada) {
+        return false;
+    }
+
+    public Object getClientes() {
+        return cliente;
+    }
+
+    public Object getFechaVenta() {
+        return fechaVenta;
+    }
 }

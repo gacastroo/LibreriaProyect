@@ -1,11 +1,5 @@
-package Ensamblador.Ventas;
+package Ensamblador.Ventass;
 
-import java.time.LocalDate;
-import java.util.Objects;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
 public class Vendedor {
     private String nombre;
     private String apellido;

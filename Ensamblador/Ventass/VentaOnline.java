@@ -1,14 +1,13 @@
-package Ensamblador.Ventas;
+package Ensamblador.Ventass;
 
 import Ensamblador.Cliente;
 import Ensamblador.Libros;
-import Ensamblador.Venta;
-
+import Ensamblador.Ventas;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class VentaOnline extends Venta {
+public class VentaOnline extends Ventas {
 
     public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
         super(sc, fechaVenta, libroVendidos, cliente);
