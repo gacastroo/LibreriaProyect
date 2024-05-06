@@ -1,32 +1,35 @@
 package Ensamblador;
 
+import Ensamblador.ArchivoBinario.ArchivoBinarioLibroAudio;
+import Ensamblador.TipoLibros.LibroAudio;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Ensamblador {
-     ArrayList<Cliente> clientes;
+     ArrayList<ClienteVentas> clientes;
      ArrayList<Libros> libros;
      ArrayList<Archivos> archivos;
-    ArrayList<Ventas> venta;
+    ArrayList<Venta> venta;
 
 
 
-    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
-        this.clientes = (ArrayList<Cliente>) clientes;
+    public Ensamblador(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos) {
+        this.clientes = (ArrayList<ClienteVentas>) clientes;
         this.libros = (ArrayList<Libros>) libros;
         this.archivos = (ArrayList<Archivos>) archivos;
     }
 
 
-    public void add(Cliente cliente)
+    public void add(ClienteVentas cliente)
     {
-        Cliente.add(cliente);
+        this.clientes.add(cliente);
     }
-    public static void remove(Cliente cliente)
+    public void remove(ClienteVentas cliente)
     {
-        Cliente.remove(cliente);
+        this.clientes.remove(cliente);
     }
 
 
@@ -47,9 +50,9 @@ public class Ensamblador {
     public void buscarClientePorNombre(Scanner sc){
         System.out.println("Dame el nombre que quieres buscar: ");
         String Nombre=sc.nextLine();
-        for (Cliente clientes: clientes){
-            if (clientes.getNombre().equals(Nombre)){
-                System.out.println("El cliente buscado es" + clientes.getNombre());
+        for (ClienteVentas clientes: clientes){
+            if (ClienteVentas.getNombre().equals(Nombre)){
+                System.out.println("El cliente buscado es" + ClienteVentas.getNombre());
             }
         }
 
@@ -68,7 +71,8 @@ public class Ensamblador {
         //Modificar
     }
     public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
-        //Modificar
+        Object[] Archivo = new Object[0];
+        new Archivos().leerArchivo(Archivo);
     }
     public void generarInforme(EnsambladorReportes reportes, Scanner scanner) throws IllegalStateException {
         System.out.println("Elige una opcion para el reporte: ");

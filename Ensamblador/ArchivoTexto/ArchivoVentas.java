@@ -2,7 +2,7 @@ package Ensamblador.ArchivoTexto;
 
 import Ensamblador.Archivos;
 import Ensamblador.Libros;
-import Ensamblador.Ventas;
+import Ensamblador.Venta;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -66,7 +66,7 @@ public class ArchivoVentas extends Archivos {
             bw.write("fecha,cliente,librosVendidos,total,idVenta,descuento,precio,fechaEntrega\n");
 
             for (Ventas venta : ventas) {
-                String datos = Ventas.getFechaVenta().toString() + "," + Ventas.getClientes().toString() + "," + Ventas.getLibrosVendidos().toString() + "," + Ventas.calcularTotal() + "," + Ventas.getIdVenta()+","+ Ventas.getDescuento()+","+ Ventas.getPrecio()+","+ Ventas.getFechaEntrega();
+                String datos = Venta.getFechaVenta().toString() + "," + Venta.getClientes().toString() + "," + Venta.getLibrosVendidos().toString() + "," + Venta.calcularTotal() + "," + Venta.getIdVenta()+","+Venta.getDescuento()+","+Venta.getPrecio()+","+Venta.getFechaEntrega();
                 bw.write(datos);
                 bw.newLine();
                 registro.add(datos);
