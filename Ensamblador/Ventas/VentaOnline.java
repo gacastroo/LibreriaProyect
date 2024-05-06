@@ -1,6 +1,6 @@
 package Ensamblador.Ventas;
+
 import Ensamblador.Cliente;
-import Ensamblador.ClienteVentas;
 import Ensamblador.Libros;
 import Ensamblador.Venta;
 
@@ -10,34 +10,33 @@ import java.util.Scanner;
 
 public class VentaOnline extends Venta {
 
-    public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, List<ClienteVentas> cliente) {
+    public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
         super(sc, fechaVenta, libroVendidos, cliente);
     }
 
-    public void BuscarClienteYMostrarDireccion(String nombreCliente) {
-        if (ClienteVentas.getNombre().equalsIgnoreCase(nombreCliente)) {
-            System.out.println("Dirección del cliente " + nombreCliente + ": " + ClienteVentas.getDireccion());
+    public void BuscarClienteYMostrarDireccion(String nombreCliente, Cliente cliente) {
+        if (cliente != null && cliente.getNombre().equalsIgnoreCase(nombreCliente)) {
+            System.out.println("Dirección del cliente " + nombreCliente + ": " + cliente.getDireccion());
         } else {
             System.out.println("Cliente no encontrado o nulo");
         }
     }
 
-    public void setDireccionEnvioCliente(String nuevaDireccionEnvio) {
-        if (nuevaDireccionEnvio != null) {
-            ClienteVentas.setDireccion(nuevaDireccionEnvio);
-            System.out.println("Dirección de envío del cliente " + ClienteVentas.getNombre() + " actualizada correctamente.");
+    public void setDireccionEnvioCliente(String nuevaDireccionEnvio, Cliente cliente) {
+        if (cliente != null) {
+            cliente.setDireccion(nuevaDireccionEnvio);
+            System.out.println("Dirección de envío del cliente " + cliente.getNombre() + " actualizada correctamente.");
         } else {
             System.out.println("Cliente no encontrado");
         }
     }
 
-    public void calcularCostoDeEnvio() {
+    public void calcularCostoDeEnvio(Cliente cliente) {
         // Este método calculará el costo de envío dependiendo del país del cliente que tengamos en esta venta
-
         double costoEnvio;
 
-        if (costoEnvio != null) {
-            String direccionCliente = ClienteVentas.getDireccion().toLowerCase();
+        if (cliente != null) {
+            String direccionCliente = cliente.getDireccion().toLowerCase();
 
             if (direccionCliente.contains("españa")) {
                 costoEnvio = 5.0;
@@ -48,7 +47,7 @@ public class VentaOnline extends Venta {
                 costoEnvio = 15.0;
             }
 
-            System.out.println("El costo de envío para " + ClienteVentas.getNombre() + " es: " + costoEnvio + "€");
+            System.out.println("El costo de envío para " + cliente.getNombre() + " es: " + costoEnvio + "€");
         } else {
             System.out.println("Cliente no encontrado");
         }

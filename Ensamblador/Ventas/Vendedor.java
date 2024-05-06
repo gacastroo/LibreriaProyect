@@ -1,4 +1,5 @@
-package Ensamblador;
+package Ensamblador.Ventas;
+
 import java.time.LocalDate;
 import java.util.Objects;
 import java.time.LocalDate;

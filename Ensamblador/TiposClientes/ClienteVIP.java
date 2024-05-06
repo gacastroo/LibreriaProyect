@@ -1,7 +1,6 @@
 package Ensamblador.TiposClientes;
 
 import Ensamblador.Cliente;
-import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 
