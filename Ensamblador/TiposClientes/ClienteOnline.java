@@ -1,6 +1,7 @@
 package Ensamblador.TiposClientes;
 
 import Ensamblador.Cliente;
+import Ensamblador.Ventas;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -24,7 +25,7 @@ public class ClienteOnline extends Cliente {
         // Buscamos la venta en el mapa de ventas
         Ventas ventaEncontrada = null;
         for (Map.Entry<Ventas, Integer> entry : mapaVentas.entrySet()) {
-            if (entry.getKey().getIdVenta() == idVenta) {
+            if (entry.getKey().getIdVentas() == idVenta) {
                 ventaEncontrada = entry.getKey();
                 break;
             }

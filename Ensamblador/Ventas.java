@@ -1,6 +1,8 @@
 package Ensamblador;
 
-package TestProyecto;
+import Ensamblador.TiposClientes.ClienteMayorista;
+import Ensamblador.TiposClientes.ClienteRegular;
+import Ensamblador.TiposClientes.ClienteVIP;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.Scanner;
 import java.util.*;
 
 
-public class Venta {
+public class Ventas {
     Scanner sc = new Scanner(System.in);
     double descuento;
     int idVenta;
@@ -18,22 +20,22 @@ public class Venta {
     List<Libros> libroVendidos;
     Cliente cliente;
 
-    public Venta(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
+    public Ventas(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
         this.sc = sc;
         this.fechaVenta = fechaVenta;
         this.libroVendidos = libroVendidos;
         this.cliente = cliente;
     }
 
-    public Venta() {
+    public Ventas() {
 
     }
 
-    public void setIdVenta(int idVenta) {
+    public void setIdVentas(int idVenta) {
         this.idVenta = idVenta;
     }
 
-    public int getIdVenta() {
+    public int getIdVentas() {
         return idVenta;
     }
 
@@ -75,7 +77,7 @@ public class Venta {
 
     public void setCliente(Cliente cliente) { this.cliente = cliente; }
 
-    public LocalDate getFechaVenta() {
+    public LocalDate getFechaVentas() {
         return fechaVenta;
     }
 
@@ -121,8 +123,8 @@ public class Venta {
             System.out.println("Cliente no encontrado");
         }
     }
-    public static void GuardarVenta(Scanner sc, ArrayList<Venta> listaVentas, HashMap<Integer, Cliente> mapaClientes, HashMap<Venta, Integer> mapaVentas) {
-        Venta venta = new Venta();
+    public static void GuardarVentas(Scanner sc, ArrayList<Ventas> listaVentas, HashMap<Integer, Cliente> mapaClientes, HashMap<Ventas, Integer> mapaVentas) {
+        Ventas venta = new Ventas();
         System.out.println("Ingrese el ID del cliente a buscar: ");
         int idCliente = sc.nextInt();
         sc.nextLine();
@@ -133,11 +135,11 @@ public class Venta {
             do {
                 idVenta = random.nextInt(10000);
             } while (mapaVentas.containsValue(idVenta));
-            venta.setIdVenta(idVenta);
+            venta.setIdVentas(idVenta);
             mapaVentas.put(venta, idCliente);
 
             System.out.println("Venta guardada con idCliente de: " + cliente.getIdCliente() +
-                    "\nIdVenta de: " + venta.getIdVenta());
+                    "\nIdVenta de: " + venta.getIdVentas());
 
             System.out.println("Ingrese el precio de la venta : ");
             int precioVenta = sc.nextInt();
@@ -174,7 +176,7 @@ public class Venta {
         }
 
     }
-    public static void Descuento(Cliente cliente,Venta venta) {
+    public static void Descuento(Cliente cliente,Ventas venta) {
         switch (cliente.getTipoCliente()){
             case 1 ->{
                 ClienteRegular.VerificarBonificacionRegular(venta);
@@ -192,7 +194,7 @@ public class Venta {
         }
     }
 
-    public static void CalcularEnvio(Scanner sc,Venta venta,Cliente cliente){
+    public static void CalcularEnvio(Scanner sc,Ventas venta,Cliente cliente){
         System.out.println("Indique la region del envio:"+
                 "\n1)Africa"+
                 "\n2)America" +
