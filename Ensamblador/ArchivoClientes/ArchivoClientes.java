@@ -94,24 +94,31 @@ public class ArchivoClientes extends Archivos {
                     String nombre = datosCliente[1].trim();
                     String direccion = datosCliente[2].trim();
                     String email = datosCliente[3].trim();
+                    String[] fecha = datosCliente[4].split("-");
+                    int[]fecha2 = new int[3];
+                    fecha2[0] = Integer.parseInt(fecha[0]);
+                    fecha2[1] = Integer.parseInt(fecha[1]);
+                    fecha2[2] = Integer.parseInt(fecha[2]);
+
+                    LocalDate fechaX = LocalDate.of(fecha2[0], fecha2[1],fecha2[2]);
 
                     Cliente cliente;
 
                     switch (tipoCliente) {
                         case "ClientesInternacional":
-                            cliente = new ClienteInternacional(nombre, direccion, email,Integer.parseInt(datosCliente[5].trim(), LocalDate.parse(datosCliente[4].trim()) ));
+                            cliente = new ClienteInternacional(nombre, direccion, email,Integer.parseInt(datosCliente[5].trim()), fechaX);
                             break;
 
                         case "ClientesMayorista":
-                            cliente = new ClienteMayorista(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
+                            cliente = new ClienteMayorista(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
                             break;
 
                         case "ClientesOnline":
-                            cliente = new ClienteOnline(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
+                            cliente = new ClienteOnline(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
                             break;
 
                         case "ClientesRegular":
-                            cliente = new ClienteRegular(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
+                            cliente = new ClienteRegular(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
                             break;
 
                         case "ClientesVIP":
