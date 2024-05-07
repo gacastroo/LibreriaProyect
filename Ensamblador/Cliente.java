@@ -35,11 +35,12 @@ public class Cliente {
 
     // atributo del grupo libros.
     //Constructor completo de la clase cliente.
-    public Cliente(String nombre, String direccion, String email, int numTelefono) {
+    public Cliente(String nombre, String direccion, String email, int numTelefono, LocalDate fechaRegistro) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
         this.numTelefono = numTelefono;
+        this.fechaRegistro=fechaRegistro;
     }
 
 

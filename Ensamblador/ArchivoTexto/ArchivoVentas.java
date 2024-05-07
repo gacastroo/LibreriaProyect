@@ -1,6 +1,7 @@
 package Ensamblador.ArchivoTexto;
 
 import Ensamblador.Archivos;
+import Ensamblador.Cliente;
 import Ensamblador.Libros;
 import Ensamblador.Ventas;
 
@@ -101,8 +102,8 @@ public class ArchivoVentas extends Archivos {
 
                     //Venta venta= new Venta( fechaVenta,  clientes,  librosVendidos,  total, idVenta,descuento,precio,fechaEntrega);
 
-                    Ventas ventas= new Ventas(fechaVenta,  libroVendidos,  clientes);
-                    ventas.add(ventas);
+                    Ventas venta= new Ventas(fechaVenta,  libroVendidos,  clientes);
+                    ventas.add(venta);
                 } else {
                     System.out.println("No hay mas ventas");
                 }
