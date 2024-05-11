@@ -89,7 +89,7 @@ public class Ventas {
 
     public LocalDate getFechaEntrega() {return fechaEntrega;}
 
-    public void setFechaEntrega(LocalDate fechaEntrega) {fechaEntrega = fechaEntrega;}
+    public void setFechaEntrega(LocalDate fechaEntrega) {this.fechaEntrega = fechaEntrega;}
 
     public void mostrarCliente() {
         System.out.println(cliente.toString());

@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
-import Ensamblador.EnsambladorReportes;
+import Ensamblador.Libros;
+import Ensamblador.Cliente;
 
 public class Ensamblador {
      ArrayList<Cliente> clientes;
