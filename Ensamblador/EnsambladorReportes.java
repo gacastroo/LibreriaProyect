@@ -4,15 +4,15 @@ package Ensamblador;
 import java.util.List;
 
 public class EnsambladorReportes extends Ensamblador {
-    public EnsambladorReportes(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos) {
+    public EnsambladorReportes(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
         super(clientes, libros, archivos);
     }
 
     public String generarReporteClientes() {
         // Generar un reporte con información detallada sobre los clientes
         StringBuilder reporte = new StringBuilder();
-        for (ClienteVentas cliente : clientes) {
-            reporte.append("Nombre: ").append(ClienteVentas.getNombre()).append(", Email: ").append(cliente.getEmail()).append(", Teléfono: ").append(cliente.getNumTelefono()).append("\n");
+        for (Cliente cliente : clientes) {
+            reporte.append("Nombre: ").append(Cliente.getNombre()).append(", Email: ").append(cliente.getEmail()).append(", Teléfono: ").append(cliente.getNumTelefono()).append("\n");
         }
         return reporte.toString();
     }
@@ -31,11 +31,11 @@ public class EnsambladorReportes extends Ensamblador {
         StringBuilder reporte = new StringBuilder();
         for (Ventas venta : venta) {
             // Obtener el cliente de la venta actual
-            ClienteVentas cliente = venta.getCliente().getFirst(); // Supongo que solo hay un cliente por venta
+            Cliente cliente = venta.getCliente().getFirst(); // Supongo que solo hay un cliente por venta
             // Obtener el libro de la venta actual
             Libros libro = venta.getLibrosVendidos().getFirst(); // Supongo que solo se vende un libro por venta
             // Agregar detalles de la venta al reporte
-            reporte.append("Cliente: ").append(ClienteVentas.getNombre())
+            reporte.append("Cliente: ").append(Cliente.getNombre())
                     .append(", Libro: ").append(Libros.getTitulo())
                     .append(", Cantidad: ").append(venta.getLibrosVendidos().size()) // Aquí supongo que deseas mostrar la cantidad de libros vendidos
                     .append(", Total: ").append(venta.calcularTotal())

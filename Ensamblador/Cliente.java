@@ -1,4 +1,4 @@
-package Ensamblador;//package EjerciciosProgramacion.PROYECTOFINAL;
+package Ensamblador;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class Cliente {
 
     //Creación de las variables de la clase cliente.
-    String nombre, direccion, email;
+    static String nombre;
+    String direccion, email;
     LocalDate fechaRegistro;
 
     int idCliente;
@@ -45,7 +46,7 @@ public class Cliente {
 
 
     //Getters y setters.
-    public String getNombre() {
+    public static String getNombre() {
         return nombre;
     }
 

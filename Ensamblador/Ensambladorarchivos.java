@@ -5,7 +5,7 @@ import java.util.List;
 //subclase de ensamblador :D
 public class Ensambladorarchivos extends Ensamblador {
 
-    public Ensambladorarchivos(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos) {
+    public Ensambladorarchivos(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
         super(clientes, libros, archivos);
     }
 

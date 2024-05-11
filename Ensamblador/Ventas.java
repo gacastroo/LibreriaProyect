@@ -20,11 +20,11 @@ public class Ventas {
     List<Libros> libroVendidos;
     Cliente cliente;
 
-    public Ventas(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
+    public Ventas(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente clientes) {
         this.sc = sc;
         this.fechaVenta = fechaVenta;
         this.libroVendidos = libroVendidos;
-        this.cliente = cliente;
+        this.cliente = clientes;
     }
 
     public Ventas() {

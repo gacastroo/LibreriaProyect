@@ -8,18 +8,18 @@ import java.util.Scanner;
 //subclase ensamblador :D
 public class EnsambladorVentas extends Ensamblador {
 
-    public EnsambladorVentas(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
+    public EnsambladorVentas(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
         super(clientes, libros, archivos);
     }
 
     public static void add(Ventas ventas) {
     }
 
-    public static Ventas agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos , List<ClienteVentas> clientes) {
+    public static Ventas agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos , Cliente clientes) {
         return new Ventas(sc,fechaVenta,librosVendidos,clientes);
     }
 
-    public static Ventas BuscarVentaPorCliente(List<Ventas> Ventas, List<ClienteVentas> Clientes) {
+    public static Ventas BuscarVentaPorCliente(List<Ventas> Ventas, List<Cliente> Clientes) {
         return null;
     }
 

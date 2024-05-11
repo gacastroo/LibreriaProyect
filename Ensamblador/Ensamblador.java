@@ -5,26 +5,28 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
+import Ensamblador.EnsambladorReportes;
+
 public class Ensamblador {
-     ArrayList<ClienteVentas> clientes;
+     ArrayList<Cliente> clientes;
      ArrayList<Libros> libros;
      ArrayList<Archivos> archivos;
     ArrayList<Ventas> venta;
 
 
 
-    public Ensamblador(List<ClienteVentas> clientes, List<Libros> libros, List<Archivos> archivos) {
-        this.clientes = (ArrayList<ClienteVentas>) clientes;
+    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
+        this.clientes = (ArrayList<Cliente>) clientes;
         this.libros = (ArrayList<Libros>) libros;
         this.archivos = (ArrayList<Archivos>) archivos;
     }
 
 
-    public void add(ClienteVentas cliente)
+    public void add(Cliente cliente)
     {
         this.clientes.add(cliente);
     }
-    public void remove(ClienteVentas cliente)
+    public void remove(Cliente cliente)
     {
         this.clientes.remove(cliente);
     }
@@ -47,17 +49,16 @@ public class Ensamblador {
     public void buscarClientePorNombre(Scanner sc){
         System.out.println("Dame el nombre que quieres buscar: ");
         String Nombre=sc.nextLine();
-        for (ClienteVentas clientes: clientes){
-            if (ClienteVentas.getNombre().equals(Nombre)){
-                System.out.println("El cliente buscado es" + ClienteVentas.getNombre());
-            }
+        for (Cliente clientes: clientes){
+            if (Cliente.getNombre().equals(Nombre)){
+                System.out.println("El cliente buscado es" + Cliente
         }
 
     }
-    public Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> listaLibros) {
-            for (Libros libro : listaLibros) {
+    public Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
+            for (Libros libro : libros) {
                 if (Objects.equals(Libros.getTitulo(), titulo)) {
-                    return libro;
+                    return libros;
                 }
             }
             return null;
@@ -67,16 +68,16 @@ public class Ensamblador {
         new Archivos().escribirArchivo(Archivo);
         //Modificar
     }
-    public void cargarDatosDesdeArchivo(Ensambladorarchivos archivo) {
+    public void cargarDatosDesdeArchivo(Ensambladorarchivos Archivos) {
         Object[] Archivo = new Object[0];
         new Archivos().leerArchivo(Archivo);
     }
-    public void generarInforme(EnsambladorReportes reportes, Scanner scanner) throws IllegalStateException {
+    public void generarInforme(EnsambladorReportes reportes, Scanner sc) throws IllegalStateException {
         System.out.println("Elige una opcion para el reporte: ");
         System.out.println("Opcion 1: Generar reporte de clientes");
         System.out.println("Opcion 2: Generar reporte de libros");
         System.out.println("Opcion 3: Generar reporte de ventas");
-        int o= scanner.nextInt();
+        int o= sc.nextInt();
 
         switch (o) {
             case 1:
