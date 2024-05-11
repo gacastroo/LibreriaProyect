@@ -60,7 +60,7 @@ public class Ventas {
     }
 
     public void setPrecio(double precio) {
-        precio = precio;
+        this.precio = precio;
     }
 
     public void setFechaVenta(LocalDate fechaVenta) {
