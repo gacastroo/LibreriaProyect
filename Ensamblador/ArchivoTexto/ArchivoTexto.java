@@ -48,7 +48,7 @@ public class ArchivoTexto extends Archivos {
                                 libroElectronico.getFormato();
 
                         bw.write(datos);
-                        registro.add("Elecctronico," + datos);
+                        registro.add("Electronico," + datos);
 
 
                     }
@@ -56,7 +56,7 @@ public class ArchivoTexto extends Archivos {
                         LibroFisico libroFisico = (LibroFisico) libro;
                         bw.write("Fisico,");
                         String datos = libro.getTitulo() + "," + libro.getAutor() + "," + libro.getGenero() + "," +
-                                libro.getPrecio() + "," + libroFisico.getUbicacion();
+                                libro.getPrecio() + "," + libroFisico.getUbicacion() + "," + libroFisico.getNumeroCopias();
 
                         bw.write(datos);
                         bw.newLine();
@@ -113,8 +113,11 @@ public class ArchivoTexto extends Archivos {
                             break;
                         case "Fisico":
                             String ubicacion = datosLibro[5].trim(); // Obtener la ubicación física del libro
+                            int numCopias = Integer.parseInt(datosLibro[6]);
                             libro = new LibroFisico(titulo, autor, genero, precio, ubicacion);
+                            ((LibroFisico) libro).setNumeroCopias(numCopias);
                             libros.add(libro);
+
                             break;
                         default:
                             // Manejo de otros tipos de libros
@@ -134,4 +137,5 @@ public class ArchivoTexto extends Archivos {
 
         return libros;
     }
+
 }

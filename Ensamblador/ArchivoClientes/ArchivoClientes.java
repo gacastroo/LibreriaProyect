@@ -10,70 +10,19 @@ import java.util.*;
 
 public class ArchivoClientes extends Archivos {
 
-    List <String> registro = new ArrayList<>();
+
     void guardarClientes(List<Cliente> clientes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))){
             for (Cliente cliente : clientes) {
-                switch (cliente.getClass().getSimpleName()) {
+                String datosCliente = cliente.getClass().getSimpleName() +"," + cliente.getNombre() + "," +
+                        cliente.getDireccion() + "," + cliente.getEmail() + "," +
+                        cliente.getFechaRegistro().getDayOfMonth() + "," + cliente.getFechaRegistro().getMonthValue() + "," + cliente.getFechaRegistro().getYear() + "," +
+                        cliente.getIdCliente() + "," + cliente.getNumTelefono() + "," + cliente.getPuntosFidelidad() + "," + cliente.getTipoCliente();
 
-                    case "ClienteInternacional" -> {
-                        ClienteInternacional clienteInternacional = (ClienteInternacional) cliente;
-                        bw.write("ClientesInternacional,");
-                        String DatosClienteInternacinal =  cliente.getNombre()+ "," + cliente.getDireccion() + ","
-                                +  cliente.getEmail() + "," + cliente.getFechaRegistro() + ","
-                                + cliente.getNumTelefono();
 
-                        bw.write(DatosClienteInternacinal);
-                        bw.newLine();
+                bw.write(datosCliente);
+                bw.newLine();
 
-                        registro.add(clienteInternacional.toString());
-                    }
-                    case "ClienteMayorista" -> {
-                        ClienteMayorista clienteMayorista = (ClienteMayorista) cliente;
-                        bw.write("ClientesMayorista,");
-                        String DatosClienteMayorista = cliente.getNombre() + "," +  cliente.getDireccion()
-                                + "," + cliente.getEmail() + "," + cliente.getFechaRegistro() + ","
-                                + cliente.getNumTelefono();
-                        bw.write(DatosClienteMayorista);
-                        bw.newLine();
-
-                        registro.add(clienteMayorista.toString());
-                    }
-                    case "ClienteOnline" -> {
-                        ClienteOnline clienteOnline = (ClienteOnline) cliente;
-                        bw.write("ClienteOnline,");
-                        String DatosClientesOnline =  cliente.getNombre() + "," + cliente.getDireccion()
-                                + "," + cliente.getEmail() + ","  + cliente.getFechaRegistro()
-                                +  "," + cliente.getNumTelefono();
-                        bw.write(DatosClientesOnline);
-                        bw.newLine();
-
-                        registro.add(clienteOnline.toString());
-                    }
-                    case "ClienteRegular" -> {
-                        ClienteRegular clienteRegular = (ClienteRegular) cliente;
-                        bw.write("ClienteRegular,");
-                        String DatosClientesRegular = cliente.getNombre() + "," + cliente.getDireccion()
-                                + "," + cliente.getEmail() + "," + cliente.getFechaRegistro()
-                                +  "," + cliente.getNumTelefono();
-                        bw.write(DatosClientesRegular);
-                        bw.newLine();
-
-                        registro.add(clienteRegular.toString());
-
-                    }
-                    case "ClienteVIP" -> {
-                        ClienteVIP ClienteVip = (ClienteVIP) cliente;
-                        bw.write("ClientesVip,");
-                        String DatosClienteVip =  cliente.getNombre() + "," + cliente.getDireccion()
-                                + "," + cliente.getEmail() + "," + cliente.getFechaRegistro()
-                                +  "," + cliente.getNumTelefono();
-                        bw.write(DatosClienteVip);
-                        bw.newLine();
-
-                        registro.add(ClienteVip.toString());
-                    }
-                }
             }
         }catch (Exception e){
             System.out.println(e);
@@ -88,42 +37,55 @@ public class ArchivoClientes extends Archivos {
             while ((linea = br.readLine()) != null) {
                 String[] datosCliente = linea.split(",");
 
-                if (datosCliente.length >= 5) {
+                if (datosCliente.length >= 7) {
                     String tipoCliente = datosCliente[0].trim();
-                    System.out.println(tipoCliente);
                     String nombre = datosCliente[1].trim();
                     String direccion = datosCliente[2].trim();
                     String email = datosCliente[3].trim();
-                    String[] fecha = datosCliente[4].split("-");
-                    int[]fecha2 = new int[3];
-                    fecha2[0] = Integer.parseInt(fecha[0]);
-                    fecha2[1] = Integer.parseInt(fecha[1]);
-                    fecha2[2] = Integer.parseInt(fecha[2]);
-
-                    LocalDate fechaX = LocalDate.of(fecha2[0], fecha2[1],fecha2[2]);
+                    LocalDate fechaRegistro = LocalDate.of(Integer.parseInt(datosCliente[6]),
+                            Integer.parseInt(datosCliente[5]),Integer.parseInt(datosCliente[4]));
+                    int puntosFidelidad = Integer.parseInt(datosCliente[7]);
+                    int numero = Integer.parseInt(datosCliente[8]);
+                    int tipoClientenInt = Integer.parseInt(datosCliente[9]);
 
                     Cliente cliente;
 
                     switch (tipoCliente) {
-                        case "ClientesInternacional":
-                            cliente = new ClienteInternacional(nombre, direccion, email,Integer.parseInt(datosCliente[5].trim()), fechaX);
+                        case "Cliente" :
+                            cliente = new Cliente(nombre,direccion,email,numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
+                            break;
+                        case "ClienteInternacional":
+                            cliente = new ClienteInternacional(nombre,direccion,email,numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
 
-                        case "ClientesMayorista":
-                            cliente = new ClienteMayorista(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
+                        case "ClienteMayorista":
+                            cliente = new ClienteMayorista(nombre,direccion,email,numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
 
-                        case "ClientesOnline":
-                            cliente = new ClienteOnline(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
+                        case "ClienteOnline":
+                            cliente = new ClienteOnline(nombre,direccion,email,numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
 
-                        case "ClientesRegular":
-                            cliente = new ClienteRegular(nombre, direccion, email, Integer.parseInt(datosCliente[5].trim()), fechaX);
+                        case "ClienteRegular":
+                            cliente = new ClienteRegular(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
 
-                        case "ClientesVIP":
-                            cliente = new ClienteVIP(nombre, direccion, email, LocalDate.parse(datosCliente[4].trim()), Integer.parseInt(datosCliente[5].trim()));
+                        case "ClienteVIP":
+                            cliente = new ClienteVIP(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                            cliente.setTipoCliente(tipoClientenInt);
+                            cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
+
                         default:
                             System.out.println("Tipo de cliente no reconocido: " + tipoCliente);
                             continue;
@@ -139,4 +101,6 @@ public class ArchivoClientes extends Archivos {
 
         return clientes;
     }
+
+
 }
