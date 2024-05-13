@@ -8,6 +8,8 @@ import java.util.Scanner;
 import Ensamblador.Libros;
 import Ensamblador.Cliente;
 
+import static Ensamblador.Libros.titulo;
+
 public class Ensamblador {
      ArrayList<Cliente> clientes;
      ArrayList<Libros> libros;
@@ -59,7 +61,7 @@ public class Ensamblador {
     public Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
             for (Libros libro : libros) {
                 if (Objects.equals(Libros.getTitulo(), titulo)) {
-                    return libros;
+                    return libro;
                 }
             }
             return null;
