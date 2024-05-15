@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="767b163f-68a3-4f7d-a608-e5d858a90d1d" name="Changes" comment="EnsambladorBienProv">
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensamblador.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/EnsambladorReportes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/EnsambladorVentas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorarchivos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Libros.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventas.class" beforeDir="false" />
+    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,13 +13,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
-  <component name="ProjectId" id="2gQSXhC0TpMd1LpSuAo0ycCN0Oh" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2gRq6Js9Clq21REu4xHyCCXnbXv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
@@ -33,10 +29,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -45,43 +37,24 @@
     <attachedChunks>
       <set>
         <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="767b163f-68a3-4f7d-a608-e5d858a90d1d" name="Changes" comment="" />
-      <created>1715628349866</created>
+      <changelist id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="" />
+      <created>1715670560549</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715628349866</updated>
-      <workItem from="1715628350902" duration="315000" />
+      <updated>1715670560549</updated>
+      <workItem from="1715670562443" duration="100000" />
+      <workItem from="1715672765749" duration="29000" />
     </task>
-    <task id="LOCAL-00001" summary="EnsambladorBienProv">
-      <option name="closed" value="true" />
-      <created>1715628487581</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1715628487581</updated>
-    </task>
-    <task id="LOCAL-00002" summary="EnsambladorBienProv">
-      <option name="closed" value="true" />
-      <created>1715628512835</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715628512835</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="EnsambladorBienProv" />
-    <option name="LAST_COMMIT_MESSAGE" value="EnsambladorBienProv" />
   </component>
 </project>
