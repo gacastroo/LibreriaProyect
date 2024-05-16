@@ -1,17 +1,14 @@
 package Ensamblador.Test;
 
-import Ensamblador.*;
-import org.junit.jupiter.api.Nested;
+import Ensamblador.Archivos.Archivos;
+import Ensamblador.Clientess.Cliente;
+import Ensamblador.Ensambladorc.Ensamblador;
+import Ensamblador.Librosc.Libros;
+import Ensamblador.Ventass.Ventas;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 

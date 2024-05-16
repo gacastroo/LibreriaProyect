@@ -1,8 +1,7 @@
 package Ensamblador.Ventass;
 
-import Ensamblador.Libros;
-import Ensamblador.Cliente;
-import Ensamblador.Ventas;
+import Ensamblador.Librosc.Libros;
+import Ensamblador.Clientess.Cliente;
 
 import java.time.LocalDate;
 import java.util.List;
