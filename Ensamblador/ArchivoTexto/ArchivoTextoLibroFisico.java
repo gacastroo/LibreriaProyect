@@ -5,6 +5,10 @@ import Ensamblador.Libros;
 import java.util.List;
 
 public class ArchivoTextoLibroFisico extends ArchivoTexto{
+    public ArchivoTextoLibroFisico(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     @Override
     void guardarLibros(List<Libros> libros) {
         super.guardarLibros(libros);

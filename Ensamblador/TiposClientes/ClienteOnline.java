@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class ClienteOnline extends Cliente {
 
     public ClienteOnline(String nombre, String direccion, String email, int numTelefono, LocalDate fechaRegistro) {
-        super(nombre, direccion, email, numTelefono, fechaRegistro);
+        super(nombre, direccion, email);
     }
 
 
@@ -32,14 +32,14 @@ public class ClienteOnline extends Cliente {
         }
 
         if (ventaEncontrada != null) {
-            System.out.println(ventaEncontrada.ventaEncontrada(ventaEncontrada));
+            //System.out.println(ventaEncontrada.ventaEncontrada(ventaEncontrada));
             System.out.println("""
                     ¿Desea consultar el estado del envio o cancelar un envío?\s
                     1. Consultar estado
                     2. Cancelar envío""");
             int x = sc.nextInt();
             if (x == 1) {
-                System.out.println(ventaEncontrada.obtenerEstadoEnvio(ventaEncontrada));
+                //System.out.println(ventaEncontrada.obtenerEstadoEnvio(ventaEncontrada));
             }
             if (x == 2) {
                 System.out.println("Cancelando el envío.");

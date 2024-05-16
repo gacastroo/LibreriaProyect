@@ -10,6 +10,10 @@ import java.util.List;
 public class ArchivoBinarioLibroFisico extends ArchivoBinario {
     public byte[] datos;
 
+    public ArchivoBinarioLibroFisico(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     public void GuardarLibros(List<LibroFisico> librosList){
         File file = new File(super.getRuta());
         try {

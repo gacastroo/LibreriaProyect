@@ -10,6 +10,11 @@ import java.io.*;
 import java.util.*;
 public class ArchivoTexto extends Archivos {
     List <String> registro = new ArrayList<>();
+
+    public ArchivoTexto(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     void guardarLibros(List<Libros> libros) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))) {
             for (Libros libro : libros) {

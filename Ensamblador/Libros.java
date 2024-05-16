@@ -3,14 +3,13 @@ package Ensamblador;
 import java.io.Serializable;
 import java.util.List;
 
-public abstract class Libros  implements Serializable {
+public class Libros  implements Serializable {
 
     protected static String titulo;
     protected String autor;
     protected String genero;
     protected double precio;
 
-    public Libros(){}
 
     public Libros(String titulo, String autor, String genero, double precio) {
         this.titulo = titulo;

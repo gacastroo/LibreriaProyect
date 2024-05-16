@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class EnsambladorVentas extends Ensamblador {
 
     public EnsambladorVentas(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
-        super(clientes, libros, archivos);
+        super(clientes, libros, archivos, ventas);
     }
 
     public void add(Ventas ventas) {
-        this.venta.add(ventas);
+        this.ventas.add(ventas);
     }
 
     public static Ventas agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos, Cliente clientes) {

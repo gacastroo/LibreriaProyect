@@ -3,7 +3,6 @@ package Ensamblador.TipoLibros;
 import Ensamblador.Libros;
 
 import java.io.Serializable;
-import java.util.Scanner;
 
 public class LibroAudio extends Libros implements Serializable {
     private int duracion;
@@ -11,9 +10,11 @@ public class LibroAudio extends Libros implements Serializable {
     private String tasa;
 
     public LibroAudio() {
+        super("El Señor de los Anillos", "J.R.R. Tolkien","audio",3);
     }
 
     public LibroAudio(int duracion, String idioma, String tasa) {
+        super("El Señor de los Anillos", "J.R.R. Tolkien","novela", 12.5);
         this.duracion = duracion;
         this.idioma = idioma;
         this.tasa = tasa;

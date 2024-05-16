@@ -3,15 +3,16 @@ package Ensamblador.TipoLibros;
 import Ensamblador.Libros;
 
 import java.io.Serializable;
-import java.util.Scanner;
 
 public class LibroElectronico extends Libros implements Serializable {
     String formato;
 
     public LibroElectronico() {
+        super("El Señor de los Anillos", "J.R.R. Tolkien","novela", 12.5);
     }
 
     public LibroElectronico(String formato) {
+        super("El Señor de los Anillos", "J.R.R. Tolkien","novela", 3);
         this.formato = formato;
     }
 

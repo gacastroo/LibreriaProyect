@@ -12,10 +12,10 @@ import java.util.Scanner;
 
 
 //subclase de ensamblador :D
-public class Ensambladorarchivos extends Ensamblador {
+public class Ensambladorarchivos extends Ensamblador  {
 
-    public Ensambladorarchivos(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
-        super(clientes, libros, archivos);
+    public Ensambladorarchivos(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List <Ventas> ventas) {
+        super(clientes, libros, archivos, ventas);
     }
 
 

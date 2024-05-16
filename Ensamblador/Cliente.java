@@ -1,11 +1,12 @@
 package Ensamblador;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Cliente {
+public class Cliente implements Serializable {
 
     //Creación de las variables de la clase cliente.
     static String nombre;
@@ -36,7 +37,7 @@ public class Cliente {
 
     // atributo del grupo libros.
     //Constructor completo de la clase cliente.
-    public Cliente(String nombre, String direccion, String email, int numTelefono, LocalDate fechaRegistro) {
+    public Cliente(String nombre, String direccion, String email) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
