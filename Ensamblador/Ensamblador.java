@@ -9,9 +9,9 @@ import Ensamblador.Libros;
 import Ensamblador.Cliente;
 
 public class Ensamblador {
-     ArrayList<Cliente> clientes;
-     ArrayList<Libros> libros;
-     ArrayList<Archivos> archivos;
+     public ArrayList<Cliente> clientes;
+     public ArrayList<Libros> libros;
+     public ArrayList<Archivos> archivos;
     ArrayList<Ventas> venta;
 
 
@@ -57,7 +57,7 @@ public class Ensamblador {
         }
 
     }
-    public Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
+    public static Object buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
             for (Libros libro : libros) {
                 if (Objects.equals(Libros.getTitulo(), titulo)) {
                     return libros;
@@ -70,7 +70,7 @@ public class Ensamblador {
         new Archivos().escribirArchivo(Archivo);
        
     }
-    public void cargarDatosDesdeArchivo(Ensambladorarchivos Archivos) {
+    public static void cargarDatosDesdeArchivo(Ensambladorarchivos Archivos) {
         Object[] Archivo = new Object[0];
         new Archivos().leerArchivo(Archivo);
     }
@@ -95,6 +95,4 @@ public class Ensamblador {
                 System.out.println("Opcion incorrecta");
         }
     }
-
-
 }
