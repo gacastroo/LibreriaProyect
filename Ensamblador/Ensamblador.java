@@ -1,9 +1,11 @@
 package Ensamblador;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 
 import Ensamblador.Libros;
 import Ensamblador.Cliente;
@@ -12,14 +14,15 @@ public class Ensamblador {
      public ArrayList<Cliente> clientes;
      public ArrayList<Libros> libros;
      public ArrayList<Archivos> archivos;
-    ArrayList<Ventas> venta;
+    public ArrayList<Ventas> ventas;
 
 
 
-    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
+    public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
         this.clientes = (ArrayList<Cliente>) clientes;
         this.libros = (ArrayList<Libros>) libros;
         this.archivos = (ArrayList<Archivos>) archivos;
+        this.ventas = (ArrayList<Ventas>) ventas;
     }
 
 
@@ -31,8 +34,24 @@ public class Ensamblador {
     {
         this.clientes.remove(cliente);
     }
+    public List<Cliente> getClientes() {
+        return Collections.unmodifiableList(this.clientes); // Return an unmodifiable copy of the list
+    }
 
+    public List<Libros> getLibros() {
+        // Return an unmodifiable copy to prevent direct modification of the internal list
+        return Collections.unmodifiableList(this.libros);
+    }
 
+    public List<Archivos> getArchivos() {
+        // Return an unmodifiable copy to prevent direct modification of the internal list
+        return Collections.unmodifiableList(this.archivos);
+    }
+
+    public List<Ventas> getVentas() {
+        // Return an unmodifiable copy to prevent direct modification of the internal list
+        return Collections.unmodifiableList(this.ventas);
+    }
     public void agregarLibro(Libros libro)
     {
         this.libros.add(libro);
@@ -65,15 +84,33 @@ public class Ensamblador {
             }
             return null;
         }
-    public void guardarDatosEnArchivo(Archivos archivos) {
-        Object[] Archivo = new Object[0];
-        new Archivos().escribirArchivo(Archivo);
-       
+    public void saveDataToFile(String filePath) throws IOException {
+        // Create a serialization output stream
+        ObjectOutputStream outputStream = new ObjectOutputStream(Files.newOutputStream(Paths.get(filePath)));
+
+        // Write the list of clientes, libros, archivos, and ventas to the file
+        outputStream.writeObject(clientes);
+        outputStream.writeObject(libros);
+        outputStream.writeObject(archivos);
+        outputStream.writeObject(ventas);
+
+        // Close the output stream
+        outputStream.close();
     }
-    public static void cargarDatosDesdeArchivo(Ensambladorarchivos Archivos) {
-        Object[] Archivo = new Object[0];
-        new Archivos().leerArchivo(Archivo);
+
+    @SuppressWarnings("unchecked") // Suppress warnings for unchecked casts
+    public void loadDataFromFile(String filePath) throws IOException, ClassNotFoundException {
+        // Create a serialization input stream
+        ObjectInputStream inputStream = new ObjectInputStream(Files.newInputStream(Paths.get(filePath)));
+
+        // Read the lists of clientes, libros, archivos, and ventas from the file
+        clientes = (ArrayList<Cliente>) inputStream.readObject();
+        libros = (ArrayList<Libros>) inputStream.readObject();
+        archivos = (ArrayList<Archivos>)inputStream.readObject();
+        // Close the input stream
+        inputStream.close();
     }
+
     public void generarInforme(EnsambladorReportes reportes, Scanner sc) throws IllegalStateException {
         System.out.println("Elige una opcion para el reporte: ");
         System.out.println("Opcion 1: Generar reporte de clientes");
@@ -89,7 +126,7 @@ public class Ensamblador {
                 reportes.generarReporteLibros();
                 break;
             case 3:
-                reportes.generarReporteVentas(venta);
+                reportes.generarReporteVentas();
                 break;
             default:
                 System.out.println("Opcion incorrecta");

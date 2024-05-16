@@ -4,8 +4,9 @@ package Ensamblador;
 import java.util.List;
 
 public class EnsambladorReportes extends Ensamblador {
-    public EnsambladorReportes(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos) {
-        super(clientes, libros, archivos);
+
+    public EnsambladorReportes(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List <Ventas> ventas) {
+        super(clientes, libros, archivos, ventas);
     }
 
     public String generarReporteClientes() {
@@ -26,7 +27,7 @@ public class EnsambladorReportes extends Ensamblador {
         return reporte.toString();
     }
 
-    public String generarReporteVentas(List<Ventas> ventas) {
+    public String generarReporteVentas() {
         // Generar un reporte con información detallada sobre las ventas realizadas
         StringBuilder reporte = new StringBuilder();
         for (Ventas venta : ventas) { 

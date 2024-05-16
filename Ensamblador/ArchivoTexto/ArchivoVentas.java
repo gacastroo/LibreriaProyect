@@ -23,6 +23,10 @@ import java.util.Scanner;
 public class ArchivoVentas extends Archivos{
     ArrayList<Ventas> ventas = new ArrayList<>();
 
+    public ArchivoVentas(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     public void guardar(List<Ventas> ventasGuardar){
         File file = new File(super.getRuta());
         try{
@@ -261,7 +265,7 @@ public class ArchivoVentas extends Archivos{
 
             switch (tipoCliente) {
                 case "Cliente" :
-                    cliente = new Cliente(nombre,direccion,email,numero,fechaRegistro);
+                    cliente = new Cliente(nombre,direccion,email);
                     cliente.setTipoCliente(tipoClientenInt);
                     cliente.setPuntosFidelidad(puntosFidelidad);
                     cliente.setIdCliente(idCliente);

@@ -11,8 +11,6 @@ public class LibroFisico extends Libros implements Serializable {
     private String ubicacion; //sala + estanteria + balda
     private int numeroCopias;
 
-    public LibroFisico() {}
-
     public LibroFisico(String titulo, String autor, String genero, double precio, String ubicacion) {
         super(titulo, autor, genero, precio);
         this.ubicacion = ubicacion;

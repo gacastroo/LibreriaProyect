@@ -5,6 +5,10 @@ import java.util.List;
 
 public class ArchivoTextoLibroInfantil extends ArchivoTexto {
 
+    public ArchivoTextoLibroInfantil(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     @Override
     void guardarLibros(List<Libros> libros) {
         super.guardarLibros(libros);

@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/ArchivoClientes/ArchivoClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/ArchivoClientes/ArchivoClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/ArchivoTexto/ArchivoVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/ArchivoTexto/ArchivoVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/Archivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/Libros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroElectronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroElectronico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TipoLibros/LibroInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteInternacional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteInternacional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteMayorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteVIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/TiposClientes/ClienteVIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/Ventas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +29,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -29,6 +49,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -51,10 +75,24 @@
       <updated>1715670560549</updated>
       <workItem from="1715670562443" duration="100000" />
       <workItem from="1715672765749" duration="29000" />
+      <workItem from="1715853775929" duration="2690000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1715856204770</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715856204770</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

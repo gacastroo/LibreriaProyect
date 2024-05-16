@@ -2,10 +2,10 @@ package Ensamblador;
 
 import java.io.*;
 import java.util.*;
-public class Archivos {
+public class Archivos implements Serializable {
     private String nombre;
     private String extension;
-    private String ruta;
+    private static String ruta;
 
     public String getNombre() {
         return nombre;
@@ -18,11 +18,15 @@ public class Archivos {
     public String getExtension() {
         return extension;
     }
-    public String getRuta() {
+    public static String getRuta() {
         return ruta;
     }
 
-
+    public Archivos(String nombre, String extension, String ruta) {
+        this.nombre = nombre;
+        this.extension = extension;
+        this.ruta = ruta;
+    }
 
     @Override
     public String toString() {

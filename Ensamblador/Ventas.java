@@ -4,13 +4,14 @@ import Ensamblador.TiposClientes.ClienteMayorista;
 import Ensamblador.TiposClientes.ClienteRegular;
 import Ensamblador.TiposClientes.ClienteVIP;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 import java.util.*;
 
 
-public class Ventas {
+public class Ventas implements Serializable {
     Scanner sc = new Scanner(System.in);
     double descuento;
     int idVenta;
@@ -260,22 +261,5 @@ public class Ventas {
                 cliente.setTipoCliente(4);
             }
         }
-    }
-
-
-    public boolean obtenerEstadoEnvio(Ventas ventaEncontrada) {
-        return false;
-    }
-
-    public boolean ventaEncontrada(Ventas ventaEncontrada) {
-        return false;
-    }
-
-    public Object getClientes() {
-        return cliente;
-    }
-
-    public Object getFechaVenta() {
-        return fechaVenta;
     }
 }

@@ -11,6 +11,10 @@ import java.util.*;
 public class ArchivoClientes extends Archivos {
 
 
+    public ArchivoClientes(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     void guardarClientes(List<Cliente> clientes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))){
             for (Cliente cliente : clientes) {
@@ -52,7 +56,7 @@ public class ArchivoClientes extends Archivos {
 
                     switch (tipoCliente) {
                         case "Cliente" :
-                            cliente = new Cliente(nombre,direccion,email,numero,fechaRegistro);
+                            cliente = new Cliente(nombre,direccion,email);
                             cliente.setTipoCliente(tipoClientenInt);
                             cliente.setPuntosFidelidad(puntosFidelidad);
                             break;

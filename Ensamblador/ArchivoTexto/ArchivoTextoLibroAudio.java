@@ -4,6 +4,10 @@ import Ensamblador.Libros;
 import java.util.List;
 
 public class ArchivoTextoLibroAudio extends ArchivoTexto{
+    public ArchivoTextoLibroAudio(String nombre, String extension, String ruta) {
+        super(nombre, extension, ruta);
+    }
+
     @Override
     void guardarLibros(List<Libros> libros) {
         super.guardarLibros(libros);
