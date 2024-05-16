@@ -2,8 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroAudio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroAudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroElectronico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroElectronico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroFisico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroFisico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroInfantil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroInfantil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoClientes/ArchivoClientes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoClientes/ArchivoClientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTexto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTexto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroAudio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroAudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroElectronico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroElectronico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroFisico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroFisico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroInfantil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroInfantil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoVentas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoVentas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/Archivos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteInternacional.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteInternacional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteMayorista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteMayorista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteOnline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteOnline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteRegular.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteRegular.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteVIP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteVIP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensamblador.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensamblador.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/EnsambladorReportes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/EnsambladorVentas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensambladorarchivos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioAgregarCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioAgregarLibro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteClientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteLibros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteVentas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/GUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelClientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelLibros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelReportes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelVentas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroAudio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroAudio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroElectronico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroElectronico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroFisico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroFisico.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroInfantil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroInfantil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/Libros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Test/EnsambladorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/Vendedor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaMayorista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaOnline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaPresencial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/Ventas.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +81,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2gRq6Js9Clq21REu4xHyCCXnbXv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,8 +100,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-22 (2)",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Nyx/Desktop/XML/UML/LibreriaProyect54",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -51,10 +128,22 @@
       <updated>1715670560549</updated>
       <workItem from="1715670562443" duration="100000" />
       <workItem from="1715672765749" duration="29000" />
+      <workItem from="1715866539551" duration="127000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
