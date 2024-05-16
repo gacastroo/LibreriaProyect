@@ -1,22 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Test/EnsambladorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroElectronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroElectronico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoBinario/ArchivoBinarioLibroInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoClientes/ArchivoClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoClientes/ArchivoClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroElectronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroElectronico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoTextoLibroInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/ArchivoTexto/ArchivoVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Archivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Archivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ensamblador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ensamblador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/EnsambladorReportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/EnsambladorReportes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/EnsambladorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/EnsambladorVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ensambladorarchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ensambladorarchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Libros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroElectronico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroElectronico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TipoLibros/LibroInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteInternacional.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteInternacional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteMayorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteVIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/TiposClientes/ClienteVIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ventas.java" beforeDir="false" afterPath="$PROJECT_DIR$/../LibreriaProyect3/Ensamblador/Ventas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../LibreriaProyect3" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2gRq6Js9Clq21REu4xHyCCXnbXv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,14 +72,131 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.EnsambladorTest.executor": "Run",
+    "JUnit.EnsambladorTest.testAddCliente.executor": "Run",
+    "JUnit.EnsambladorTest.testAgregarArchivo.executor": "Run",
+    "JUnit.EnsambladorTest.testAgregarCliente.executor": "Run",
+    "JUnit.EnsambladorTest.testAgregarLibro.executor": "Run",
+    "JUnit.EnsambladorTest.testBuscarClientePorNombre.executor": "Run",
+    "JUnit.EnsambladorTest.testBuscarLibroPorTitulo.executor": "Run",
+    "JUnit.EnsambladorTest.testEliminarArchivo.executor": "Run",
+    "JUnit.EnsambladorTest.testEliminarCliente.executor": "Run",
+    "JUnit.EnsambladorTest.testEliminarLibro.executor": "Run",
+    "JUnit.EnsambladorTest.testGenerarInforme_PrintsCorrectErrorForInvalidOption.executor": "Run",
+    "JUnit.EnsambladorTest.testGenerarInforme_PrintsCorrectMessages.executor": "Run",
+    "JUnit.EnsambladorTest.testSaveAndLoadData.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "openjdk-22",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Nyx/Desktop/XML/UML/LibreriaProyect3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.EnsambladorTest.testGenerarInforme_PrintsCorrectErrorForInvalidOption">
+    <configuration name="EnsambladorTest.testAgregarArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorTest" />
+      <option name="METHOD_NAME" value="testAgregarArchivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnsambladorTest.testEliminarArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorTest" />
+      <option name="METHOD_NAME" value="testEliminarArchivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnsambladorTest.testGenerarInforme_PrintsCorrectErrorForInvalidOption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorTest" />
+      <option name="METHOD_NAME" value="testGenerarInforme_PrintsCorrectErrorForInvalidOption" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnsambladorTest.testGenerarInforme_PrintsCorrectMessages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorTest" />
+      <option name="METHOD_NAME" value="testGenerarInforme_PrintsCorrectMessages" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnsambladorTest.testSaveAndLoadData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorTest" />
+      <option name="METHOD_NAME" value="testSaveAndLoadData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EnsambladorTest.testGenerarInforme_PrintsCorrectErrorForInvalidOption" />
+        <item itemvalue="JUnit.EnsambladorTest.testGenerarInforme_PrintsCorrectMessages" />
+        <item itemvalue="JUnit.EnsambladorTest.testSaveAndLoadData" />
+        <item itemvalue="JUnit.EnsambladorTest.testEliminarArchivo" />
+        <item itemvalue="JUnit.EnsambladorTest.testAgregarArchivo" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -51,6 +215,8 @@
       <updated>1715670560549</updated>
       <workItem from="1715670562443" duration="100000" />
       <workItem from="1715672765749" duration="29000" />
+      <workItem from="1715856595375" duration="3675000" />
+      <workItem from="1715860297766" duration="3855000" />
     </task>
     <servers />
   </component>
