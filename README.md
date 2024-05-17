@@ -4,7 +4,7 @@ El objetivo de este proyecto es desarrollar un sistema de gestión de una tienda
 
 ## Estructura del proyecto ⚙️
 > [!NOTE]
-> Esta estructura esta sujeta a cambios.
+> Esta estructura está sujeta a cambios.
 ```
 Da un ejemplo
 ```
@@ -30,7 +30,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 ```
 ## Objetivos 🎯
 
-integrar los diferentes módulos desarrollados por los otros equipos en una aplicación funcional y completa.
+Integrar los diferentes módulos desarrollados por los otros equipos en una aplicación funcional y completa.
 
 *	Crear la clase Ensamblador con métodos para integrar los diferentes elementos del sistema, como clientes, libros, archivos, etc.
 *	Definir subclases específicas para manejar ventas, archivos y reportes, e implementa los métodos necesarios para cada una.
@@ -78,7 +78,7 @@ Esta subclase de Ensamblador se dedica a generar reportes y estadísticas sobre 
 
 ## Construido con 🛠️
 
- <img height="60" src="./java-original.svg"> Java
+ <img alt="imagen-java" height="60" src="./java-original.svg"> Java
 
 ## Autores ✒️
 

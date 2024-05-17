@@ -1,6 +1,8 @@
 package Ensamblador.GUI;
 
 
+import Ensamblador.Ventass.Ventas;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -15,7 +17,7 @@ public class PanelVentas extends JPanel {
     private JButton btnMostrarHistorial;
     private JTextField txtBusquedaVenta;
     private JPanel panelBotonesVentasEspeciales;
-    private ArrayList<Venta> historialVentas;
+    private ArrayList<Ventas> historialVentas;
 
     public PanelVentas() {
         setLayout(new BorderLayout());
@@ -139,22 +141,7 @@ public class PanelVentas extends JPanel {
         dialog.setVisible(true);
     }
 
-
-
-    private class Venta {
-        private String nombreLibro;
-        private String cliente;
-        private double total;
-
-        public Venta(String nombreLibro, String cliente, double total) {
-            this.nombreLibro = nombreLibro;
-            this.cliente = cliente;
-            this.total = total;
-        }
-
-        // Getters y Setters
     }
-}
 
 
 

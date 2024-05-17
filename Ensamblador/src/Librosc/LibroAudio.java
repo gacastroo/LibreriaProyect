@@ -18,11 +18,10 @@ public class LibroAudio extends Libros implements Serializable {
         this.tasa = tasa;
     }
 
-    public LibroAudio(String titulo, String autor, String genero, double precio, int duracion, String idioma, String tasa) {
+    public LibroAudio(String titulo, String autor, String genero, double precio, int duracion, String idioma) {
         super(titulo, autor, genero, precio);
         this.duracion = duracion;
         this.idioma = idioma;
-        this.tasa = tasa;
     }
 
     public int getDuracion() {

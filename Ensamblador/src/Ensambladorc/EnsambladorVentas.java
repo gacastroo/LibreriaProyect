@@ -18,11 +18,7 @@ public class EnsambladorVentas extends Ensamblador {
     }
 
     public void add(Ventas ventas) {
-        this.ventas.add(ventas);
-    }
-
-    public static Ventas agregarVenta(Scanner sc, LocalDate fechaVenta, List<Libros> librosVendidos, Cliente clientes) {
-        return new Ventas(sc, fechaVenta, librosVendidos, clientes);
+        add(ventas);
     }
 
     public static String BuscarVentaPorCliente(List<Ventas> ventas, List<Cliente> clientes) {
@@ -69,12 +65,11 @@ public class EnsambladorVentas extends Ensamblador {
         }
 
 
-        public static String TotalVentas (List < Ventas > Ventas) {
-            double TotalVentas = 0.0;
-            for (Ventas venta : Ventas) {
-                TotalVentas += venta.calcularTotal();
-            }
-            String V = "El total de las ventas es: " + TotalVentas;
-            return V;
+    public static String TotalVentas(List<Ventas> ventas) {
+        double totalVentas = 0.0;
+        for (Ventas venta : ventas) {
+            totalVentas += venta.calcularTotal();
         }
+        return "El total de las ventas es: " + totalVentas;
+    }
     }

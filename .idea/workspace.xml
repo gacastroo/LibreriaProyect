@@ -1,82 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="">
+    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdatepicker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroAudio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroAudio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroElectronico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroElectronico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroFisico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroFisico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroInfantil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoBinario/ArchivoBinarioLibroInfantil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoClientes/ArchivoClientes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoClientes/ArchivoClientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTexto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTexto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroAudio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroAudio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroElectronico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroElectronico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroFisico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroFisico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroInfantil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoTextoLibroInfantil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoVentas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/ArchivoTexto/ArchivoVentas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Archivos/Archivos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteInternacional.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteInternacional.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteMayorista.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteMayorista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteOnline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteOnline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteRegular.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteRegular.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteVIP.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Clientess/ClienteVIP.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensamblador.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensamblador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/EnsambladorReportes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/EnsambladorVentas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ensambladorc/Ensambladorarchivos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioAgregarCliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioAgregarLibro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteClientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteLibros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/FormularioReporteVentas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelClientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelLibros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelReportes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/GUI/PanelVentas.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroAudio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroAudio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroElectronico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroElectronico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroFisico.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroFisico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroInfantil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/LibroInfantil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Librosc/Libros.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Test/EnsambladorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/Vendedor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaMayorista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaOnline.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/VentaPresencial.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/Ventass/Ventas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoClientes/ArchivoClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoClientes/ArchivoClientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteInternacional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteInternacional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteMayorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteRegular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteVIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteVIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroInfantil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/Libros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaMayorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaOnline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaPresencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaPresencial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LibreriaProyect54.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibreriaProyect54.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,19 +72,154 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.GUI.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.EnsambladorReportesTest.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarInformeClientes.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarInformeLibros.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarInformeVentas.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarReporteClientes.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarReporteLibros.executor": "Run",
+    "JUnit.EnsambladorReportesTest.testGenerarReporteVentas.executor": "Run",
+    "JUnit.EnsambladorTest.executor": "Run",
+    "JUnit.EnsambladorTest.testAddCliente.executor": "Run",
+    "JUnit.EnsambladorTest.testAgregarLibro.executor": "Debug",
+    "JUnit.EnsambladorTest.testBuscarLibroPorTitulo_ExistingBook.executor": "Run",
+    "JUnit.EnsambladorTest.testBuscarLibroPorTitulo_NonexistentBook.executor": "Run",
+    "JUnit.EnsambladorTest.testEliminarLibro.executor": "Debug",
+    "JUnit.EnsambladorTest.testGenerarReporteClientes.executor": "Run",
+    "JUnit.EnsambladorTest.testGenerarReporteLibros.executor": "Run",
+    "JUnit.EnsambladorTest.testGenerarReporteVentas.executor": "Run",
+    "JUnit.EnsambladorTest.testOpcionIncorrecta.executor": "Run",
+    "JUnit.EnsambladorTest.testRemoveCliente.executor": "Run",
+    "JUnit.EnsambladorTest.testSaveAndLoadData.executor": "Run",
+    "JUnit.EnsambladorTest.testSaveDataToFile.executor": "Run",
+    "JUnit.EnsambladorVentasTest.executor": "Run",
+    "JUnit.EnsambladorVentasTest.testBuscarVentaPorCliente.executor": "Run",
+    "JUnit.EnsambladorVentasTest.testBuscarVentasPorLibro.executor": "Run",
+    "JUnit.dsf.executor": "Run",
+    "JUnit.ensambladorArchivosTest.executor": "Run",
+    "JUnit.ensambladorArchivosTest.testGuardarLibro.executor": "Run",
+    "JUnit.ensambladorArchivosTest.testGuardarLibros.executor": "Run",
+    "JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo.executor": "Run",
+    "JUnit.ensambladorVentas.executor": "Run",
+    "JUnit.ensambladorVentas.testBuscarVentaPorCliente.executor": "Run",
+    "JUnit.ensambladorVentas.testBuscarVentasPorLibro.executor": "Run",
+    "JUnit.ensambladorVentasTest.executor": "Run",
+    "JUnit.ensambladorVentasTest.testBuscarVentasPorLibro.executor": "Run",
+    "JUnit.ensambladorVentasTest.testTotalVentas.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "openjdk-22 (2)",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Nyx/Desktop/XML/UML/LibreriaProyect54",
+    "last_opened_file_path": "C:/Users/Nyx/Downloads/luigi el salvador (1)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.ensambladorArchivosTest.testCargar">
+    <configuration name="ensambladorArchivosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ensambladorArchivosTest.testCargar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testCargar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ensambladorArchivosTest.testGuardarLibro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testGuardarLibro" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ensambladorArchivosTest.testGuardarLibros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testGuardarLibros" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testGuardarYRecuperarDatosDesdeArchivo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ensambladorArchivosTest.testCargar" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibro" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibros" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" />
+        <item itemvalue="JUnit.ensambladorArchivosTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -128,8 +238,27 @@
       <updated>1715670560549</updated>
       <workItem from="1715670562443" duration="100000" />
       <workItem from="1715672765749" duration="29000" />
-      <workItem from="1715866539551" duration="127000" />
+      <workItem from="1715866539551" duration="547000" />
+      <workItem from="1715867116489" duration="20837000" />
+      <workItem from="1715905348743" duration="12865000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1715866748919</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715866748919</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1715866812389</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715866812389</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,5 +274,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

@@ -20,20 +20,95 @@ public class Ensambladorarchivos extends Ensamblador  {
 
 
     public String guardarDatosEnArchivo(String nombreArchivo, String datos) {
-        guardarDatosEnArchivo(nombreArchivo,datos);
-        return nombreArchivo + "Archivo Guardado";
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(nombreArchivo))) {
+            bw.write(datos);
+            return nombreArchivo + "Archivo Guardado";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error al guardar el archivo";
+        }
     }
 
     public String cargarDatosDesdeArchivo(String nombreArchivo) {
-        cargarDatosDesdeArchivo(nombreArchivo);
-        return nombreArchivo + "Archivo Cargado";
+        StringBuilder datos = new StringBuilder();
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreArchivo))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                datos.append(linea);
+            }
+            return datos.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error al cargar el archivo";
+        }
     }
+
+
 
     //Metodo por tipo de Libro --> Archivo Pendiente
     List <String> registro = new ArrayList<>();
     public void guardarLibros(List<Libros> libros) {
+        List<String> registro = new ArrayList<>();
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(Archivos.getRuta()))) {
             for (Libros libro : libros) {
+                // Determinar el tipo de libro y guardar en el archivo
+                switch (libro.getClass().getSimpleName()) {
+                    case "LibroAudio":
+                        LibroAudio libroAudio = (LibroAudio) libro;
+                        bw.write("Audio,");
+                        String datosAudio = libro.getTitulo() + "," + libro.getAutor() + "," + libro.getGenero() + "," +
+                                libro.getPrecio() + "," + libroAudio.getDuracion() + "," + libroAudio.getIdioma()+ "," + libroAudio.getTasa();
+
+                        bw.write(datosAudio);
+                        bw.newLine();
+                        registro.add(libroAudio.toString());
+                        break;
+
+                    case "LibroInfantil":
+                        LibroInfantil libroInfantil = (LibroInfantil) libro;
+                        bw.write("Infantil,");
+                        String datosInfantil = libro.getTitulo() + "," + libro.getAutor() + "," + libro.getGenero() + "," + libro.getPrecio() + "," +
+                                libroInfantil.getEdadRecomendada() + "," + libroInfantil.tieneIlustraciones() + "," + libroInfantil.getNumIlustraciones();
+
+                        bw.write(datosInfantil);
+                        bw.newLine();
+                        registro.add("Infantil," + datosInfantil);
+                        break;
+
+                    case "LibroElectronico":
+                        bw.write("Electronico,");
+                        LibroElectronico libroElectronico = (LibroElectronico) libro;
+                        String datosElectronico = libro.getTitulo() + "," + libro.getAutor() + "," + libro.getGenero() + "," + libro.getPrecio() + "," +
+                                libroElectronico.getFormato();
+
+                        bw.write(datosElectronico);
+                        bw.newLine();
+                        registro.add("Electronico," + datosElectronico);
+                        break;
+
+                    case "LibroFisico":
+                        LibroFisico libroFisico = (LibroFisico) libro;
+                        bw.write("Fisico,");
+                        String datosFisico = libro.getTitulo() + "," + libro.getAutor() + "," + libro.getGenero() + "," +
+                                libro.getPrecio() + "," + libroFisico.getUbicacion() + "," + libroFisico.getNumeroCopias();
+
+                        bw.write(datosFisico);
+                        bw.newLine();
+                        break;
+
+                    default:
+                        System.out.println("Tipo de libro no encontrado");
+                        break;
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error al guardar en el archivo: " + e.getMessage());
+        }
+    }
+
+    public void guardarLibro(Libros libro) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(Archivos.getRuta()))) {
+
                 // Determinar el tipo de libro y guardar en el archivo
                 switch (libro.getClass().getSimpleName()) {
                     case "LibroAudio" -> {
@@ -88,7 +163,6 @@ public class Ensambladorarchivos extends Ensamblador  {
                             System.out.println("tipo de libro no encontrado"); // Puedes agregar más tipos de libros según sea necesario
                 }
 
-            }
         } catch (IOException e) {
             System.out.println("archivo no encontrado IOException ");
         }
@@ -115,7 +189,7 @@ public class Ensambladorarchivos extends Ensamblador  {
 
                             String idioma = datosLibro[6].trim(); // Obtener el idioma del libro de la posición correcta
                             String tasa = datosLibro[7].trim();
-                            libro = new LibroAudio(titulo, autor, genero, precio, duracion, idioma, tasa);
+                            libro = new LibroAudio(titulo, autor, genero, precio, duracion, idioma);
                             libros.add(libro);
                             break;
                         case "Infantil":

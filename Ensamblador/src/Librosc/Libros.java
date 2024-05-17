@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Libros  implements Serializable {
 
-    protected static String titulo;
+    protected String titulo;
     protected String autor;
     protected String genero;
     protected double precio;
@@ -18,7 +18,7 @@ public class Libros  implements Serializable {
         this.precio = precio;
     }
 
-    public static String getTitulo() {return titulo;}
+    public  String getTitulo() {return titulo;}
 
     public void setTitulo(String titulo) {this.titulo = titulo;}
 

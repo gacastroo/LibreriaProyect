@@ -1,8 +1,15 @@
 package Ensamblador.GUI;
 
+import Ensamblador.Ensambladorc.Ensamblador;
+import Ensamblador.Archivos.Archivos;
+import Ensamblador.Clientess.Cliente;
+import Ensamblador.Librosc.Libros;
+import Ensamblador.Ventass.Ventas;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GUI {
     private JFrame ventanaPrincipal;
@@ -10,8 +17,11 @@ public class GUI {
     private PanelClientes panelClientes;
     private PanelVentas panelVentas;
     private PanelReportes panelReportes;
+    private Ensamblador ensamblador;
 
-    public GUI() {
+    public GUI(Ensamblador ensamblador) {
+        this.ensamblador = ensamblador;
+
         inicializarVentanaPrincipal();
         configurarComponentes();
         inicializarEventos();
@@ -109,8 +119,15 @@ public class GUI {
         ventanaPrincipal.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        GUI gui = new GUI();
+    public static void main(String[] args)
+    {
+        // Crear las listas necesarias
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        ArrayList<Libros> libros = new ArrayList<>();
+        ArrayList<Archivos> archivos = new ArrayList<>();
+        ArrayList<Ventas> ventas = new ArrayList<>();
+        // Inicializar la clase Ensamblador
+        Ensamblador ensamblador = new Ensamblador(clientes, libros, archivos, ventas);
+        GUI gui = new GUI(ensamblador);
     }
 }
-

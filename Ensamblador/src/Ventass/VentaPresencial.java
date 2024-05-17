@@ -11,8 +11,8 @@ public class VentaPresencial extends Ventas {
 
     Vendedor vendedor;
 
-    public VentaPresencial(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente, Vendedor vendedor) {
-        super(sc, fechaVenta, libroVendidos, cliente);
+    public VentaPresencial( LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente, Vendedor vendedor) {
+        super( fechaVenta, libroVendidos, cliente);
         this.vendedor = vendedor;
     }
 

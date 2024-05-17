@@ -5,8 +5,8 @@ import Ensamblador.Ventass.Ventas;
 import java.time.LocalDate;
 
 public class ClienteMayorista extends Cliente {
-    public ClienteMayorista(String nombre, String direccion, String email, int numTelefono, LocalDate fechaRegistro) {
-        super(nombre, direccion, email);
+    public ClienteMayorista(String nombre, String direccion, String email, String numTelefono, LocalDate fechaRegistro) {
+        super(nombre, direccion, email,numTelefono,fechaRegistro);
     }
     public static void gestionarPedidoMayorista() {
         // Simulando algunas operaciones de gestión de pedidos para un cliente mayorista

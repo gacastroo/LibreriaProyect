@@ -135,18 +135,18 @@ public class ArchivoVentas extends Archivos{
 
                 switch (atributos[0]){
                     case "Venta" ->{
-                        venta = new Ventas(sc,fechaDeVenta, librosVendidos,cliente);
+                        venta = new Ventas(fechaDeVenta, librosVendidos,cliente);
                         venta.setFechaEntrega(LocalDate.of(Integer.parseInt(atributos[7]), Integer.parseInt(atributos[8]), Integer.parseInt(atributos[9])));
                     }
                     case "VentaMayorista" ->{
-                        venta = new VentaMayorista(sc, fechaDeVenta,librosVendidos, cliente);
+                        venta = new VentaMayorista(fechaDeVenta,librosVendidos, cliente);
                         venta.setFechaEntrega(LocalDate.of(Integer.parseInt(atributos[7]), Integer.parseInt(atributos[8]), Integer.parseInt(atributos[9])));
                     }
                     case "VentaOnline" ->{
-                        venta = new VentaOnline(sc,fechaDeVenta,librosVendidos, cliente);
+                        venta = new VentaOnline(fechaDeVenta,librosVendidos, cliente);
                         venta.setFechaEntrega(LocalDate.of(Integer.parseInt(atributos[7]), Integer.parseInt(atributos[8]), Integer.parseInt(atributos[9])));
                     }
-                    case"VentaPresencial" -> venta = new VentaPresencial(sc, fechaDeVenta, librosVendidos,cliente, vendedor);
+                    case"VentaPresencial" -> venta = new VentaPresencial(fechaDeVenta, librosVendidos,cliente, vendedor);
                 }
                 venta.setDescuento(Descuento);
                 venta.setIdVentas(idVenta);
@@ -257,7 +257,7 @@ public class ArchivoVentas extends Archivos{
             LocalDate fechaRegistro = LocalDate.of(Integer.parseInt(datosCliente[6]),
                     Integer.parseInt(datosCliente[5]),Integer.parseInt(datosCliente[4]));
             int idCliente = Integer.parseInt(datosCliente[7]);
-            int numero = Integer.parseInt(datosCliente[8]);
+            String numero = datosCliente[8];
             int puntosFidelidad = Integer.parseInt(datosCliente[9]);
             int tipoClientenInt = Integer.parseInt(datosCliente[10]);
 
@@ -265,7 +265,7 @@ public class ArchivoVentas extends Archivos{
 
             switch (tipoCliente) {
                 case "Cliente" :
-                    cliente = new Cliente(nombre,direccion,email);
+                    cliente = new Cliente(nombre,direccion,email,numero,fechaRegistro);
                     cliente.setTipoCliente(tipoClientenInt);
                     cliente.setPuntosFidelidad(puntosFidelidad);
                     cliente.setIdCliente(idCliente);
@@ -292,14 +292,14 @@ public class ArchivoVentas extends Archivos{
                     return cliente;
 
                 case "ClienteRegular":
-                    cliente = new ClienteRegular(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                    cliente = new ClienteRegular(nombre,direccion,email,numero,fechaRegistro);
                     cliente.setTipoCliente(tipoClientenInt);
                     cliente.setPuntosFidelidad(puntosFidelidad);
                     cliente.setIdCliente(idCliente);
                     return cliente;
 
                 case "ClienteVIP":
-                    cliente = new ClienteVIP(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                    cliente = new ClienteVIP(nombre,direccion,email,numero,fechaRegistro);
                     cliente.setTipoCliente(tipoClientenInt);
                     cliente.setPuntosFidelidad(puntosFidelidad);
                     cliente.setIdCliente(idCliente);
@@ -334,7 +334,7 @@ public class ArchivoVentas extends Archivos{
 
                     String idioma = datosLibro[6].trim(); // Obtener el idioma del libro de la posición correcta
                     String tasa = datosLibro[7].trim();
-                    libro = new LibroAudio(titulo, autor, genero, precio, duracion, idioma, tasa);
+                    libro = new LibroAudio(titulo, autor, genero, precio, duracion, idioma);
                     return libro;
                 case "Infantil":
                     int edadRecomendada = Integer.parseInt(datosLibro[5].trim()); // Obtener la edad recomendada

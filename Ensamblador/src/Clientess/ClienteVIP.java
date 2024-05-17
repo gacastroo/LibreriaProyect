@@ -5,8 +5,8 @@ import Ensamblador.Ventass.Ventas;
 import java.time.LocalDate;
 
 public class ClienteVIP extends Cliente {
-    public ClienteVIP(String nombre, String direccion, String email, LocalDate parse, int numTelefono, LocalDate fechaRegistro) {
-        super(nombre, direccion, email);
+    public ClienteVIP(String nombre, String direccion, String email, String numTelefono, LocalDate fechaRegistro) {
+        super(nombre, direccion, email, numTelefono,fechaRegistro);
     }
     public static void accesoServicioPersonalizado() {
         // Asesoramiento personalizado

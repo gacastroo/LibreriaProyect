@@ -11,13 +11,14 @@ import java.util.Scanner;
 public class Cliente implements Serializable {
 
     //Creación de las variables de la clase cliente.
-    public static String nombre;
-    String direccion, email;
-    LocalDate fechaRegistro;
+    protected  String nombre;
+    protected String direccion;
+    protected String email;
+    protected LocalDate fechaRegistro;
 
-    int idCliente;
-    int numTelefono;
-    int puntosFidelidad;
+    protected int idCliente;
+    protected String numTelefono;
+    protected int puntosFidelidad;
 
     public int getTipoCliente() {
         return TipoCliente;
@@ -39,48 +40,45 @@ public class Cliente implements Serializable {
 
     // atributo del grupo libros.
     //Constructor completo de la clase cliente.
-    public Cliente(String nombre, String direccion, String email) {
+    public Cliente(String nombre, String direccion, String email, String numTelefono, LocalDate fechaRegistro) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
         this.numTelefono = numTelefono;
-        this.fechaRegistro=fechaRegistro;
+        this.fechaRegistro =fechaRegistro;
     }
 
 
     //Getters y setters.
-    public static String getNombre() {
+    public  String getNombre() {
         return nombre;
+    }
+
+    public  String getNumTelefono() {
+        return numTelefono;
+    }
+
+    public  String getDireccion() {
+        return direccion;
+    }
+
+    public  String getEmail() {
+        return email;
     }
 
     public int getIdCliente() {
         return idCliente;
     }
 
-    public int getNumTelefono() {
-        return numTelefono;
-    }
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public LocalDate getFechaRegistro() {
+    public  LocalDate getFechaRegistro() {
         return fechaRegistro;
     } //Tipo fecha.
-    public void setFechaRegistro(LocalDate fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
 
-    public void setNombre(String nombre) {
+    public  void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setDireccion(String direccion) {
+    public  void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
@@ -88,7 +86,11 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
-    public void setNumTelefono(int numTelefono) {
+    public  void setFechaRegistro(LocalDate fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public void setNumTelefono(String numTelefono) {
         this.numTelefono = numTelefono;
     }
 
@@ -99,7 +101,7 @@ public class Cliente implements Serializable {
 
     //Metodo para buscar cliente por su número de teléfono. Le pasamos por parametro el numero de teléfono, el
     //ArrayList que contiene los clientes.
-    public static Cliente buscarClientePorTelefono(int numTelefono, ArrayList<Cliente> listaClientes) {
+    public static Cliente buscarClientePorTelefono(String numTelefono, ArrayList<Cliente> listaClientes) {
         //Recorremos el arreglo de clientes, y si el numero de telefono introducido por parametro es igual al
         //numero de telefono de alguno de los clientes, retornamos la informacion de dicho cliente.
         for (Cliente cliente : listaClientes) {
@@ -136,7 +138,7 @@ public class Cliente implements Serializable {
         Cliente cliente = mapaClientes.get(id);
         if (cliente != null) {
             System.out.println("¡Cliente encontrado!");
-            System.out.println("Nombre: " + cliente.getNombre() + " con el ID: " + cliente.getIdCliente());
+            System.out.println("Nombre: " + cliente.getNombre());
             System.out.println("Direccion: " + cliente.getDireccion());
             System.out.println("Telefono: " + cliente.getNumTelefono());
             System.out.println("Fecha de registro: " + cliente.getFechaRegistro());

@@ -88,7 +88,7 @@ public class ArchivoTexto extends Archivos {
                     String titulo = datosLibro[1].trim();
                     String autor = datosLibro[2].trim();
                     String genero = datosLibro[3].trim();
-                    double precio = Double.parseDouble(datosLibro[4].trim());
+                    double id = Double.parseDouble(datosLibro[4].trim());
 
                     Libros libro;
                     // Crear el tipo correcto de libro según el tipo registrado en el archivo
@@ -98,25 +98,25 @@ public class ArchivoTexto extends Archivos {
 
                             String idioma = datosLibro[6].trim(); // Obtener el idioma del libro de la posición correcta
                             String tasa = datosLibro[7].trim();
-                            libro = new LibroAudio(titulo, autor, genero, precio, duracion, idioma, tasa);
+                            libro = new LibroAudio(titulo, autor, genero, id, duracion, idioma);
                             libros.add(libro);
                             break;
                         case "Infantil":
                             int edadRecomendada = Integer.parseInt(datosLibro[5].trim()); // Obtener la edad recomendada
                             boolean ilustraciones = Boolean.parseBoolean(datosLibro[6].trim()); // Obtener si tiene ilustraciones
                             int numIlustraciones = Integer.parseInt(datosLibro[7].trim()); // Obtener el número de ilustraciones
-                            libro = new LibroInfantil(titulo, autor, genero, precio, edadRecomendada, ilustraciones, numIlustraciones);
+                            libro = new LibroInfantil(titulo, autor, genero, id, edadRecomendada, ilustraciones, numIlustraciones);
                             libros.add(libro);
                             break;
                         case "Electronico":
                             String formato = datosLibro[5].trim(); // Obtener el formato del libro electrónico
-                            libro = new LibroElectronico(titulo, autor, genero, precio, formato);
+                            libro = new LibroElectronico(titulo, autor, genero, id, formato);
                             libros.add(libro);
                             break;
                         case "Fisico":
                             String ubicacion = datosLibro[5].trim(); // Obtener la ubicación física del libro
                             int numCopias = Integer.parseInt(datosLibro[6]);
-                            libro = new LibroFisico(titulo, autor, genero, precio, ubicacion);
+                            libro = new LibroFisico(titulo, autor, genero, id, ubicacion);
                             ((LibroFisico) libro).setNumeroCopias(numCopias);
                             libros.add(libro);
 

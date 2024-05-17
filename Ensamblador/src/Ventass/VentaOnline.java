@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class VentaOnline extends Ventas {
 
-    public VentaOnline(Scanner sc, LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
-        super(sc, fechaVenta, libroVendidos, cliente);
+    public VentaOnline( LocalDate fechaVenta, List<Libros> libroVendidos, Cliente cliente) {
+        super(fechaVenta, libroVendidos, cliente);
     }
 
     public void BuscarClienteYMostrarDireccion(String nombreCliente, Cliente cliente) {

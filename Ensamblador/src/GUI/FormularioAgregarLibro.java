@@ -4,16 +4,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+import Ensamblador.Librosc.*;
+import Ensamblador.Ensambladorc.Ensamblador;
+
+
 public class FormularioAgregarLibro extends JDialog {
     private JTextField txtTitulo;
     private JTextField txtAutor;
-    private JTextField txtID;
-    private JTextField txtCampoAdicional1; // Campo adicional para LibroFisico
-    private JTextField txtCampoAdicional2; // Campo adicional para LibroElectronico
-    private JTextField txtCampoAdicional3; // Campo adicional para LibroAudio
-    private JTextField txtCampoAdicional4; // Campo adicional para LibroAudio (segundo campo)
-    private JComboBox<String> cmbIlustraciones; // JComboBox para seleccionar si lleva ilustraciones o no
+    private JTextField txtGenero;
+    private JTextField txtPrecio;
+    private JTextField txtUbicacion;
+    private JTextField txtFormato; // Campo adicional para LibroElectronico
+    private JTextField txtDuracion; // Campo adicional para LibroAudio
+    private JTextField txtIdioma; // Campo adicional para LibroAudio (segundo campo)
+    private JTextField txtIlustraciones; // Campo adicional para LibroAudio (segundo campo)
+    private JTextField txtNumIlustraciones; // Campo adicional para LibroAudio (segundo campo)
+    private JTextField txtEdadRecomendada; // Campo adicional para LibroAudio (segundo campo)
     private JButton btnAgregar;
+    
 
     public FormularioAgregarLibro(Frame parent, String title, String tipoLibro) {
         super(parent, title, true); // El diálogo será modal y estará asociado al frame parent
@@ -24,7 +32,8 @@ public class FormularioAgregarLibro extends JDialog {
         // Crear los campos de texto y botones
         txtTitulo = new JTextField();
         txtAutor = new JTextField();
-        txtID = new JTextField();
+        txtPrecio = new JTextField();
+        txtGenero = new JTextField();
         btnAgregar = new JButton("Agregar");
 
         // Agregar etiquetas y campos de texto al diálogo
@@ -32,36 +41,41 @@ public class FormularioAgregarLibro extends JDialog {
         add(txtTitulo);
         add(new JLabel("Autor:"));
         add(txtAutor);
-        add(new JLabel("ID:"));
-        add(txtID);
+        add(new JLabel("Genero: "));
+        add(txtGenero);
+        add(new JLabel("Precio: "));
+        add(txtPrecio);
+        
 
         // Dependiendo del tipo de libro, agregamos campos adicionales específicos
         switch (tipoLibro) {
             case "Libro Físico":
-                add(new JLabel("Ubicación:"));
-                txtCampoAdicional1 = new JTextField();
-                add(txtCampoAdicional1);
+                add(new JLabel("Ubicacion:"));
+                txtUbicacion = new JTextField();
+                add(txtUbicacion);
                 break;
             case "Libro Electrónico":
                 add(new JLabel("Formato:"));
-                txtCampoAdicional2 = new JTextField();
-                add(txtCampoAdicional2);
+                txtFormato = new JTextField();
+                add(txtFormato);
                 break;
             case "Libro de Audio":
                 add(new JLabel("Duración:"));
-                txtCampoAdicional3 = new JTextField();
-                add(txtCampoAdicional3);
+                txtDuracion = new JTextField();
+                add(txtDuracion);
                 add(new JLabel("Idioma:"));
-                txtCampoAdicional4 = new JTextField();
-                add(txtCampoAdicional4);
+                txtIdioma = new JTextField();
+                add(txtIdioma);
                 break;
             case "Libro Infantil":
                 add(new JLabel("Edad Recomendada:"));
-                txtCampoAdicional3 = new JTextField();
-                add(txtCampoAdicional3);
+                txtEdadRecomendada = new JTextField();
+                add(txtEdadRecomendada);
                 add(new JLabel("Ilustraciones:"));
-                cmbIlustraciones = new JComboBox<>(new String[]{"Sí", "No"}); // Opciones de Sí y No para ilustraciones
-                add(cmbIlustraciones);
+                txtIlustraciones = new JTextField(); // Opciones de Sí y No para ilustraciones
+                add(txtIlustraciones);
+                txtNumIlustraciones = new JTextField(); // Opciones de Sí y No para ilustraciones
+                add(txtNumIlustraciones);
                 break;
             default:
                 break;
@@ -81,34 +95,39 @@ public class FormularioAgregarLibro extends JDialog {
                 // Aquí puedes obtener los valores de los campos de texto y realizar la acción de agregar el libro
                 String titulo = txtTitulo.getText();
                 String autor = txtAutor.getText();
-                String id = txtID.getText();
+                String genero = txtGenero.getText();
+                double precio = Double.parseDouble(txtPrecio.getText());
                 // Dependiendo del tipo de libro, obtén los valores de los campos adicionales
-                String campoAdicional1 = null;
-                String campoAdicional2 = null;
-                String campoAdicional3 = null;
-                String campoAdicional4 = null;
                 switch (tipoLibro) {
                     case "Libro Físico":
-                        campoAdicional1 = txtCampoAdicional1.getText();
+                        String ubicacion = txtUbicacion.getText();
+                        LibroFisico fisico = new LibroFisico(titulo,autor,genero, precio, ubicacion);
+                        Ensamblador.agregarLibro(fisico);
                         break;
                     case "Libro Electrónico":
-                        campoAdicional2 = txtCampoAdicional2.getText();
+                        String formato = txtFormato.getText();
+                        LibroElectronico electronico = new LibroElectronico(titulo,autor,genero,precio,formato);
+                        Ensamblador.agregarLibro(electronico);
                         break;
                     case "Libro de Audio":
-                        campoAdicional3 = txtCampoAdicional3.getText();
-                        campoAdicional4 = txtCampoAdicional4.getText();
+                        int duracion = Integer.parseInt(txtDuracion.getText());
+                        String idioma =  txtIdioma.getText();
+                        LibroAudio audio = new LibroAudio(titulo,autor,genero,precio,duracion,idioma);
+                        Ensamblador.agregarLibro(audio);
                         break;
                     case "Libro Infantil":
-                        campoAdicional3 = txtCampoAdicional3.getText();
-                        campoAdicional4 = (String) cmbIlustraciones.getSelectedItem(); // Obtener la opción seleccionada
+                        int edadRecomendada = Integer.parseInt(txtEdadRecomendada.getText());
+                        boolean ilustraciones = Boolean.parseBoolean(txtIlustraciones.getText());
+                        int numIlustraciones = Integer.parseInt(txtNumIlustraciones.getText());
+                        LibroInfantil infantil = new LibroInfantil(titulo,autor,genero,precio,edadRecomendada,ilustraciones,numIlustraciones);
+                        Ensamblador.agregarLibro(infantil);
                         break;
                     default:
                         break;
                 }
-                // Luego, puedes realizar la lógica para agregar el libro utilizando estos valores
-                // Por ahora, simplemente cerraremos el diálogo
                 setVisible(false);
             }
+
         });
     }
 }

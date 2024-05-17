@@ -49,14 +49,14 @@ public class ArchivoClientes extends Archivos {
                     LocalDate fechaRegistro = LocalDate.of(Integer.parseInt(datosCliente[6]),
                             Integer.parseInt(datosCliente[5]),Integer.parseInt(datosCliente[4]));
                     int puntosFidelidad = Integer.parseInt(datosCliente[7]);
-                    int numero = Integer.parseInt(datosCliente[8]);
+                    String numero = datosCliente[8];
                     int tipoClientenInt = Integer.parseInt(datosCliente[9]);
 
                     Cliente cliente;
 
                     switch (tipoCliente) {
                         case "Cliente" :
-                            cliente = new Cliente(nombre,direccion,email);
+                            cliente = new Cliente(nombre,direccion,email,numero,fechaRegistro);
                             cliente.setTipoCliente(tipoClientenInt);
                             cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
@@ -79,13 +79,13 @@ public class ArchivoClientes extends Archivos {
                             break;
 
                         case "ClienteRegular":
-                            cliente = new ClienteRegular(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                            cliente = new ClienteRegular(nombre,direccion,email,numero,fechaRegistro);
                             cliente.setTipoCliente(tipoClientenInt);
                             cliente.setPuntosFidelidad(puntosFidelidad);
                             break;
 
                         case "ClienteVIP":
-                            cliente = new ClienteVIP(nombre,direccion,email,LocalDate.now(),numero,fechaRegistro);
+                            cliente = new ClienteVIP(nombre,direccion,email,numero,fechaRegistro);
                             cliente.setTipoCliente(tipoClientenInt);
                             cliente.setPuntosFidelidad(puntosFidelidad);
                             break;

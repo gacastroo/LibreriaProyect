@@ -1,26 +1,43 @@
 package Ensamblador.GUI;
 
+import Ensamblador.Ensambladorc.Ensamblador;
+import Ensamblador.Librosc.Libros;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class PanelLibros extends JPanel {
     private JTable tablaLibros;
     private JButton btnAgregarLibro;
     private JButton btnBuscarLibro;
-    private JButton btnBorrarLibro; // Nuevo botón para borrar libros
-    private JButton btnCancelar; // Nuevo botón para cancelar la acción
+    private JButton btnBorrarLibro;
+    private JButton btnCancelar;
     private JTextField txtBusqueda;
-    private JPanel panelTiposLibro; // Botonera para seleccionar el tipo de libro
+    private JPanel panelTiposLibro;
 
-    public PanelLibros() {
+    public  PanelLibros() {
+        ArrayList<Libros> libros = (ArrayList<Libros>) Ensamblador.getLibros();
+
         // Configuración del panel
         setLayout(new BorderLayout());
 
-        // Creación de los componentes
+        // Creación de la tabla
         tablaLibros = new JTable();
         JScrollPane scrollPane = new JScrollPane(tablaLibros);
 
+        // Llenar el modelo de tabla con los datos del ArrayList
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.setColumnIdentifiers(new String[]{"Titulo", "Autor", "Genero", "Precio"});
+        for (Libros libro : libros) {
+            Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(),libro.getPrecio()};
+            modelo.addRow(fila);
+        }
+        tablaLibros.setModel(modelo);
+
+        // Creación de los botones
         btnAgregarLibro = new JButton("Agregar Libro");
         btnAgregarLibro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -47,7 +64,7 @@ public class PanelLibros extends JPanel {
 
         // Crear la botonera para seleccionar el tipo de libro
         panelTiposLibro = new JPanel(new GridBagLayout());
-        panelTiposLibro.setVisible(false); // La botonera estará oculta inicialmente
+        panelTiposLibro.setVisible(false);
 
         // Configurar restricciones para los botones en el GridBagLayout
         GridBagConstraints gbc = new GridBagConstraints();
@@ -56,7 +73,7 @@ public class PanelLibros extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
-        gbc.insets = new Insets(5, 5, 5, 5); // Espacio entre los botones
+        gbc.insets = new Insets(5, 5, 5, 5);
 
         JButton btnLibroFisico = new JButton("Libro Físico");
         JButton btnLibroElectronico = new JButton("Libro Electrónico");
@@ -91,7 +108,7 @@ public class PanelLibros extends JPanel {
 
         btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                panelTiposLibro.setVisible(false); // Ocultar la botonera al cancelar
+                panelTiposLibro.setVisible(false);
             }
         });
 
@@ -99,7 +116,7 @@ public class PanelLibros extends JPanel {
         panelTiposLibro.add(btnLibroElectronico, gbc);
         panelTiposLibro.add(btnLibroAudio, gbc);
         panelTiposLibro.add(btnLibroInfantil, gbc);
-        panelTiposLibro.add(btnCancelar, gbc); // Agregar el botón de cancelar
+        panelTiposLibro.add(btnCancelar, gbc);
 
         // Agregar componentes al panel
         JPanel panelSuperior = new JPanel();
