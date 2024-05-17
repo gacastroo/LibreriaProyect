@@ -7,6 +7,7 @@ import Ensamblador.Librosc.Libros;
 import Ensamblador.Ventass.Ventas;
 
 import java.time.LocalDate;
+import java.util.LinkedList;
 import java.util.List;
 
 public class EnsambladorReportes extends Ensamblador {
@@ -36,20 +37,31 @@ public class EnsambladorReportes extends Ensamblador {
     public String generarReporteVentas() {
         // Generar un reporte con información detallada sobre las ventas realizadas
         StringBuilder reporte = new StringBuilder();
+        if (!ventas.isEmpty()) {
+            // Bucle for y generación del informe aquí
+        } else {
+            reporte.append("No hay ventas registradas.\n");
+        }
         for (Ventas venta : ventas) {
-            // Obtener el cliente de la venta actual
+            // Obtener la fecha de la venta actual
             LocalDate fecha = venta.getFechaVentas();
-            // Obtener el libro de la venta actual
-            Libros libro = venta.getLibrosVendidos().getFirst(); // Suponiendo que 'getLibrosVendidos()' devuelve una lista y queremos el primer libro vendido
+            // Obtener los libros vendidos en la venta actual
+            LinkedList<Libros> librosVendidos = (LinkedList<Libros>) venta.getLibrosVendidos();
+            // Obtener el cliente de la venta actual
             Cliente cliente = venta.getCliente();
+
             // Agregar detalles de la venta al reporte
-            reporte.append("Fecha Registrada: ").append(fecha)
-                    .append(", Libro Vendidos: ").append(libro)
-                    .append(", Cliente: ").append(cliente)
-                    .append("\n");
+            reporte.append("Fecha de la Venta: ").append(fecha).append("\n");
+            reporte.append("Cliente: ").append(cliente).append("\n");
+            reporte.append("Libros Vendidos:\n");
+            // Iterar sobre los libros vendidos en esta venta
+            for (Libros libro : librosVendidos) {
+                // Agregar detalles de cada libro al reporte
+                reporte.append("- ").append(libro).append("\n");
+            }
+            reporte.append("\n");
         }
         return reporte.toString();
     }
-
 
 }

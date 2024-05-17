@@ -2,6 +2,7 @@ package Ensamblador.Test;
 
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
+import Ensamblador.Ensambladorc.Ensamblador;
 import Ensamblador.Ensambladorc.EnsambladorReportes;
 import Ensamblador.Librosc.Libros;
 import Ensamblador.Ventass.Ventas;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -71,19 +73,22 @@ public class EnsambladorReportesTest {
         List<Ventas> ventas = new ArrayList<>();
         Cliente cliente = new Cliente("Juan","patata", "juan@example.com", "123456789",LocalDate.parse("2000-11-20"));
         Libros libro = new Libros("El Quijote","patata", "Miguel de Cervantes", 25.0);
-        ventas.add(new Ventas(LocalDate.parse("2000-11-20"), libros, cliente));
+        LinkedList<Libros> librosVendidos = new LinkedList<>();
+        librosVendidos.add(libro);
+        ventas.add(new Ventas(LocalDate.parse("2000-11-20"), librosVendidos, cliente));
 
         EnsambladorReportes reportes = new EnsambladorReportes(clientes, libros, archivos, ventas);
 
         // Llamar al método
-        String resultado = EnsambladorReportes.generarInformeVentas(reportes);
+        String resultado = Ensamblador.generarInformeVentas(reportes);
         System.out.println(resultado);
 
         // Verificar que la salida no sea nula
         assertNotNull(resultado);
         // Verificar que la salida contiene información de la venta
-        assertTrue(resultado.contains("Juan") && resultado.contains("El Quijote") && resultado.contains("25.0"));
+        assertTrue(  resultado.contains("El Quijote") && resultado.contains("patata") && resultado.contains("Miguel de Cervantes") && resultado.contains("25.0"));
     }
+
 
 
 }

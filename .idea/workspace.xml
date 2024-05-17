@@ -4,42 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jdatepicker.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="UpdateMal">
+      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/mainEnsamblador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoClientes/ArchivoClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoClientes/ArchivoClientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteInternacional.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteInternacional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteMayorista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteRegular.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteRegular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteVIP.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Clientess/ClienteVIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelVentas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroInfantil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroInfantil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/Libros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaMayorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaMayorista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaPresencial.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/VentaPresencial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibreriaProyect54.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibreriaProyect54.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +42,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.GUI.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.mainEnsamblador.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.EnsambladorReportesTest.executor": "Run",
     "JUnit.EnsambladorReportesTest.testGenerarInformeClientes.executor": "Run",
@@ -99,6 +70,7 @@
     "JUnit.EnsambladorVentasTest.testBuscarVentasPorLibro.executor": "Run",
     "JUnit.dsf.executor": "Run",
     "JUnit.ensambladorArchivosTest.executor": "Run",
+    "JUnit.ensambladorArchivosTest.testCargar.executor": "Run",
     "JUnit.ensambladorArchivosTest.testGuardarLibro.executor": "Run",
     "JUnit.ensambladorArchivosTest.testGuardarLibros.executor": "Run",
     "JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo.executor": "Run",
@@ -130,7 +102,36 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ensambladorArchivosTest.testCargar">
+  <component name="RunManager" selected="JUnit.EnsambladorReportesTest.testGenerarInformeVentas">
+    <configuration name="mainEnsamblador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Ensambladorc.mainEnsamblador" />
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Ensambladorc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EnsambladorReportesTest.testGenerarInformeVentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.EnsambladorReportesTest" />
+      <option name="METHOD_NAME" value="testGenerarInformeVentas" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ensambladorArchivosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibreriaProyect54" />
       <extension name="coverage">
@@ -142,22 +143,6 @@
       <option name="PACKAGE_NAME" value="Ensamblador.Test" />
       <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ensambladorArchivosTest.testCargar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibreriaProyect54" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ensamblador.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
-      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
-      <option name="METHOD_NAME" value="testCargar" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ensambladorArchivosTest.testGuardarLibros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ensambladorVentasTest.testTotalVentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibreriaProyect54" />
       <extension name="coverage">
         <pattern>
@@ -187,24 +172,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ensamblador.Test" />
-      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
-      <option name="METHOD_NAME" value="testGuardarLibros" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LibreriaProyect54" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ensamblador.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
-      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
-      <option name="METHOD_NAME" value="testGuardarYRecuperarDatosDesdeArchivo" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorVentasTest" />
+      <option name="METHOD_NAME" value="testTotalVentas" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ensambladorArchivosTest.testCargar" />
-        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibro" />
-        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibros" />
-        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" />
+        <item itemvalue="JUnit.EnsambladorReportesTest.testGenerarInformeVentas" />
+        <item itemvalue="Application.mainEnsamblador" />
         <item itemvalue="JUnit.ensambladorArchivosTest" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibro" />
+        <item itemvalue="JUnit.ensambladorVentasTest.testTotalVentas" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +209,7 @@
       <workItem from="1715672765749" duration="29000" />
       <workItem from="1715866539551" duration="547000" />
       <workItem from="1715867116489" duration="20837000" />
-      <workItem from="1715905348743" duration="12865000" />
+      <workItem from="1715905348743" duration="14964000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -258,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715866812389</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UpdateMal">
+      <option name="closed" value="true" />
+      <created>1715918459529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715918459529</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +254,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="UpdateMal" />
+    <option name="LAST_COMMIT_MESSAGE" value="UpdateMal" />
   </component>
 </project>
