@@ -124,8 +124,7 @@ Esta subclase de Ensamblador se dedica a generar reportes y estadísticas sobre 
 - [ ] generarReporteVentas(): Genera un reporte con información detallada sobre las ventas realizadas.
 
 ## Construido con 🛠️
-
- <img alt="imagen-java" height="60" src="./java-original.svg"> Java
+ <img alt="imagen-java" height="60" src="./java-original.svg"> <br/> &ensp; Java
 
 ## Autores ✒️
 
