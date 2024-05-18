@@ -25,7 +25,7 @@ Este es un ejemplo de un método de prueba realizado,<b> testEliminarLibro() </b
 
 Esta prueba asegura que el método eliminarLibro() funcione correctamente tanto para libros existentes como para libros que no existen en la lista. Esto garantiza un comportamiento adecuado en el manejo de la lista de libros en el objeto Ensamblador.
 
-```
+```java
   @Test
     public void testEliminarLibro() {
         // Configure scenario: create objects with data
