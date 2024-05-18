@@ -29,6 +29,11 @@ public class Ventas implements Serializable {
         this.cliente = clientes;
     }
 
+    @Override
+    public String toString() {
+        return "Venta realizada el " + fechaVenta + " para el cliente " + cliente.getNombre();
+    }
+
     public Ventas() {
 
     }

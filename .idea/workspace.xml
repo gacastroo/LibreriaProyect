@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="UpdateMal">
-      <change afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/mainEnsamblador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorReportes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/ArchivoTexto/ArchivoVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Archivos/Archivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Archivos/Archivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/EnsambladorVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensambladorarchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/mainEnsamblador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/mainEnsamblador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Librosc/LibroAudio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ventass/Ventas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,83 +47,71 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GUI.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.mainEnsamblador.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.EnsambladorReportesTest.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarInformeClientes.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarInformeLibros.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarInformeVentas.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarReporteClientes.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarReporteLibros.executor": "Run",
-    "JUnit.EnsambladorReportesTest.testGenerarReporteVentas.executor": "Run",
-    "JUnit.EnsambladorTest.executor": "Run",
-    "JUnit.EnsambladorTest.testAddCliente.executor": "Run",
-    "JUnit.EnsambladorTest.testAgregarLibro.executor": "Debug",
-    "JUnit.EnsambladorTest.testBuscarLibroPorTitulo_ExistingBook.executor": "Run",
-    "JUnit.EnsambladorTest.testBuscarLibroPorTitulo_NonexistentBook.executor": "Run",
-    "JUnit.EnsambladorTest.testEliminarLibro.executor": "Debug",
-    "JUnit.EnsambladorTest.testGenerarReporteClientes.executor": "Run",
-    "JUnit.EnsambladorTest.testGenerarReporteLibros.executor": "Run",
-    "JUnit.EnsambladorTest.testGenerarReporteVentas.executor": "Run",
-    "JUnit.EnsambladorTest.testOpcionIncorrecta.executor": "Run",
-    "JUnit.EnsambladorTest.testRemoveCliente.executor": "Run",
-    "JUnit.EnsambladorTest.testSaveAndLoadData.executor": "Run",
-    "JUnit.EnsambladorTest.testSaveDataToFile.executor": "Run",
-    "JUnit.EnsambladorVentasTest.executor": "Run",
-    "JUnit.EnsambladorVentasTest.testBuscarVentaPorCliente.executor": "Run",
-    "JUnit.EnsambladorVentasTest.testBuscarVentasPorLibro.executor": "Run",
-    "JUnit.dsf.executor": "Run",
-    "JUnit.ensambladorArchivosTest.executor": "Run",
-    "JUnit.ensambladorArchivosTest.testCargar.executor": "Run",
-    "JUnit.ensambladorArchivosTest.testGuardarLibro.executor": "Run",
-    "JUnit.ensambladorArchivosTest.testGuardarLibros.executor": "Run",
-    "JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo.executor": "Run",
-    "JUnit.ensambladorVentas.executor": "Run",
-    "JUnit.ensambladorVentas.testBuscarVentaPorCliente.executor": "Run",
-    "JUnit.ensambladorVentas.testBuscarVentasPorLibro.executor": "Run",
-    "JUnit.ensambladorVentasTest.executor": "Run",
-    "JUnit.ensambladorVentasTest.testBuscarVentasPorLibro.executor": "Run",
-    "JUnit.ensambladorVentasTest.testTotalVentas.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "openjdk-22 (2)",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Nyx/Downloads/luigi el salvador (1)",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.mainEnsamblador.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.EnsambladorReportesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarInformeClientes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarInformeLibros.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarInformeVentas.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarReporteClientes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarReporteLibros.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorReportesTest.testGenerarReporteVentas.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testAddCliente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testAgregarLibro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testBuscarLibroPorTitulo_ExistingBook.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testBuscarLibroPorTitulo_NonexistentBook.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testEliminarLibro.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.EnsambladorTest.testGenerarReporteClientes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testGenerarReporteLibros.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testGenerarReporteVentas.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testOpcionIncorrecta.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testRemoveCliente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testSaveAndLoadData.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorTest.testSaveDataToFile.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorVentasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorVentasTest.testBuscarVentaPorCliente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.EnsambladorVentasTest.testBuscarVentasPorLibro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.dsf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorArchivosTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorArchivosTest.testCargar.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorArchivosTest.testGuardarLibro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorArchivosTest.testGuardarLibros.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentas.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentas.testBuscarVentaPorCliente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentas.testBuscarVentasPorLibro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentasTest.testBuscarVentaPorCliente.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentasTest.testBuscarVentasPorLibro.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ensambladorVentasTest.testTotalVentas.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-22 (2)&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nyx/Downloads/luigi el salvador (1)&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.EnsambladorReportesTest.testGenerarInformeVentas">
-    <configuration name="mainEnsamblador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ensamblador.Ensambladorc.mainEnsamblador" />
-      <module name="LibreriaProyect54" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ensamblador.Ensambladorc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}</component>
+  <component name="RunManager" selected="JUnit.ensambladorArchivosTest.testCargar">
     <configuration name="EnsambladorReportesTest.testGenerarInformeVentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibreriaProyect54" />
       <extension name="coverage">
@@ -147,6 +143,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ensambladorArchivosTest.testCargar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LibreriaProyect54" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ensamblador.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ensamblador.Test" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testCargar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ensambladorArchivosTest.testGuardarLibro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibreriaProyect54" />
       <extension name="coverage">
@@ -163,7 +175,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ensambladorVentasTest.testTotalVentas" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LibreriaProyect54" />
       <extension name="coverage">
         <pattern>
@@ -172,8 +184,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ensamblador.Test" />
-      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorVentasTest" />
-      <option name="METHOD_NAME" value="testTotalVentas" />
+      <option name="MAIN_CLASS_NAME" value="Ensamblador.Test.ensambladorArchivosTest" />
+      <option name="METHOD_NAME" value="testGuardarYRecuperarDatosDesdeArchivo" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EnsambladorReportesTest.testGenerarInformeVentas" />
-        <item itemvalue="Application.mainEnsamblador" />
-        <item itemvalue="JUnit.ensambladorArchivosTest" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testCargar" />
         <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarLibro" />
-        <item itemvalue="JUnit.ensambladorVentasTest.testTotalVentas" />
+        <item itemvalue="JUnit.ensambladorArchivosTest.testGuardarYRecuperarDatosDesdeArchivo" />
+        <item itemvalue="JUnit.ensambladorArchivosTest" />
+        <item itemvalue="JUnit.EnsambladorReportesTest.testGenerarInformeVentas" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +221,11 @@
       <workItem from="1715672765749" duration="29000" />
       <workItem from="1715866539551" duration="547000" />
       <workItem from="1715867116489" duration="20837000" />
-      <workItem from="1715905348743" duration="14964000" />
+      <workItem from="1715905348743" duration="15042000" />
+      <workItem from="1715920494817" duration="25000" />
+      <workItem from="1715920565262" duration="144000" />
+      <workItem from="1715944039397" duration="4184000" />
+      <workItem from="1715983733074" duration="9484000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -235,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715918459529</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="UpdateMal">
+      <option name="closed" value="true" />
+      <created>1715920428591</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715920428591</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,5 +280,15 @@
     <MESSAGE value="update" />
     <MESSAGE value="UpdateMal" />
     <option name="LAST_COMMIT_MESSAGE" value="UpdateMal" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

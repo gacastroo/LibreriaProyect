@@ -98,7 +98,7 @@ public class ArchivoTexto extends Archivos {
 
                             String idioma = datosLibro[6].trim(); // Obtener el idioma del libro de la posición correcta
                             String tasa = datosLibro[7].trim();
-                            libro = new LibroAudio(titulo, autor, genero, id, duracion, idioma);
+                            libro = new LibroAudio(titulo, autor, genero, id, duracion, idioma,tasa);
                             libros.add(libro);
                             break;
                         case "Infantil":

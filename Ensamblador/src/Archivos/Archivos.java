@@ -11,8 +11,8 @@ public class Archivos implements Serializable {
         return nombre;
     }
 
-    public void setRuta(String ruta) {
-        this.ruta = ruta;
+    public static void setRuta(String ruta) {
+        Archivos.ruta = ruta;
     }
 
     public String getExtension() {

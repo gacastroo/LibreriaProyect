@@ -7,21 +7,11 @@ public class LibroAudio extends Libros implements Serializable {
     private String idioma;
     private String tasa;
 
-    public LibroAudio() {
-        super("El Señor de los Anillos", "J.R.R. Tolkien","audio",3);
-    }
-
-    public LibroAudio(int duracion, String idioma, String tasa) {
-        super("El Señor de los Anillos", "J.R.R. Tolkien","novela", 12.5);
-        this.duracion = duracion;
-        this.idioma = idioma;
-        this.tasa = tasa;
-    }
-
-    public LibroAudio(String titulo, String autor, String genero, double precio, int duracion, String idioma) {
+    public LibroAudio(String titulo, String autor, String genero, double precio, int duracion, String idioma, String tasa) {
         super(titulo, autor, genero, precio);
         this.duracion = duracion;
         this.idioma = idioma;
+        this.tasa = tasa;
     }
 
     public int getDuracion() {

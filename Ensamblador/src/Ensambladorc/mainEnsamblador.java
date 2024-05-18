@@ -5,17 +5,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
-
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
-import Ensamblador.Ensambladorc.Ensamblador;
-import Ensamblador.Ensambladorc.EnsambladorReportes;
 import Ensamblador.Librosc.Libros;
 import Ensamblador.Ventass.Ventas;
-
-
-import static Ensamblador.Ensambladorc.Ensamblador.*;
 
 public class mainEnsamblador {
 

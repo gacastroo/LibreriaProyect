@@ -14,6 +14,7 @@ public class FormularioAgregarLibro extends JDialog {
     private JTextField txtGenero;
     private JTextField txtPrecio;
     private JTextField txtUbicacion;
+    private JTextField txtTasa;
     private JTextField txtFormato; // Campo adicional para LibroElectronico
     private JTextField txtDuracion; // Campo adicional para LibroAudio
     private JTextField txtIdioma; // Campo adicional para LibroAudio (segundo campo)
@@ -34,6 +35,7 @@ public class FormularioAgregarLibro extends JDialog {
         txtAutor = new JTextField();
         txtPrecio = new JTextField();
         txtGenero = new JTextField();
+        txtTasa = new JTextField();
         btnAgregar = new JButton("Agregar");
 
         // Agregar etiquetas y campos de texto al diálogo
@@ -45,6 +47,8 @@ public class FormularioAgregarLibro extends JDialog {
         add(txtGenero);
         add(new JLabel("Precio: "));
         add(txtPrecio);
+        add(new JLabel("Tasa: "));
+        add(txtTasa);
         
 
         // Dependiendo del tipo de libro, agregamos campos adicionales específicos
@@ -112,7 +116,8 @@ public class FormularioAgregarLibro extends JDialog {
                     case "Libro de Audio":
                         int duracion = Integer.parseInt(txtDuracion.getText());
                         String idioma =  txtIdioma.getText();
-                        LibroAudio audio = new LibroAudio(titulo,autor,genero,precio,duracion,idioma);
+                        String tasa =  txtTasa.getText();
+                        LibroAudio audio = new LibroAudio(titulo,autor,genero,precio,duracion,idioma,tasa);
                         Ensamblador.agregarLibro(audio);
                         break;
                     case "Libro Infantil":

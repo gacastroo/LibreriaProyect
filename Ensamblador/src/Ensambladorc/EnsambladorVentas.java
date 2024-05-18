@@ -21,55 +21,81 @@ public class EnsambladorVentas extends Ensamblador {
         add(ventas);
     }
 
-    public static String BuscarVentaPorCliente(List<Ventas> ventas, List<Cliente> clientes) {
+    //ESTE METODO VA EN EL GUI
+    public static String BuscarVentaPorClienteScanner(List<Ventas> ventas, List<Cliente> clientes) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("¿Qué cliente quieres buscar?");
         String nombreCliente = scanner.nextLine().trim();
+        return BuscarVentaPorCliente(ventas, clientes, nombreCliente);
+    }
+
+    public static String BuscarVentaPorCliente(List<Ventas> ventas, List<Cliente> clientes, String nombreCliente) {
+        StringBuilder resultado = new StringBuilder();
+        boolean clienteEncontrado = false;
 
         for (Cliente cliente : clientes) {
             if (cliente.getNombre().equalsIgnoreCase(nombreCliente)) {
-                StringBuilder resultado = new StringBuilder("\nVentas para el cliente " + nombreCliente + ":");
-                boolean ventasEncontradas = false;
+                clienteEncontrado = true;
+                boolean ventaEncontrada = false;
+                resultado.append("Ventas para el cliente ").append(nombreCliente).append(":\n");
                 for (Ventas venta : ventas) {
                     if (venta.getCliente().equals(cliente)) {
-                        resultado.append("\n").append(venta); // Suponiendo que la clase Ventas tiene un método toString() adecuado
-                        ventasEncontradas = true;
+                        resultado.append(venta).append("\n");
+                        ventaEncontrada = true;
                     }
                 }
-                if (ventasEncontradas) {
-                    return resultado.toString();
-                } else {
-                    return "No se encontraron ventas para el cliente " + nombreCliente;
+                if (!ventaEncontrada) {
+                    resultado.append("No se encontraron ventas para el cliente ").append(cliente.getNombre());
                 }
+                break; // Rompe el bucle ya que hemos encontrado el cliente
             }
         }
-        return "El cliente " + nombreCliente + " no está registrado";
+        if (!clienteEncontrado) {
+            resultado.append("El cliente ").append(nombreCliente).append(" no está registrado");
+        }
+        return resultado.toString();
     }
-        public static Ventas BuscarVentasPorLibro(List<Libros> libros, List<Ventas> ventas) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("¿Qué libro quieres consultar?");
-            String nombreLibro = scanner.nextLine().trim();
 
-            for (Libros libro : libros) {
-                if (libro.getTitulo().equalsIgnoreCase(nombreLibro)) {
-                    System.out.println("\nVentas para el libro \"" + nombreLibro + "\":");
-                    for (Ventas venta : ventas) {
-                        if (venta.getLibrosVendidos().equals(libro)) {
-                            return venta;
-                        }
+    ////LAS DE SCANNER ES LA FUNCION PARA IMPLEMENTAR EN EL GUI
+    public static String BuscarVentaPorLibroScanner(List<Ventas> ventas, List<Cliente> clientes) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("¿Qué libro quieres consultar?");
+        String nombreLibro = scanner.nextLine().trim();
+        return BuscarVentaPorCliente(ventas, clientes, nombreLibro);
+    }
+
+    public static String BuscarVentasPorLibro(List<Libros> libros, List<Ventas> ventas, String nombreLibro) {
+        StringBuilder resultado = new StringBuilder();
+        boolean libroEncontrado = false;
+        boolean ventaEncontrada = false;
+
+        for (Libros libro : libros) {
+            if (libro.getTitulo().equalsIgnoreCase(nombreLibro)) {
+                libroEncontrado = true;
+                for (Ventas venta : ventas) {
+                    if (venta.getLibrosVendidos().stream().anyMatch(l -> l.equals(libro))) {
+                        resultado.append(venta);
+                        ventaEncontrada = true;
                     }
-                    return null; // No se encontraron ventas para el libro
                 }
+                if (!ventaEncontrada) {
+                    resultado.append("No se encontraron ventas para el libro ").append(nombreLibro);
+                }
+                break; // Rompe el bucle ya que hemos encontrado el libro
             }
-            return null; // El libro no está registrado
         }
+        if (!libroEncontrado) {
+            resultado.append("El libro ").append(nombreLibro).append(" no está registrado");
+        }
+        return resultado.toString();
+    }
 
 
-    public static String TotalVentas(List<Ventas> ventas) {
-        double totalVentas = 0.0;
-        for (Ventas venta : ventas) {
-            totalVentas += venta.calcularTotal();
+    public static String TotalVentas(List<Libros> libros) {
+        double sumaPrecios = 0.0;
+        for (Libros libro : libros) {
+            sumaPrecios += libro.getPrecio();
         }
-        return "El total de las ventas es: " + totalVentas;
+        return "El total de las ventas es: " + sumaPrecios;
     }
-    }
+}
