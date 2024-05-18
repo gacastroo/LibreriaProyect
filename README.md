@@ -69,7 +69,9 @@ Esta prueba asegura que el método eliminarLibro() funcione correctamente tanto 
 ```
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+<p align="center">
+  <img src="interfaz.PNG" />
+</p>
 
 ## Complicaciones 🐛
 ![texto cualquiera por si no carga la imagen](error.PNG)
