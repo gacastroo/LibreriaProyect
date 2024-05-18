@@ -11,14 +11,61 @@ Da un ejemplo
 
 ## Ejecutando las pruebas 🧪
 
-> [!CAUTION]
-> No todas las pruebas realizadas han sido comprobadas.
+Este es un ejemplo de un método de prueba realizado,<b> testEliminarLibro() </b>, prueba la funcionalidad de eliminar un libro de la lista de libros en un objeto Ensamblador. Aquí está lo que hace:
 
+<b>Configuración del escenario:</b> Crea dos objetos de libro (libro1 y libro2) con datos predefinidos. Luego, inicializa un objeto Ensamblador con una lista de libros que contiene estos dos libros.
 
-_Explica que verifican estas pruebas y por qué_
+<b>Caso de prueba:</b> Eliminar un libro existente: Elimina libro1 de la lista de libros usando el método eliminarLibro().
+
+<b>Verificación del resultado:</b> Se asegura de que libro1 se haya eliminado correctamente de la lista y de que libro2 permanezca en la lista.
+
+<b>Caso de prueba:</b> Eliminar un libro que no existe: Intenta eliminar un libro que no está en la lista.
+
+<b>Verificación del resultado:</b> Comprueba que la lista de libros permanezca sin cambios después de intentar eliminar un libro que no está en ella.
+
+Esta prueba asegura que el método eliminarLibro() funcione correctamente tanto para libros existentes como para libros que no existen en la lista. Esto garantiza un comportamiento adecuado en el manejo de la lista de libros en el objeto Ensamblador.
 
 ```
-Da un ejemplo
+  @Test
+    public void testEliminarLibro() {
+        // Configure scenario: create objects with data
+        String tituloLibro1 = "Clean Code";
+        String autorLibro1 = "Robert C. Martin";
+        String generoLibro1 = "Programming";
+        double precioLibro1 = 35.99;
+
+        String tituloLibro2 = "The Pragmatic Programmer";
+        String autorLibro2 = "Andrew Hunt & David Thomas";
+        String generoLibro2 = "Software Development";
+        double precioLibro2 = 42.50;
+
+        Libros libro1 = new Libros(tituloLibro1, autorLibro1, generoLibro1, precioLibro1);
+        Libros libro2 = new Libros(tituloLibro2, autorLibro2, generoLibro2, precioLibro2);
+
+        List<Cliente> clientes = new ArrayList<>();
+        List<Archivos> archivos = new ArrayList<>();
+        List<Ventas> ventas = new ArrayList<>();
+
+        Ensamblador ensamblador = new Ensamblador(clientes, new ArrayList<>() {{
+            add(libro1);
+            add(libro2);
+        }}, archivos, ventas); // Initialize libros list
+
+        // Test case: Remove existing book
+        ensamblador.eliminarLibro(libro1);
+
+        // Verify result: libro1 is removed
+        assertEquals(1, ensamblador.getLibros().size());
+        assertFalse(ensamblador.getLibros().contains(libro1));
+        assertTrue(ensamblador.getLibros().contains(libro2));
+
+        // Test case: Remove non-existent book
+        ensamblador.eliminarLibro(new Libros("Nuevo Libro", "Nuevo Autor", "Nuevo Género", 0.0));
+
+        // Verify result: list remains unchanged
+        assertEquals(1, ensamblador.getLibros().size());
+        assertTrue(ensamblador.getLibros().contains(libro2));
+    }
 ```
 ## Despliegue 📦
 
