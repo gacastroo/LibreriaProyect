@@ -72,9 +72,7 @@ Esta prueba asegura que el método eliminarLibro() funcione correctamente tanto 
 _Agrega notas adicionales sobre como hacer deploy_
 
 ## Complicaciones 🐛
-```
 ![texto cualquiera por si no carga la imagen](error.PNG)
-```
 ## Objetivos 🎯
 
 Integrar los diferentes módulos desarrollados por los otros equipos en una aplicación funcional y completa.
