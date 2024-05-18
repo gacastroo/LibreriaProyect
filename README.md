@@ -6,7 +6,8 @@ El objetivo de este proyecto es desarrollar un sistema de gestión de una tienda
 > [!NOTE]
 > Esta estructura está sujeta a cambios.
 ```
- <img alt="imagen-codigo" height="60" src="./codigo.png">
+![Imagen-codigo](./codigo.png)
+
 ```
 
 ## Ejecutando las pruebas 🧪
