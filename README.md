@@ -73,7 +73,7 @@ _Agrega notas adicionales sobre como hacer deploy_
 
 ## Complicaciones 🐛
 ```
-![texto cualquiera por si no carga la imagen](error.png)
+![texto cualquiera por si no carga la imagen](error.PNG)
 ```
 ## Objetivos 🎯
 
