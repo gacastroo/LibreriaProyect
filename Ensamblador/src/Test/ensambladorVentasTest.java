@@ -1,4 +1,4 @@
-/*package Ensamblador.Test;
+package Ensamblador.Test;
 
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
@@ -79,4 +79,3 @@ public class ensambladorVentasTest {
         assertEquals("El total de las ventas es: 4.0", resultado); // Hasta ahora, solo hemos creado ventas, no se ha calculado el total.
     }
 }
-*/
