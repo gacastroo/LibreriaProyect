@@ -15,7 +15,7 @@ import Ensamblador.Ventass.Ventas;
 
 public class Ensamblador implements Serializable {
 
-    protected static ArrayList<Cliente> clientes;
+     protected static ArrayList<Cliente> clientes;
     protected static ArrayList<Libros> libros;
     protected static ArrayList<Archivos> archivos;
     protected static ArrayList<Ventas> ventas;
@@ -23,10 +23,10 @@ public class Ensamblador implements Serializable {
 
 
     public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
-        this.clientes = (ArrayList<Cliente>) clientes;
-        this.libros = (ArrayList<Libros>) libros;
-        this.archivos = (ArrayList<Archivos>) archivos;
-        this.ventas = (ArrayList<Ventas>) ventas;
+        Ensamblador.clientes = (ArrayList<Cliente>) clientes;
+        Ensamblador.libros = (ArrayList<Libros>) libros;
+        Ensamblador.archivos = (ArrayList<Archivos>) archivos;
+        Ensamblador.ventas = (ArrayList<Ventas>) ventas;
     }
 
 
@@ -78,7 +78,7 @@ public class Ensamblador implements Serializable {
         libros.add(libro);
     }
 
-    public void eliminarLibro(Libros libro){
+    public static void eliminarLibro(Libros libro){
         libros.remove(libro);
     }
     public void agregarArchivo(Archivos archivo){
@@ -100,14 +100,14 @@ public class Ensamblador implements Serializable {
 
     public static ArrayList<Libros> buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
         ArrayList<Libros> libros1 = new ArrayList<>();
-        for (Libros libro : libros) {
-            System.out.println(libro.getAutor());
-            if (libro.getTitulo().equals(titulo)) {
-                libros1.add(libro);
+            for (Libros libro : libros) {
+                System.out.println(libro.getAutor());
+                if (libro.getTitulo().equals(titulo)) {
+                    libros1.add(libro);
+                }
             }
-        }
         return libros1;
-    }
+        }
     public void saveDataToFile(String filePath) throws IOException {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(Files.newOutputStream(Paths.get(filePath)))) {
             outputStream.writeObject(clientes);

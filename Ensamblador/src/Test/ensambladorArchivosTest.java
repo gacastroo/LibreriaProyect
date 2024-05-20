@@ -57,7 +57,7 @@ public class ensambladorArchivosTest {
         Path tempFile = Files.createTempFile("testGuardarLibro", ".txt");
         Archivos.setRuta(tempFile.toString());
 
-        Ensambladorarchivos ensamblador = new Ensambladorarchivos(clientes,libros, archivos, ventas);
+        Ensambladorarchivos ensamblador = new Ensambladorarchivos(clientes,libros,archivos,ventas);
 
         // Ejecutar el método
         ensamblador.guardarLibro(libro1);
@@ -94,8 +94,11 @@ public class ensambladorArchivosTest {
         }
         // Inicializar lista de libros
         List<Ventas> ventas = new ArrayList<>();
+        List<Libros> libros = new ArrayList<>();
+        List<Cliente> clientes = new ArrayList<>();
+        List<Archivos> archivos = new ArrayList<>();
         // Crear instancia de Ensambladorarchivos con la lista de libros inicializada
-        Ensambladorarchivos ensamblador = new Ensambladorarchivos(new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), ventas);
+        Ensambladorarchivos ensamblador = new Ensambladorarchivos(clientes,libros,archivos,ventas);
         // Ejecutar el método y verificar
         List<Libros> librosCargados = ensamblador.cargar();
         assertEquals(2, librosCargados.size());
