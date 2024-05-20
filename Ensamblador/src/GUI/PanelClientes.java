@@ -1,8 +1,13 @@
 package Ensamblador.GUI;
 
+import Ensamblador.Clientess.Cliente;
+import Ensamblador.Ensambladorc.Ensamblador;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PanelClientes extends JPanel {
     private JTable tablaClientes;
@@ -52,25 +57,17 @@ public class PanelClientes extends JPanel {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
-        gbc.insets = new Insets(5, 5, 5, 5); // Espacio entre los botones
+        gbc.insets = new Insets(5, 5, 5, 5);
 
         JButton btnClienteRegular = new JButton("Cliente Regular");
-        JButton btnClienteVip = new JButton("Cliente VIP");
         JButton btnClienteMayorista = new JButton("Cliente Mayorista");
         JButton btnClienteOnline = new JButton("Cliente Online");
         JButton btnClienteInternacional = new JButton("Cliente Internacional");
         btnCancelar = new JButton("Cancelar");
 
-        // Agregar ActionListener a los botones de tipos de Cliente inspirados en los de libros.
         btnClienteRegular.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 abrirFormularioClientes("Cliente Regular");
-            }
-        });
-
-        btnClienteVip.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                abrirFormularioClientes("Cliente VIP");
             }
         });
 
@@ -81,28 +78,29 @@ public class PanelClientes extends JPanel {
         });
 
         btnClienteOnline.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {  abrirFormularioClientes("Cliente Online");
+            public void actionPerformed(ActionEvent e) {
+                abrirFormularioClientes("Cliente Online");
             }
         });
+
         btnClienteInternacional.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {  abrirFormularioClientes("Cliente Internacional");
+            public void actionPerformed(ActionEvent e) {
+                abrirFormularioClientes("Cliente Internacional");
             }
         });
 
         btnCancelar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                panelTiposClientes.setVisible(false); // Ocultar la botonera al cancelar
+                panelTiposClientes.setVisible(false);
             }
         });
 
         panelTiposClientes.add(btnClienteRegular, gbc);
-        panelTiposClientes.add(btnClienteVip, gbc);
         panelTiposClientes.add(btnClienteMayorista, gbc);
         panelTiposClientes.add(btnClienteOnline, gbc);
         panelTiposClientes.add(btnClienteInternacional, gbc);
         panelTiposClientes.add(btnCancelar, gbc);
 
-        // Agregar componentes al panel
         JPanel panelSuperior = new JPanel();
         panelSuperior.add(new JLabel("Buscar:"));
         panelSuperior.add(txtBusqueda);
@@ -117,26 +115,64 @@ public class PanelClientes extends JPanel {
         add(panelInferior, BorderLayout.SOUTH);
 
         add(panelTiposClientes, BorderLayout.EAST);
+
+        cargarDatosTabla();
     }
 
     public void mostrarBotoneraTiposClientes() {
-        // Mostrar la botonera para seleccionar el tipo deCliente que sea elegido
         panelTiposClientes.setVisible(true);
     }
 
     public void abrirFormularioClientes(String tipoCliente) {
-        // Crear una instancia del formulario para agregar un tipo de cliente elegido
         FormularioAgregarCliente formulario = new FormularioAgregarCliente((Frame) SwingUtilities.getWindowAncestor(this), "Agregar Cliente", tipoCliente);
         formulario.setVisible(true);
         panelTiposClientes.setVisible(false);
+        cargarDatosTabla();
     }
 
     public void buscarCliente(String criterio) {
+        DefaultTableModel modelo = (DefaultTableModel) tablaClientes.getModel();
+        modelo.setRowCount(0);
 
+        for (Cliente cliente : Ensamblador.getClientes()) {
+            if (cliente.getNombre().toLowerCase().contains(criterio.toLowerCase())) {
+                modelo.addRow(new Object[]{cliente.getNombre(), cliente.getDireccion(), cliente.getEmail(), cliente.getTelefono()});
+            }
+        }
     }
 
     public void borrarClienteSeleccionado() {
+        int filaSeleccionada = tablaClientes.getSelectedRow();
+        if (filaSeleccionada != -1) {
+            String nombreCliente = (String) tablaClientes.getValueAt(filaSeleccionada, 0);
+            Cliente clienteAEliminar = null;
 
+            for (Cliente cliente : Ensamblador.getClientes()) {
+                if (cliente.getNombre().equals(nombreCliente)) {
+                    clienteAEliminar = cliente;
+                    break;
+                }
+            }
+
+            if (clienteAEliminar != null) {
+                Ensamblador.eliminarCliente(clienteAEliminar);
+                cargarDatosTabla();
+            }
+        }
+    }
+
+    private void cargarDatosTabla() {
+        DefaultTableModel modelo = new DefaultTableModel();
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Dirección");
+        modelo.addColumn("Email");
+        modelo.addColumn("Teléfono");
+
+        for (Cliente cliente : Ensamblador.getClientes()) {
+            modelo.addRow(new Object[]{cliente.getNombre(), cliente.getDireccion(), cliente.getEmail(), cliente.getTelefono()});
+        }
+
+        tablaClientes.setModel(modelo);
     }
 
     public void setTablaClientes(JTable tablaClientes) {

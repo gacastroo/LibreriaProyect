@@ -1,13 +1,12 @@
 package Ensamblador.GUI;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class FormularioReporteLibros extends JDialog {
-    private JTextField txtISBN;
     private JTextField txtTitulo;
+    private JTextField txtAutor;
     private JComboBox<String> comboTipoLibro;
     private JButton btnAceptar;
     private JButton btnCancelar;
@@ -17,8 +16,8 @@ public class FormularioReporteLibros extends JDialog {
 
         setLayout(new GridLayout(5, 2, 5, 5));
 
-        txtISBN = new JTextField();
         txtTitulo = new JTextField();
+        txtAutor = new JTextField();
         comboTipoLibro = new JComboBox<>();
         comboTipoLibro.addItem("LibroFisico");
         comboTipoLibro.addItem("LibroElectronico");
@@ -40,10 +39,10 @@ public class FormularioReporteLibros extends JDialog {
             }
         });
 
-        add(new JLabel("ISBN:"));
-        add(txtISBN);
         add(new JLabel("Título:"));
         add(txtTitulo);
+        add(new JLabel("Autor:"));
+        add(txtAutor);
         add(new JLabel("Tipo de Libro:"));
         add(comboTipoLibro);
         add(btnAceptar);
@@ -51,5 +50,12 @@ public class FormularioReporteLibros extends JDialog {
 
         setSize(300, 200);
         setLocationRelativeTo(parent);
+    }
+
+    public String getReporte() {
+        String titulo = txtTitulo.getText();
+        String autor = txtAutor.getText();
+        String tipoLibro = (String) comboTipoLibro.getSelectedItem();
+        return "Título: " + titulo + "\nAutor: " + autor + "\nTipo de Libro: " + tipoLibro;
     }
 }

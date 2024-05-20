@@ -10,75 +10,60 @@ import java.util.Scanner;
 
 public class Cliente implements Serializable {
 
-    //Creación de las variables de la clase cliente.
-    protected  String nombre;
+    protected String nombre;
     protected String direccion;
     protected String email;
     protected LocalDate fechaRegistro;
-
     protected int idCliente;
     protected String numTelefono;
     protected int puntosFidelidad;
+    protected int tipoCliente;
 
-    public int getTipoCliente() {
-        return TipoCliente;
-    }
-
-    public void setTipoCliente(int tipoCliente) {
-        TipoCliente = tipoCliente;
-    }
-
-    int TipoCliente;
-
-    public int getPuntosFidelidad() {
-        return puntosFidelidad;
-    }
-
-    public void setPuntosFidelidad(int puntosFidelidad) {
-        this.puntosFidelidad = puntosFidelidad;
-    }
-
-    // atributo del grupo libros.
-    //Constructor completo de la clase cliente.
     public Cliente(String nombre, String direccion, String email, String numTelefono, LocalDate fechaRegistro) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.email = email;
         this.numTelefono = numTelefono;
-        this.fechaRegistro =fechaRegistro;
+        this.fechaRegistro = fechaRegistro;
     }
 
-
-    //Getters y setters.
-    public  String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public  String getNumTelefono() {
-        return numTelefono;
-    }
-
-    public  String getDireccion() {
+    public String getDireccion() {
         return direccion;
     }
 
-    public  String getEmail() {
+    public String getEmail() {
         return email;
+    }
+
+    public LocalDate getFechaRegistro() {
+        return fechaRegistro;
     }
 
     public int getIdCliente() {
         return idCliente;
     }
 
-    public  LocalDate getFechaRegistro() {
-        return fechaRegistro;
-    } //Tipo fecha.
+    public String getNumTelefono() {
+        return numTelefono;
+    }
 
-    public  void setNombre(String nombre) {
+    public int getPuntosFidelidad() {
+        return puntosFidelidad;
+    }
+
+    public int getTipoCliente() {
+        return tipoCliente;
+    }
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public  void setDireccion(String direccion) {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
@@ -86,7 +71,7 @@ public class Cliente implements Serializable {
         this.email = email;
     }
 
-    public  void setFechaRegistro(LocalDate fechaRegistro) {
+    public void setFechaRegistro(LocalDate fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
@@ -98,18 +83,20 @@ public class Cliente implements Serializable {
         this.idCliente = idCliente;
     }
 
+    public void setPuntosFidelidad(int puntosFidelidad) {
+        this.puntosFidelidad = puntosFidelidad;
+    }
 
-    //Metodo para buscar cliente por su número de teléfono. Le pasamos por parametro el numero de teléfono, el
-    //ArrayList que contiene los clientes.
+    public void setTipoCliente(int tipoCliente) {
+        this.tipoCliente = tipoCliente;
+    }
+
     public static Cliente buscarClientePorTelefono(String numTelefono, ArrayList<Cliente> listaClientes) {
-        //Recorremos el arreglo de clientes, y si el numero de telefono introducido por parametro es igual al
-        //numero de telefono de alguno de los clientes, retornamos la informacion de dicho cliente.
         for (Cliente cliente : listaClientes) {
-            if (cliente.getNumTelefono() == numTelefono) {
+            if (cliente.getNumTelefono().equals(numTelefono)) {
                 return cliente;
             }
         }
-        //Si no se encuentra ningun cliente, retornamos null.
         return null;
     }
 
@@ -134,7 +121,7 @@ public class Cliente implements Serializable {
     public static void buscarClientePorID(Scanner sc, HashMap<Integer, Cliente> mapaClientes) {
         System.out.println("Ingrese el ID del cliente a buscar: ");
         int id = sc.nextInt();
-        sc.nextLine(); // Limpiar el buffer del scanner después de leer un entero
+        sc.nextLine();
         Cliente cliente = mapaClientes.get(id);
         if (cliente != null) {
             System.out.println("¡Cliente encontrado!");
@@ -149,19 +136,21 @@ public class Cliente implements Serializable {
         }
     }
 
-    //Métodos asignarPuntosFidelidad y canjearPuntosFidelidad: Estos métodos se encargan de asignar y canjear puntos de fidelidad a un cliente.
-    // Se calcula el número de puntos a asignar o canjear según el precio de la venta y se actualizan los puntos de fidelidad del cliente en consecuencia.
-    // Además, se aplican descuentos en función de los puntos canjeados.
-    public static void GuardarPuntosFidelidad(Cliente cliente,int precioVenta){
-        cliente.setPuntosFidelidad((cliente.getPuntosFidelidad() + (precioVenta)));
+    public static void GuardarPuntosFidelidad(Cliente cliente, int precioVenta) {
+        cliente.setPuntosFidelidad(cliente.getPuntosFidelidad() + precioVenta);
     }
-    public static void CanjearPuntosFidelidad(Cliente cliente, Ventas venta){
-        int PuntosCanjeables=cliente.getPuntosFidelidad();
-        int PuntosNoCanjeados= cliente.getPuntosFidelidad()-PuntosCanjeables;
+
+    public static void CanjearPuntosFidelidad(Cliente cliente, Ventas venta) {
+        int PuntosCanjeables = cliente.getPuntosFidelidad();
+        int PuntosNoCanjeados = cliente.getPuntosFidelidad() - PuntosCanjeables;
         cliente.setPuntosFidelidad(PuntosNoCanjeados);
-        int Descuento=PuntosCanjeables/20;//Si tengo 200 puntos fidelidad se realiza un descuento de 5% (10 euros)
-        venta.setPrecio(venta.getPrecio()-Descuento);
-        System.out.println("Cantidad de puntos de fidelidad a canjear :"+PuntosCanjeables+" equivalentes a "+Descuento + " euros");
+        int Descuento = PuntosCanjeables / 20;
+        venta.setPrecio(venta.getPrecio() - Descuento);
+        System.out.println("Cantidad de puntos de fidelidad a canjear: " + PuntosCanjeables + " equivalentes a " + Descuento + " euros");
         System.out.println("¡Puntos de fidelidad canjeados exitosamente!");
+    }
+
+    public String getTelefono() {
+        return getNumTelefono();
     }
 }
