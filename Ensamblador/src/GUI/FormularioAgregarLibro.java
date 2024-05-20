@@ -23,12 +23,10 @@ public class FormularioAgregarLibro extends JDialog {
     private JButton btnAgregar;
 
     public FormularioAgregarLibro(Frame parent, String title, String tipoLibro) {
-        super(parent, title, true); // El diálogo será modal y estará asociado al frame parent
+        super(parent, title, true);
 
-        // Configurar el layout del diálogo
-        setLayout(new GridLayout(8, 2, 5, 5)); // 8 filas, 2 columnas, espacios de 5px entre componentes
+        setLayout(new GridLayout(8, 2, 5, 5));
 
-        // Crear los campos de texto y botones
         txtTitulo = new JTextField();
         txtAutor = new JTextField();
         txtPrecio = new JTextField();
@@ -36,7 +34,6 @@ public class FormularioAgregarLibro extends JDialog {
         txtTasa = new JTextField();
         btnAgregar = new JButton("Agregar");
 
-        // Agregar etiquetas y campos de texto al diálogo
         add(new JLabel("Título:"));
         add(txtTitulo);
         add(new JLabel("Autor:"));
@@ -48,7 +45,6 @@ public class FormularioAgregarLibro extends JDialog {
         add(new JLabel("Tasa:"));
         add(txtTasa);
 
-        // Dependiendo del tipo de libro, agregamos campos adicionales específicos
         switch (tipoLibro) {
             case "Libro Físico":
                 add(new JLabel("Ubicación:"));
@@ -83,15 +79,12 @@ public class FormularioAgregarLibro extends JDialog {
                 break;
         }
 
-        // Agregar el botón "Agregar" al diálogo
-        add(new JLabel()); // Espacio en blanco para alinear el botón
+        add(new JLabel());
         add(btnAgregar);
 
-        // Configurar el tamaño y la posición del diálogo
         setSize(300, 300);
-        setLocationRelativeTo(parent); // Centrar el diálogo respecto al frame parent
+        setLocationRelativeTo(parent);
 
-        // Configurar el ActionListener para el botón "Agregar"
         btnAgregar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 agregarLibro(tipoLibro);
@@ -100,13 +93,11 @@ public class FormularioAgregarLibro extends JDialog {
     }
 
     private void agregarLibro(String tipoLibro) {
-        // Obtener los valores de los campos de texto
         String titulo = txtTitulo.getText();
         String autor = txtAutor.getText();
         String genero = txtGenero.getText();
         double precio = Double.parseDouble(txtPrecio.getText());
 
-        // Dependiendo del tipo de libro, obtener los valores de los campos adicionales
         switch (tipoLibro) {
             case "Libro Físico":
                 String ubicacion = txtUbicacion.getText();

@@ -15,46 +15,32 @@ import Ensamblador.Ventass.Ventas;
 
 public class Ensamblador implements Serializable {
 
-     protected static ArrayList<Cliente> clientes;
-    protected static ArrayList<Libros> libros;
-    protected static ArrayList<Archivos> archivos;
-    protected static ArrayList<Ventas> ventas;
-
-
+    protected static ArrayList<Cliente> clientes = new ArrayList<>();
+    protected static ArrayList<Libros> libros = new ArrayList<>();
+    protected static ArrayList<Archivos> archivos = new ArrayList<>();
+    protected static ArrayList<Ventas> ventas = new ArrayList<>();
 
     public Ensamblador(List<Cliente> clientes, List<Libros> libros, List<Archivos> archivos, List<Ventas> ventas) {
-        this.clientes = (ArrayList<Cliente>) clientes;
-        this.libros = (ArrayList<Libros>) libros;
-        this.archivos = (ArrayList<Archivos>) archivos;
-        this.ventas = (ArrayList<Ventas>) ventas;
+        this.clientes = new ArrayList<>(clientes);
+        this.libros = new ArrayList<>(libros);
+        this.archivos = new ArrayList<>(archivos);
+        this.ventas = new ArrayList<>(ventas);
     }
 
-
-    public  void add(Cliente cliente)
-    {
+    public static void agregarCliente(Cliente cliente) {
         clientes.add(cliente);
     }
-    public void remove(Cliente cliente)
-    {
-        this.clientes.remove(cliente);
+
+    public static void eliminarCliente(Cliente cliente) {
+        clientes.remove(cliente);
     }
-    public List<Cliente> getClientes() {
-        return Collections.unmodifiableList(this.clientes); // Return an unmodifiable copy of the list
+
+    public static List<Cliente> getClientes() {
+        return Collections.unmodifiableList(clientes);
     }
 
     public static List<Libros> getLibros() {
-        // Return an unmodifiable copy to prevent direct modification of the internal list
-        return libros;
-    }
-
-    public List<Archivos> getArchivos() {
-        // Return an unmodifiable copy to prevent direct modification of the internal list
-        return archivos;
-    }
-
-    public List<Ventas> getVentas() {
-        // Return an unmodifiable copy to prevent direct modification of the internal list
-        return Collections.unmodifiableList(this.ventas);
+        return Collections.unmodifiableList(libros);
     }
 
     public static void setClientes(ArrayList<Cliente> clientes) {
@@ -65,49 +51,22 @@ public class Ensamblador implements Serializable {
         Ensamblador.libros = libros;
     }
 
-    public void setArchivos(ArrayList<Archivos> archivos) {
-        this.archivos = archivos;
-    }
-
-    public void setVentas(ArrayList<Ventas> ventas) {
-        this.ventas = ventas;
-    }
-
-    public static void agregarLibro(Libros libro)
-    {
+    public static void agregarLibro(Libros libro) {
         libros.add(libro);
     }
 
-    public void eliminarLibro(Libros libro){
+    public static void eliminarLibro(Libros libro) {
         libros.remove(libro);
     }
-    public void agregarArchivo(Archivos archivo){
-        this.archivos.add(archivo);
-    }
-    public void eliminarArchivo(Archivos archivo){
-        this.archivos.remove(archivo);
-    }
-    public void buscarClientePorNombre(Scanner sc){
-        System.out.println("Dame el nombre que quieres buscar: ");
-        String Nombre=sc.nextLine();
-        for (Cliente cliente: clientes){
-            if (cliente.getNombre().equals(Nombre)){
-                System.out.println("El cliente buscado es" + cliente.getNombre());
-            }
-        }
 
+    public void agregarArchivo(Archivos archivo) {
+        archivos.add(archivo);
     }
 
-    public static ArrayList<Libros> buscarLibroPorTitulo(String titulo, ArrayList<Libros> libros){
-        ArrayList<Libros> libros1 = new ArrayList<>();
-            for (Libros libro : libros) {
-                System.out.println(libro.getAutor());
-                if (libro.getTitulo().equals(titulo)) {
-                    libros1.add(libro);
-                }
-            }
-        return libros1;
-        }
+    public void eliminarArchivo(Archivos archivo) {
+        archivos.remove(archivo);
+    }
+
     public void saveDataToFile(String filePath) throws IOException {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(Files.newOutputStream(Paths.get(filePath)))) {
             outputStream.writeObject(clientes);
@@ -117,17 +76,14 @@ public class Ensamblador implements Serializable {
         }
     }
 
-    @SuppressWarnings("unchecked") // Suppress warnings for unchecked casts
+    @SuppressWarnings("unchecked")
     public void loadDataFromFile(String filePath) throws IOException, ClassNotFoundException {
-        // Create a serialization input stream
-        ObjectInputStream inputStream = new ObjectInputStream(Files.newInputStream(Paths.get(filePath)));
-
-        // Read the lists of clientes, libros, archivos, and ventas from the file
-        clientes = (ArrayList<Cliente>) inputStream.readObject();
-        libros = (ArrayList<Libros>) inputStream.readObject();
-        archivos = (ArrayList<Archivos>)inputStream.readObject();
-        // Close the input stream
-        inputStream.close();
+        try (ObjectInputStream inputStream = new ObjectInputStream(Files.newInputStream(Paths.get(filePath)))) {
+            clientes = (ArrayList<Cliente>) inputStream.readObject();
+            libros = (ArrayList<Libros>) inputStream.readObject();
+            archivos = (ArrayList<Archivos>) inputStream.readObject();
+            ventas = (ArrayList<Ventas>) inputStream.readObject();
+        }
     }
 
     public static String generarInformeClientes(EnsambladorReportes reportes) {

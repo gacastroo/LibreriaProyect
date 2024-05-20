@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="UpdateMal" />
+    <list default="true" id="e8e2d65d-f7f4-48ae-be1d-b8fb6fa78c5f" name="Changes" comment="UpdateMal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Ensambladorc/Ensamblador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/FormularioAgregarLibro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/GUI/PanelLibros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorReportesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/EnsambladorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorArchivosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Ensamblador/src/Test/ensambladorVentasTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,7 +223,7 @@
       <workItem from="1715920565262" duration="144000" />
       <workItem from="1715944039397" duration="4184000" />
       <workItem from="1715983733074" duration="9484000" />
-      <workItem from="1716224043146" duration="1025000" />
+      <workItem from="1716224043146" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -256,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716224872568</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UpdateMal">
+      <option name="closed" value="true" />
+      <created>1716225094971</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716225094971</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

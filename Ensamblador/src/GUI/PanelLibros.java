@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
+import java.util.List;
 
 public class PanelLibros extends JPanel {
     private JTable tablaLibros;
@@ -19,25 +19,13 @@ public class PanelLibros extends JPanel {
     private JPanel panelTiposLibro;
 
     public PanelLibros() {
-        ArrayList<Libros> libros = (ArrayList<Libros>) Ensamblador.getLibros();
-
-        // Configuración del panel
         setLayout(new BorderLayout());
 
-        // Creación de la tabla
         tablaLibros = new JTable();
         JScrollPane scrollPane = new JScrollPane(tablaLibros);
 
-        // Llenar el modelo de tabla con los datos del ArrayList
-        DefaultTableModel modelo = new DefaultTableModel();
-        modelo.setColumnIdentifiers(new String[]{"Título", "Autor", "Género", "Precio"});
-        for (Libros libro : libros) {
-            Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(), libro.getPrecio()};
-            modelo.addRow(fila);
-        }
-        tablaLibros.setModel(modelo);
+        actualizarTabla();
 
-        // Creación de los botones
         btnAgregarLibro = new JButton("Agregar Libro");
         btnAgregarLibro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -62,11 +50,9 @@ public class PanelLibros extends JPanel {
 
         txtBusqueda = new JTextField(20);
 
-        // Crear la botonera para seleccionar el tipo de libro
         panelTiposLibro = new JPanel(new GridBagLayout());
         panelTiposLibro.setVisible(false);
 
-        // Configurar restricciones para los botones en el GridBagLayout
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = GridBagConstraints.RELATIVE;
@@ -81,7 +67,6 @@ public class PanelLibros extends JPanel {
         JButton btnLibroInfantil = new JButton("Libro Infantil");
         btnCancelar = new JButton("Cancelar");
 
-        // Agregar ActionListener a los botones de tipos de libro
         btnLibroFisico.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 abrirFormularioLibro("Libro Físico");
@@ -118,7 +103,6 @@ public class PanelLibros extends JPanel {
         panelTiposLibro.add(btnLibroInfantil, gbc);
         panelTiposLibro.add(btnCancelar, gbc);
 
-        // Agregar componentes al panel
         JPanel panelSuperior = new JPanel();
         panelSuperior.add(new JLabel("Buscar:"));
         panelSuperior.add(txtBusqueda);
@@ -136,30 +120,56 @@ public class PanelLibros extends JPanel {
     }
 
     public void mostrarBotoneraTiposLibro() {
-        // Mostrar la botonera para seleccionar el tipo de libro
         panelTiposLibro.setVisible(true);
     }
 
     public void abrirFormularioLibro(String tipoLibro) {
-        // Crear una instancia del formulario para agregar un libro
         FormularioAgregarLibro formulario = new FormularioAgregarLibro((Frame) SwingUtilities.getWindowAncestor(this), "Agregar Libro", tipoLibro);
-        formulario.setVisible(true); // Mostrar el formulario
-        panelTiposLibro.setVisible(false); // Ocultar la botonera después de abrir el formulario
+        formulario.setVisible(true);
+        panelTiposLibro.setVisible(false);
+        actualizarTabla();
     }
 
     public void buscarLibro(String criterio) {
-        // Implementar la lógica para buscar un libro en el inventario según un criterio específico
+        List<Libros> libros = Ensamblador.getLibros();
+        DefaultTableModel modelo = (DefaultTableModel) tablaLibros.getModel();
+        modelo.setRowCount(0);
+
+        for (Libros libro : libros) {
+            if (libro.getTitulo().toLowerCase().contains(criterio.toLowerCase()) ||
+                    libro.getAutor().toLowerCase().contains(criterio.toLowerCase()) ||
+                    libro.getGenero().toLowerCase().contains(criterio.toLowerCase())) {
+                Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(), libro.getPrecio()};
+                modelo.addRow(fila);
+            }
+        }
     }
 
     public void borrarLibroSeleccionado() {
-        // Implementar la lógica para borrar el libro seleccionado en la tabla
+        int filaSeleccionada = tablaLibros.getSelectedRow();
+        if (filaSeleccionada != -1) {
+            String titulo = (String) tablaLibros.getValueAt(filaSeleccionada, 0);
+            List<Libros> libros = Ensamblador.getLibros();
+            for (Libros libro : libros) {
+                if (libro.getTitulo().equals(titulo)) {
+                    Ensamblador.eliminarLibro(libro);
+                    break;
+                }
+            }
+            actualizarTabla();
+        } else {
+            JOptionPane.showMessageDialog(this, "Selecciona un libro para borrar.");
+        }
     }
 
-    public void setTablaLibros(JTable tablaLibros) {
-        this.tablaLibros = tablaLibros;
-    }
-
-    public JTable getTablaLibros() {
-        return tablaLibros;
+    public void actualizarTabla() {
+        List<Libros> libros = Ensamblador.getLibros();
+        DefaultTableModel modelo = (DefaultTableModel) tablaLibros.getModel();
+        modelo.setColumnIdentifiers(new String[]{"Título", "Autor", "Género", "Precio"});
+        modelo.setRowCount(0);
+        for (Libros libro : libros) {
+            Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(), libro.getPrecio()};
+            modelo.addRow(fila);
+        }
     }
 }

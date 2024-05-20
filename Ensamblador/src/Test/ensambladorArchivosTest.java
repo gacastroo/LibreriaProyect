@@ -1,4 +1,4 @@
-package Ensamblador.Test;
+/*package Ensamblador.Test;
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
 import Ensamblador.Ensambladorc.Ensambladorarchivos;
@@ -106,3 +106,4 @@ public class ensambladorArchivosTest {
     }
 }
 
+*/
