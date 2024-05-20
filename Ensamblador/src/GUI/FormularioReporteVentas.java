@@ -1,18 +1,17 @@
 package Ensamblador.GUI;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Date;
-import java.util.Calendar;
 
 public class FormularioReporteVentas extends JDialog {
     private JTextField txtCodigoVenta;
     private JTextField txtIDCliente;
+    private JTextField txtLibros;
     private JButton btnAceptar;
     private JButton btnCancelar;
-    private JSpinner spinnerFecha; // Declarar el JSpinner para la fecha
+    private JSpinner spinnerFecha;
 
     public FormularioReporteVentas(Frame parent, String title) {
         super(parent, title, true);
@@ -21,6 +20,7 @@ public class FormularioReporteVentas extends JDialog {
 
         txtCodigoVenta = new JTextField();
         txtIDCliente = new JTextField();
+        txtLibros = new JTextField();
 
         // Crear el JSpinner para la fecha
         spinnerFecha = new JSpinner(new SpinnerDateModel());
@@ -33,6 +33,7 @@ public class FormularioReporteVentas extends JDialog {
 
         btnAceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                // Aquí puedes agregar el código para manejar la aceptación del formulario
                 dispose();
             }
         });
@@ -43,17 +44,25 @@ public class FormularioReporteVentas extends JDialog {
             }
         });
 
-        add(new JLabel("Código de Venta:"));
+        add(new JLabel("Venta:"));
         add(txtCodigoVenta);
-        add(new JLabel("ID Cliente:"));
+        add(new JLabel("Cliente:"));
         add(txtIDCliente);
+        add(new JLabel("Libros:"));
+        add(txtLibros);
         add(new JLabel("Fecha:"));
-        add(spinnerFecha); // Agregar el JSpinner al formulario
+        add(spinnerFecha);
         add(btnAceptar);
         add(btnCancelar);
 
         setSize(300, 200);
         setLocationRelativeTo(parent);
     }
-}
 
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        FormularioReporteVentas dialog = new FormularioReporteVentas(frame, "Reporte de Ventas");
+        dialog.setVisible(true);
+        System.exit(0);
+    }
+}

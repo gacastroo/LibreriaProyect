@@ -7,7 +7,6 @@ import java.awt.event.*;
 import Ensamblador.Librosc.*;
 import Ensamblador.Ensambladorc.Ensamblador;
 
-
 public class FormularioAgregarLibro extends JDialog {
     private JTextField txtTitulo;
     private JTextField txtAutor;
@@ -15,20 +14,19 @@ public class FormularioAgregarLibro extends JDialog {
     private JTextField txtPrecio;
     private JTextField txtUbicacion;
     private JTextField txtTasa;
-    private JTextField txtFormato; // Campo adicional para LibroElectronico
-    private JTextField txtDuracion; // Campo adicional para LibroAudio
-    private JTextField txtIdioma; // Campo adicional para LibroAudio (segundo campo)
-    private JTextField txtIlustraciones; // Campo adicional para LibroAudio (segundo campo)
-    private JTextField txtNumIlustraciones; // Campo adicional para LibroAudio (segundo campo)
-    private JTextField txtEdadRecomendada; // Campo adicional para LibroAudio (segundo campo)
+    private JTextField txtFormato;
+    private JTextField txtDuracion;
+    private JTextField txtIdioma;
+    private JTextField txtIlustraciones;
+    private JTextField txtNumIlustraciones;
+    private JTextField txtEdadRecomendada;
     private JButton btnAgregar;
-    
 
     public FormularioAgregarLibro(Frame parent, String title, String tipoLibro) {
         super(parent, title, true); // El diálogo será modal y estará asociado al frame parent
 
         // Configurar el layout del diálogo
-        setLayout(new GridLayout(7, 2, 5, 5)); // 7 filas, 2 columnas, espacios de 5px entre componentes
+        setLayout(new GridLayout(8, 2, 5, 5)); // 8 filas, 2 columnas, espacios de 5px entre componentes
 
         // Crear los campos de texto y botones
         txtTitulo = new JTextField();
@@ -43,18 +41,17 @@ public class FormularioAgregarLibro extends JDialog {
         add(txtTitulo);
         add(new JLabel("Autor:"));
         add(txtAutor);
-        add(new JLabel("Genero: "));
+        add(new JLabel("Género:"));
         add(txtGenero);
-        add(new JLabel("Precio: "));
+        add(new JLabel("Precio:"));
         add(txtPrecio);
-        add(new JLabel("Tasa: "));
+        add(new JLabel("Tasa:"));
         add(txtTasa);
-        
 
         // Dependiendo del tipo de libro, agregamos campos adicionales específicos
         switch (tipoLibro) {
             case "Libro Físico":
-                add(new JLabel("Ubicacion:"));
+                add(new JLabel("Ubicación:"));
                 txtUbicacion = new JTextField();
                 add(txtUbicacion);
                 break;
@@ -76,9 +73,10 @@ public class FormularioAgregarLibro extends JDialog {
                 txtEdadRecomendada = new JTextField();
                 add(txtEdadRecomendada);
                 add(new JLabel("Ilustraciones:"));
-                txtIlustraciones = new JTextField(); // Opciones de Sí y No para ilustraciones
+                txtIlustraciones = new JTextField();
                 add(txtIlustraciones);
-                txtNumIlustraciones = new JTextField(); // Opciones de Sí y No para ilustraciones
+                add(new JLabel("Número de Ilustraciones:"));
+                txtNumIlustraciones = new JTextField();
                 add(txtNumIlustraciones);
                 break;
             default:
@@ -90,50 +88,54 @@ public class FormularioAgregarLibro extends JDialog {
         add(btnAgregar);
 
         // Configurar el tamaño y la posición del diálogo
-        setSize(300, 250);
+        setSize(300, 300);
         setLocationRelativeTo(parent); // Centrar el diálogo respecto al frame parent
 
         // Configurar el ActionListener para el botón "Agregar"
         btnAgregar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes obtener los valores de los campos de texto y realizar la acción de agregar el libro
-                String titulo = txtTitulo.getText();
-                String autor = txtAutor.getText();
-                String genero = txtGenero.getText();
-                double precio = Double.parseDouble(txtPrecio.getText());
-                // Dependiendo del tipo de libro, obtén los valores de los campos adicionales
-                switch (tipoLibro) {
-                    case "Libro Físico":
-                        String ubicacion = txtUbicacion.getText();
-                        LibroFisico fisico = new LibroFisico(titulo,autor,genero, precio, ubicacion);
-                        Ensamblador.agregarLibro(fisico);
-                        break;
-                    case "Libro Electrónico":
-                        String formato = txtFormato.getText();
-                        LibroElectronico electronico = new LibroElectronico(titulo,autor,genero,precio,formato);
-                        Ensamblador.agregarLibro(electronico);
-                        break;
-                    case "Libro de Audio":
-                        int duracion = Integer.parseInt(txtDuracion.getText());
-                        String idioma =  txtIdioma.getText();
-                        String tasa =  txtTasa.getText();
-                        LibroAudio audio = new LibroAudio(titulo,autor,genero,precio,duracion,idioma,tasa);
-                        Ensamblador.agregarLibro(audio);
-                        break;
-                    case "Libro Infantil":
-                        int edadRecomendada = Integer.parseInt(txtEdadRecomendada.getText());
-                        boolean ilustraciones = Boolean.parseBoolean(txtIlustraciones.getText());
-                        int numIlustraciones = Integer.parseInt(txtNumIlustraciones.getText());
-                        LibroInfantil infantil = new LibroInfantil(titulo,autor,genero,precio,edadRecomendada,ilustraciones,numIlustraciones);
-                        Ensamblador.agregarLibro(infantil);
-                        break;
-                    default:
-                        break;
-                }
-                setVisible(false);
+                agregarLibro(tipoLibro);
             }
-
         });
     }
-}
 
+    private void agregarLibro(String tipoLibro) {
+        // Obtener los valores de los campos de texto
+        String titulo = txtTitulo.getText();
+        String autor = txtAutor.getText();
+        String genero = txtGenero.getText();
+        double precio = Double.parseDouble(txtPrecio.getText());
+
+        // Dependiendo del tipo de libro, obtener los valores de los campos adicionales
+        switch (tipoLibro) {
+            case "Libro Físico":
+                String ubicacion = txtUbicacion.getText();
+                LibroFisico fisico = new LibroFisico(titulo, autor, genero, precio, ubicacion);
+                Ensamblador.agregarLibro(fisico);
+                break;
+            case "Libro Electrónico":
+                String formato = txtFormato.getText();
+                LibroElectronico electronico = new LibroElectronico(titulo, autor, genero, precio, formato);
+                Ensamblador.agregarLibro(electronico);
+                break;
+            case "Libro de Audio":
+                int duracion = Integer.parseInt(txtDuracion.getText());
+                String idioma = txtIdioma.getText();
+                String tasa = txtTasa.getText();
+                LibroAudio audio = new LibroAudio(titulo, autor, genero, precio, duracion, idioma, tasa);
+                Ensamblador.agregarLibro(audio);
+                break;
+            case "Libro Infantil":
+                int edadRecomendada = Integer.parseInt(txtEdadRecomendada.getText());
+                boolean ilustraciones = Boolean.parseBoolean(txtIlustraciones.getText());
+                int numIlustraciones = Integer.parseInt(txtNumIlustraciones.getText());
+                LibroInfantil infantil = new LibroInfantil(titulo, autor, genero, precio, edadRecomendada, ilustraciones, numIlustraciones);
+                Ensamblador.agregarLibro(infantil);
+                break;
+            default:
+                break;
+        }
+
+        setVisible(false);
+    }
+}

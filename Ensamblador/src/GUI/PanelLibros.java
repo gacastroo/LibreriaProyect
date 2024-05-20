@@ -18,7 +18,7 @@ public class PanelLibros extends JPanel {
     private JTextField txtBusqueda;
     private JPanel panelTiposLibro;
 
-    public  PanelLibros() {
+    public PanelLibros() {
         ArrayList<Libros> libros = (ArrayList<Libros>) Ensamblador.getLibros();
 
         // Configuración del panel
@@ -30,9 +30,9 @@ public class PanelLibros extends JPanel {
 
         // Llenar el modelo de tabla con los datos del ArrayList
         DefaultTableModel modelo = new DefaultTableModel();
-        modelo.setColumnIdentifiers(new String[]{"Titulo", "Autor", "Genero", "Precio"});
+        modelo.setColumnIdentifiers(new String[]{"Título", "Autor", "Género", "Precio"});
         for (Libros libro : libros) {
-            Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(),libro.getPrecio()};
+            Object[] fila = new Object[]{libro.getTitulo(), libro.getAutor(), libro.getGenero(), libro.getPrecio()};
             modelo.addRow(fila);
         }
         tablaLibros.setModel(modelo);
@@ -148,12 +148,11 @@ public class PanelLibros extends JPanel {
     }
 
     public void buscarLibro(String criterio) {
-        // Aquí implementarías la lógica para buscar un libro en el inventario según un criterio específico
+        // Implementar la lógica para buscar un libro en el inventario según un criterio específico
     }
 
     public void borrarLibroSeleccionado() {
-        // Aquí implementarías la lógica para borrar el libro seleccionado en la tabla
-
+        // Implementar la lógica para borrar el libro seleccionado en la tabla
     }
 
     public void setTablaLibros(JTable tablaLibros) {
@@ -164,4 +163,3 @@ public class PanelLibros extends JPanel {
         return tablaLibros;
     }
 }
-
