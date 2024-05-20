@@ -31,7 +31,6 @@ public class FormularioAgregarLibro extends JDialog {
         txtAutor = new JTextField();
         txtPrecio = new JTextField();
         txtGenero = new JTextField();
-        txtTasa = new JTextField();
         btnAgregar = new JButton("Agregar");
 
         add(new JLabel("Título:"));
@@ -42,8 +41,7 @@ public class FormularioAgregarLibro extends JDialog {
         add(txtGenero);
         add(new JLabel("Precio:"));
         add(txtPrecio);
-        add(new JLabel("Tasa:"));
-        add(txtTasa);
+
 
         switch (tipoLibro) {
             case "Libro Físico":
@@ -57,6 +55,9 @@ public class FormularioAgregarLibro extends JDialog {
                 add(txtFormato);
                 break;
             case "Libro de Audio":
+                add(new JLabel("Tasa:"));
+                txtTasa = new JTextField();
+                add(txtTasa);
                 add(new JLabel("Duración:"));
                 txtDuracion = new JTextField();
                 add(txtDuracion);
