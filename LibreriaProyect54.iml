@@ -34,5 +34,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="jdatepicker" level="project" />
+    <orderEntry type="library" name="bluecatcode.junit.4.10.extended" level="project" />
+    <orderEntry type="library" name="bluecatcode.hamcrest.1.3.extended" level="project" />
   </component>
 </module>
