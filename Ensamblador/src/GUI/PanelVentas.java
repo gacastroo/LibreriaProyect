@@ -1,94 +1,36 @@
 package Ensamblador.GUI;
 
-
-import Ensamblador.Ventass.Ventas;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PanelVentas extends JPanel {
     private JTable tablaVentas;
     private DefaultTableModel modeloTabla;
     private JButton btnNuevaVenta;
     private JButton btnBuscarVenta;
-    private JButton btnMostrarHistorial;
+    private JButton btnAnularVenta;
     private JTextField txtBusquedaVenta;
-    private JPanel panelBotonesVentasEspeciales;
-    private ArrayList<Ventas> historialVentas;
 
     public PanelVentas() {
         setLayout(new BorderLayout());
-        historialVentas = new ArrayList<>();
 
         // Inicializar la tabla de ventas
-        modeloTabla = new DefaultTableModel(new String[]{"Nombre Libro", "Cliente", "Total"}, 0);
+        modeloTabla = new DefaultTableModel(new String[]{"Nombre Libro", "Precio", "Cliente", "Tipo Venta", "Total"}, 0);
         tablaVentas = new JTable(modeloTabla);
 
         btnNuevaVenta = new JButton("Registrar Venta");
-        btnBuscarVenta = new JButton("Buscar Venta");
-        btnMostrarHistorial = new JButton("Mostrar Historial");
+        btnBuscarVenta = new JButton("Buscar");
+        btnAnularVenta = new JButton("Anular Venta");
         txtBusquedaVenta = new JTextField(20);
-        panelBotonesVentasEspeciales = new JPanel(new GridLayout(2, 1));
-
-        // Botones de venta especial
-        JButton btnVentaOnline = new JButton("Venta Online");
-        JButton btnVentaPresencial = new JButton("Venta Presencial");
-
-        // Agregar ActionListener a los botones de venta especial
-        btnVentaOnline.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Lógica para venta online
-            }
-        });
-
-        btnVentaPresencial.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Lógica para venta presencial
-            }
-        });
-
-        btnNuevaVenta.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                abrirFormularioRegistroVenta();
-            }
-        });
-
-        btnMostrarHistorial.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                mostrarHistorialVentas();
-            }
-        });
-
-
-        panelBotonesVentasEspeciales.add(btnVentaOnline);
-        panelBotonesVentasEspeciales.add(btnVentaPresencial);
-        panelBotonesVentasEspeciales.setVisible(false);
-
-        btnNuevaVenta.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                mostrarBotonesVentasEspeciales();
-            }
-        });
-
-        btnBuscarVenta.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Lógica para buscar venta
-            }
-        });
-
-        btnMostrarHistorial.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                mostrarHistorialVentas();
-            }
-        });
 
         JPanel panelBotones = new JPanel();
         panelBotones.add(btnNuevaVenta);
         panelBotones.add(btnBuscarVenta);
-        panelBotones.add(btnMostrarHistorial);
+        panelBotones.add(btnAnularVenta);
 
         JPanel panelBusqueda = new JPanel();
         panelBusqueda.add(new JLabel("Buscar:"));
@@ -97,51 +39,91 @@ public class PanelVentas extends JPanel {
         add(new JScrollPane(tablaVentas), BorderLayout.CENTER);
         add(panelBotones, BorderLayout.SOUTH);
         add(panelBusqueda, BorderLayout.NORTH);
-        add(panelBotonesVentasEspeciales, BorderLayout.EAST); // Mostrar los botones a la derecha
-    }
 
-    private void mostrarHistorialVentas() {
-        // Lógica para mostrar el historial de ventas en la interfaz
-    }
-
-    private void mostrarBotonesVentasEspeciales() {
-        panelBotonesVentasEspeciales.setVisible(true);
-    }
-
-    private void registrarNuevaVenta() {
-        // Lógica para abrir el formulario de registro de nueva venta
-    }
-
-
-
-    private void abrirFormularioRegistroVenta() {
-        JDialog dialog = new JDialog((Frame) SwingUtilities.getWindowAncestor(this), "Registro de Venta", true);
-        dialog.setLayout(new BorderLayout());
-
-        JPanel panelFormulario = new JPanel();
-        panelFormulario.add(new JLabel("Nombre del Libro:"));
-        JTextField txtNombreLibro = new JTextField(20);
-        panelFormulario.add(txtNombreLibro);
-
-        JButton btnConfirmarVenta = new JButton("Confirmar Venta");
-        btnConfirmarVenta.addActionListener(new ActionListener() {
+        // ActionListener para el botón de nueva venta
+        btnNuevaVenta.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
-                dialog.dispose();
+                mostrarBotoneraTiposVenta();
             }
         });
-        panelFormulario.add(btnConfirmarVenta);
 
+        // ActionListener para el botón de búsqueda de venta
+        btnBuscarVenta.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                buscarVenta(txtBusquedaVenta.getText());
+            }
+        });
 
-        dialog.add(panelFormulario, BorderLayout.CENTER);
-
-
-        dialog.setSize(400, 200);
-        dialog.setLocationRelativeTo(this);
-        dialog.setVisible(true);
+        // ActionListener para el botón de anular venta
+        btnAnularVenta.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                anularVentaSeleccionada();
+            }
+        });
     }
 
+    public void mostrarBotoneraTiposVenta() {
+        JFrame frame = new JFrame("Seleccionar Tipo de Venta");
+        frame.setLayout(new GridLayout(3, 1));
+
+        JButton btnVentaMayorista = new JButton("Venta Mayorista");
+        JButton btnVentaOnline = new JButton("Venta Online");
+        JButton btnVentaPresencial = new JButton("Venta Presencial");
+
+        btnVentaMayorista.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                registrarVenta("Venta Mayorista");
+                frame.dispose();
+            }
+        });
+
+        btnVentaOnline.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                registrarVenta("Venta Online");
+                frame.dispose();
+            }
+        });
+
+        btnVentaPresencial.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                registrarVenta("Venta Presencial");
+                frame.dispose();
+            }
+        });
+
+        frame.add(btnVentaMayorista);
+        frame.add(btnVentaOnline);
+        frame.add(btnVentaPresencial);
+
+        frame.setSize(300, 200);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 
+    public void registrarVenta(String tipoVenta) {
+        FormularioVenta formulario = new FormularioVenta(tipoVenta);
+        // Lógica para registrar la venta en el sistema con los datos del formulario
+    }
 
+    public void buscarVenta(String criterio) {
+        // Lógica para buscar venta en el historial
+    }
 
+    public void anularVentaSeleccionada() {
+        int filaSeleccionada = tablaVentas.getSelectedRow();
+        if (filaSeleccionada != -1) {
+            // Lógica para anular la venta seleccionada en la tabla
+        } else {
+            JOptionPane.showMessageDialog(this, "Selecciona una venta para anular.");
+        }
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Panel de Ventas");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().add(new PanelVentas());
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+}

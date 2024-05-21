@@ -268,5 +268,4 @@ public class Ventas implements Serializable {
             }
         }
     }
-
 }

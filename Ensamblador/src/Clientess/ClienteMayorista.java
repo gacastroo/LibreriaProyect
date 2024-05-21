@@ -30,4 +30,5 @@ public class ClienteMayorista extends Cliente {
         venta.setPrecio(venta.getPrecio()-DescuentoMayorista);
         return (int) venta.getPrecio();
     }
+
 }
