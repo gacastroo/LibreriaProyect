@@ -40,7 +40,7 @@ public class EnsambladorVentas extends Ensamblador {
                 resultado.append("Ventas para el cliente ").append(nombreCliente).append(":\n");
                 for (Ventas venta : ventas) {
                     if (venta.getCliente().equals(cliente)) {
-                        resultado.append(venta).append("\n");
+                        resultado.append(venta);
                         ventaEncontrada = true;
                     }
                 }

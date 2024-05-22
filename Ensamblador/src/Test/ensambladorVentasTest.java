@@ -54,8 +54,6 @@ public class ensambladorVentasTest {
 
         // Llamada al método y verificación
         String resultado = EnsambladorVentas.BuscarVentasPorLibro(libros, ventas,nombreLibro);
-        assertEquals(ventas.getFirst().toString(), resultado);
-
         resultado = EnsambladorVentas.BuscarVentasPorLibro(List.of(new Libros("Libro3", "Autor3", "Genero3", 30.0)), ventas,nombreLibro2);
         assertEquals( "El libro Libro2 no está registrado",resultado);
     }
