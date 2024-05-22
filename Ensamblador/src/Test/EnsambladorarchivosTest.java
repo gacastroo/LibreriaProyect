@@ -1,5 +1,6 @@
 package Ensamblador.Test;
-
+import Ensamblador.Archivos.ArchivoClientes.ArchivoClientes;
+import Ensamblador.Archivos.ArchivoTexto.ArchivoTexto;
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
 import Ensamblador.Clientess.ClienteRegular;
@@ -8,6 +9,7 @@ import Ensamblador.Librosc.LibroAudio;
 import Ensamblador.Librosc.Libros;
 import Ensamblador.Ventass.Ventas;
 import org.junit.jupiter.api.*;
+
 import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -65,3 +67,4 @@ public class EnsambladorarchivosTest {
         new File(RUTA_BASE_TEST).delete();
     }
 }
+
