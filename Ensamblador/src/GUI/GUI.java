@@ -130,7 +130,7 @@ public class GUI {
         // Inicializar la clase Ensamblador
         Ensamblador ensamblador = new Ensamblador(clientes, libros, archivos, ventas);
         Ensambladorarchivos ensambladorarchivos = new Ensambladorarchivos(clientes, libros, archivos, ventas);
-        Ensambladorarchivos.setRutaBase("ruta/relativa/para/los/archivos");
+        Ensambladorarchivos.setRutaBase("archivostxt");
         ensambladorarchivos.cargarDatosDesdeArchivos();
         GUI gui = new GUI(ensamblador);
         Runtime.getRuntime().addShutdownHook(new Thread(ensambladorarchivos::guardarDatosEnArchivos));
