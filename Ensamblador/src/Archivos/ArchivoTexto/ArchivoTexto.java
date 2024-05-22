@@ -12,7 +12,7 @@ public class ArchivoTexto extends Archivos {
         super(nombre, extension, ruta);
     }
 
-    void guardarLibros(List<Libros> libros) {
+    public void guardarLibros(List<Libros> libros) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))) {
             for (Libros libro : libros) {
                 // Determinar el tipo de libro y guardar en el archivo

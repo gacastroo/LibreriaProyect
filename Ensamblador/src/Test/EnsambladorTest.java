@@ -239,3 +239,11 @@ class EnsambladorTest {
     //Restante de test GenerarInforme
 
 }
+
+
+
+
+
+
+
+

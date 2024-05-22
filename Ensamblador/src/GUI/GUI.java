@@ -3,6 +3,7 @@ package Ensamblador.GUI;
 import Ensamblador.Ensambladorc.Ensamblador;
 import Ensamblador.Archivos.Archivos;
 import Ensamblador.Clientess.Cliente;
+import Ensamblador.Ensambladorc.Ensambladorarchivos;
 import Ensamblador.Librosc.Libros;
 import Ensamblador.Ventass.Ventas;
 
@@ -128,6 +129,11 @@ public class GUI {
         ArrayList<Ventas> ventas = new ArrayList<>();
         // Inicializar la clase Ensamblador
         Ensamblador ensamblador = new Ensamblador(clientes, libros, archivos, ventas);
+        Ensambladorarchivos ensambladorarchivos = new Ensambladorarchivos(clientes, libros, archivos, ventas);
+        Ensambladorarchivos.setRutaBase("ruta/relativa/para/los/archivos");
+        ensambladorarchivos.cargarDatosDesdeArchivos();
         GUI gui = new GUI(ensamblador);
+        Runtime.getRuntime().addShutdownHook(new Thread(ensambladorarchivos::guardarDatosEnArchivos));
+
     }
 }

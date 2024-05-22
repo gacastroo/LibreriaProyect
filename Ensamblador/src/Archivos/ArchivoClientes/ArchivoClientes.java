@@ -15,7 +15,7 @@ public class ArchivoClientes extends Archivos {
         super(nombre, extension, ruta);
     }
 
-    void guardarClientes(List<Cliente> clientes) {
+    public void guardarClientes(List<Cliente> clientes) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(super.getRuta()))){
             for (Cliente cliente : clientes) {
                 String datosCliente = cliente.getClass().getSimpleName() +"," + cliente.getNombre() + "," +

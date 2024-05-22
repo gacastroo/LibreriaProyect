@@ -37,7 +37,7 @@ public class ensambladorVentasTest {
         String resultado = EnsambladorVentas.BuscarVentaPorCliente(ventas, clientes,nombreCliente);
         assertEquals("Ventas para el cliente Juan:\n" + "Venta realizada el" + " " + LocalDate.now() + " para el cliente Juan", resultado);
         resultado = EnsambladorVentas.BuscarVentaPorCliente(ventas, List.of(cliente2),nombreCliente2);
-        assertEquals("No se encontraron ventas para el cliente María", resultado);
+        assertEquals("Ventas para el cliente María:\n" + "No se encontraron ventas para el cliente María", resultado);
     }
     @Test
     public void testBuscarVentasPorLibro() {

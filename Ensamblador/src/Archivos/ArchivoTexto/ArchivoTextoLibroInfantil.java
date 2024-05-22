@@ -10,7 +10,7 @@ public class ArchivoTextoLibroInfantil extends ArchivoTexto {
     }
 
     @Override
-    void guardarLibros(List<Libros> libros) {
+    public void guardarLibros(List<Libros> libros) {
         super.guardarLibros(libros);
     }
 
