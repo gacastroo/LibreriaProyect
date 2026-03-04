@@ -132,5 +132,3 @@ Esta subclase de Ensamblador se dedica a generar reportes y estadísticas sobre 
 * **Geovana Da Silva Oliveira**
 * **Luigi Alfonso Pineda**
 * **Gianfranco**
-
- :+1: This PR looks great - it's ready to merge! :shipit:
